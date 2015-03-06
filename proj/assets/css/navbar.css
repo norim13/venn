@@ -14,6 +14,16 @@ background-color: rgb(92,184,92);
 
 
 }
+#navbar-toggle-icon-black{
+background-color: rgb(51,69,79);
+}
+
+#navbar-toggle-black{
+border-color: rgb(51,69,79);
+
+}
+
+
 
 
 .dropdown-toggle-white{
