@@ -36,9 +36,15 @@
 							</div>
 							
 							<div class="collapse" id="comments">
-							  <div class="col-lg-7" >
+							  <div class="col-lg-20" >
 								<h4>Comments</h4>
 								(....)
+								<br>
+								<br>
+								<div class="input-group">
+									<textarea class="form-control" rows="1" style="resize:none"></textarea> 
+									<span class="input-group-addon btn btn-primary">Send</span>
+								</div>
 							  </div>
 							</div>
 							
