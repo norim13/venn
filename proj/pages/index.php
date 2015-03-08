@@ -14,6 +14,9 @@
     <!-- Bootstrap Core CSS -->
     <link href="../assets/frameworks/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="../assets/css/navbar.css" rel="stylesheet">
+    <link href="../assets/css/sidebar.css" rel="stylesheet">
+    <link href="../assets/css/body.css" rel="stylesheet">
+
 
     <!-- MetisMenu CSS -->
     <link href="../assets/frameworks/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
@@ -41,10 +44,10 @@
 
 <body>
 
-    <div id="wrapper">
+    <div id="wrapper" >
 	<? include 'header.php' ?>
 		
-        <div id="page-wrapper">
+        <div id="bodydashboard">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Dashboard</h1>

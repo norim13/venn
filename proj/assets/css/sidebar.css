@@ -1,0 +1,53 @@
+#sidebar{
+/*red*/
+/*
+background-color: rgb(221,77,66);
+*/
+
+/*blue*/
+
+
+
+ width: 70px;
+ height: 600px;
+ background:  white;
+
+ text-align: center;
+}
+
+#sidebar li {
+	margin-top:20px;
+	margin-bottom:50px;
+}
+
+#sidebar ul {
+ background: rgb(51,69,79);
+
+}
+
+.button-toggle-grey {
+
+color: #E8E7E7;
+
+}
+
+
+
+
+#sidebar ul.nav.nav-second-level.collapse.in::before {
+	width: 0px;
+	height: 0px;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+
+#sidebar a {
+	padding: 0px;
+}
+
+
+
+
+
