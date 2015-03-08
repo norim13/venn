@@ -1,0 +1,50 @@
+#btn-vote{
+background-color: transparent;
+border-color: transparent;
+font-size: 1em;
+color:rgb(51,69,79);
+border-radius: 50%;
+float: right;
+}
+
+#btn-comment{
+float: right;
+}
+
+#pannel-feed .panel-body,#pannel-feed .panel-heading,#pannel-feed .panel-footer{
+	padding-bottom:8px;
+	background-color:white;
+	border:0px;
+	border-radius:0%;
+}
+
+#pannel-feed .panel-heading{
+font-size:1.2em;
+padding-bottom:3px;
+padding-left:25px;
+}
+
+#pannel-feed .panel-footer{
+color:rgb(51,69,79);
+padding-top:0px;
+
+}
+
+#pannel-feed .panel-body{
+padding-top:7px;
+padding-bottom:3px;
+padding-left:25px;
+}
+
+#clock-pannel{
+background-color: transparent;
+border-color: transparent;
+font-size: 1em;
+color:rgb(51,69,79);
+float: left;
+padding-right:auto;
+}
+
+.fill-flow{
+overflow:auto;
+}

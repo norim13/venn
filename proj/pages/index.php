@@ -9,11 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Venn - Social Network</title>
+	
+	<link href="../assets/css/navbar.css" rel="stylesheet">
+	<link href="../assets/css/pannels.css" rel="stylesheet">
+
 
     <!-- Bootstrap Core CSS -->
     <link href="../assets/frameworks/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="../assets/css/navbar.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
     <link href="../assets/frameworks/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
@@ -43,22 +46,7 @@
 
     <div id="wrapper">
 	<? include 'header.php' ?>
-		
-        <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Dashboard</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-			
-			
-            <div class="row">
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /#page-wrapper -->
+	<? include 'body.php' ?>
 
     </div>
     <!-- /#wrapper -->

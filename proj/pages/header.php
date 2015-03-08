@@ -242,26 +242,26 @@
                             <a href="index.php"><i class="fa fa-rss fa-fw"></i> Feed</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-circle-thin fa-fw"></i> Circles<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-circle-thin fa-fw"></i> <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                <li>
-                                    <a href="index.php">Friends</a>
+                                    <a href="#">Friends</a>
                                 </li>
                                 <li>
-                                    <a href="index.php">Family</a>
+                                    <a href="#">Family</a>
                                 </li>
 								<li>
-                                    <a href="index.php">Feup</a>
+                                    <a href="#">Feup</a>
                                 </li>
 								<li>
-                                    <a href="index.php">Favourites</a>
+                                    <a href="#">Favourites</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
 						
 						<li>
-                            <a href="index.php"><i class="fa fa-globe fa-fw"></i>Trending</a>
+                            <a href="panels-wells.html"><i class="fa fa-globe fa-fw"></i>Trending</a>
                         </li>
 						
 						<!--
