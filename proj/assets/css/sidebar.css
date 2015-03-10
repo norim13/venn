@@ -13,6 +13,9 @@ background-color: rgb(221,77,66);
  background:  white;
 
  text-align: center;
+
+
+
 }
 
 #sidebar li {
@@ -26,12 +29,12 @@ background-color: rgb(221,77,66);
 }
 
 .button-toggle-grey {
-
-color: #E8E7E7;
-
+	color: #E8E7E7;
 }
 
-
+#sidebar .active {
+	border: 0px;
+}
 
 
 #sidebar ul.nav.nav-second-level.collapse.in::before {
@@ -42,11 +45,24 @@ color: #E8E7E7;
 
 }
 
+#sidebar li:hover {
+		background: rgb(21,49,59);
+}
+
+#sidebar-toggle-icon-black:hover{
+	background: rgb(21,49,59);
+}
+
+
 
 #sidebar a {
 	padding: 0px;
 }
 
+#sidebar button {
+	background-color: transparent;
+	border: 0px;
+}
 
 
 

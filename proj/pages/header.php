@@ -235,10 +235,11 @@
                                     <br>
                                     <p class="button-toggle-grey"> Home </p>
                                 </li>
-                                <li>
-                                    <a href="friends.php"></a>
-                                    <i class="fa fa-circle-thin fa-2x button-toggle-grey" ></i>
+                                <li id="sidebar-toggle-icon-black">
+                                    <a class="dropdown-toggle"   data-toggle="dropdown" href="#">
+                                    <i class="fa fa-circle-thin fa-2x button-toggle-grey"></i>
                                     <p class="button-toggle-grey"> Sets </p>
+                                    </a>
                                 </li>
                                 <li>
                                     <a href="index.php"> </a>
