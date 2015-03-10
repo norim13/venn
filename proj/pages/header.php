@@ -11,7 +11,7 @@
 	<title>Venn</title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="../assets/frameworks/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/frameworks/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,29 +21,26 @@
         <![endif]-->	
 
         <!-- MetisMenu CSS -->
-        <link href="../assets/frameworks/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+        <link href="assets/frameworks/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
         <!-- Timeline CSS -->
-        <link href="../assets/frameworks/timeline.css" rel="stylesheet">
+        <link href="assets/frameworks/timeline.css" rel="stylesheet">
 
         <!-- Morris Charts CSS -->
-        <link href="../assets/frameworks/morrisjs/morris.css" rel="stylesheet">
+        <link href="assets/frameworks/morrisjs/morris.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="../assets/frameworks/sb-admin-2.css" rel="stylesheet">
-        <link href="../assets/css/navbar.css" rel="stylesheet">
+        <link href="assets/frameworks/sb-admin-2.css" rel="stylesheet">
+        <link href="assets/css/navbar.css" rel="stylesheet">
 
-        <link href="../assets/css/sidebar.css" rel="stylesheet">
-        <link href="../assets/css/body.css" rel="stylesheet">
+        <link href="assets/css/sidebar.css" rel="stylesheet">
+        <link href="assets/css/body.css" rel="stylesheet">
 
-        <link href="../assets/css/pannels.css" rel="stylesheet">
+        <link href="assets/css/pannels.css" rel="stylesheet">
 
 
         <!-- Custom Fonts -->
-        <link href="../assets/frameworks/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/frameworks/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     </head>
     <body>
-
-            
-</html>

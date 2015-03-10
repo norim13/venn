@@ -207,12 +207,12 @@
                 <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
-                <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                <li><a href="index.php?page=profile"><i class="fa fa-user fa-fw"></i> User Profile</a>
                 </li>
                 <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                 </li>
                 <li class="divider"></li>
-                <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                <li><a href="index.php?page=login"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                 </li>
             </ul>
             <!-- /.dropdown-user -->
@@ -221,52 +221,50 @@
     </ul>
     <!-- /.navbar-top-links -->
 
-   <div  id="sidebar" class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                       <li class="sidebar-search">
-                            <ul class="nav nav-second-level">
-                               <li>
-                                    <a href="index.php"></a>
-                                    <i class="fa fa-home fa-2x button-toggle-grey" ></i>
-                                    <br>
-                                    <p class="button-toggle-grey"> Home </p>
-                                </li>
-                                <li id="sidebar-toggle-icon-black">
-                                    <a class="dropdown-toggle"   data-toggle="dropdown" href="#">
-                                    <i class="fa fa-circle-thin fa-2x button-toggle-grey"></i>
-                                    <p class="button-toggle-grey"> Sets </p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="index.php"> </a>
-                                    <i class="fa fa-globe fa-2x button-toggle-grey" ></i>
-                                    <br>
-                                    <p class="button-toggle-grey"> News </p>                                    
-                                </li>
-                                <li>
-                                    <a href="index.php" ></a>
-                                    <i class="fa fa-search fa-2x button-toggle-grey" ></i>
-                                    <br>
-                                    <p class="button-toggle-grey"> Search </p>
-                                </li>
-                                <li>
-                                    <a href="index.php"></a>
-                                    <i  class="fa fa-star-o fa-2x button-toggle-grey"></i>
-                                    <br>
-                                    <p class="button-toggle-grey"> Starred </p>
-
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
+    <div  id="sidebar" class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="sidebar-search">
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="index.php"></a>
+                            <i class="fa fa-home fa-2x button-toggle-grey" ></i>
+                            <br>
+                            <p class="button-toggle-grey"> Home </p>
                         </li>
+                        <li id="sidebar-toggle-icon-black">
+                            <a class="dropdown-toggle"   data-toggle="dropdown" href="#">
+                                <i class="fa fa-circle-thin fa-2x button-toggle-grey"></i>
+                                <p class="button-toggle-grey"> Circles </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.php"> </a>
+                            <i class="fa fa-globe fa-2x button-toggle-grey" ></i>
+                            <br>
+                            <p class="button-toggle-grey"> News </p>                                    
+                        </li>
+                        <li>
+                            <a href="index.php" ></a>
+                            <i class="fa fa-search fa-2x button-toggle-grey" ></i>
+                            <br>
+                            <p class="button-toggle-grey"> Search </p>
+                        </li>
+                        <li>
+                            <a href="index.php"></a>
+                            <i  class="fa fa-star-o fa-2x button-toggle-grey"></i>
+                            <br>
+                            <p class="button-toggle-grey"> Starred </p>
 
-                   
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
             </div>
             <!-- /.navbar-static-side -->
-            </ul>
-            </div>
-            </div>
+        </ul>
+    </div>
+</div>
 
 <!-- /.sidebar-collapse -->
 </div>
