@@ -10,25 +10,44 @@
 		
 			 <div class="row">
                 <div class="col-lg-6">
-                    <div class="panel panel-default" id="pannel-feed">
+                    <div class="panel panel-default" id="panel-feed">
 					
                         <div class="panel-heading ">
                             Mira
                         </div>
-						
-                        <div class="panel-body " >
-							<p>Pepino sucks<p>
+						<div class="panel-body"  >
+						<div class="vote-section" >
+							<table style="text-align:center;">
+							  <tr>
+								<td><i class="fa fa-sort-asc"></i></td>
+							  </tr>
+							  <tr>
+								<td>6</td>
+							  </tr>
+							  <tr>
+								<td><i class="fa fa-sort-desc"></i></td>
+							  </tr>
+							 </table>
+							 </div>
+							<div ">
+								<p>Eux maudite pendant eparses ces facteur general ans legumes. Habitent ete fillette continue cantines galopent ils ces. Nos rouge passa rirez roidi soirs dur foi peu temps. Le diables un dragons xv grosses dessert se. Pressent lui des precieux lampions. Instrument eu maintenant gouverneur et claquaient oh boulevards ca. Cime hors tard des agit face vif bout. Jeterent au il je pressent derriere preparer.</p>
+
+							</div>
+							
+							 
 						</div> 
+							
+							
 						
                         <div class="panel-footer clearfix ">
 							<div class="fill-flow">
-							<a href="" class="btn btn-default" id="clock-pannel"><i class="fa fa-clock-o"></i> 3 days ago</a>
+							<a href="" class="btn btn-default" id="clock-panel"><i class="fa fa-clock-o"></i> 3 days ago</a>
 							
 							<button class="btn btn-default" id="btn-comment"type="button" data-toggle="collapse" data-target="#comments" aria-expanded="false" aria-controls="comments">
 							  <i class="fa fa-comments"></i> Comments
 							</button>
-							<a href="" class="btn btn-primary" id="btn-vote"><i class="fa fa-arrow-up"></i></a>
-							<a href="" class="btn btn-primary" id="btn-vote"><i class="fa fa-arrow-down"></i> </a>
+							
+							
 							
 							
 							
@@ -36,7 +55,7 @@
 							</div>
 							
 							<div class="collapse" id="comments">
-							  <div class="col-lg-20" >
+							  <div class="col-lg-20" id="comments_section" >
 								<h4>Comments</h4>
 								(....)
 								<br>
