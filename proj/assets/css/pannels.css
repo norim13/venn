@@ -1,0 +1,83 @@
+
+/*Panel*/
+#panel-feed {
+border-color:rgb(92,184,92);
+background-color:rgb(226,253,226);
+position:center;
+}
+
+#panel-feed .panel-body,#panel-feed .panel-heading,#panel-feed .panel-footer{
+	padding-bottom:8px;
+	background-color:inherit;
+	border:0px;
+	border-radius:0%;
+}
+
+
+/*Panel Header*/
+
+
+#panel-feed .panel-heading{
+font-size:1.2em;
+padding-bottom:3px;
+padding-left:25px;
+}
+
+
+/*Panel Body*/
+#panel-feed .panel-body{
+padding-top:7px;
+padding-bottom:3px;
+padding-left:25px;
+}
+
+.vote-section{
+float:right;
+margin:15px;
+margin-top:0px;
+}
+
+.vote-section td i{
+font-size: 1.5em;
+}
+
+/*Panel Footer*/
+
+#panel-feed .panel-footer{
+color:rgb(51,69,79);
+padding-top:0px;
+}
+
+.fill-flow{
+overflow:auto;
+}
+
+#clock-panel{
+background-color: transparent;
+border-color: transparent;
+font-size: 1em;
+color:rgb(51,69,79);
+float: left;
+padding-right:auto;
+}
+
+#btn-comment{
+float: right;
+background-color:transparent;
+border-color:transparent;
+}
+
+#btn-comment:focus {
+  outline: none;
+}
+
+
+
+
+
+#{
+padding:5px;
+border-top:1px;
+}
+
+
