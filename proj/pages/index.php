@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,27 +49,12 @@
 	<? include 'header.php' ?>
 	<? include 'body.php' ?>
 
+
+        <div class="row">
+        </div>
+        <!-- /.row -->
     </div>
-    <!-- /#wrapper -->
+    <!-- /#page-wrapper -->
 
-    <!-- jQuery -->
-    <script src="../assets/jquery/dist/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../assets/frameworks/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../assets/frameworks/metisMenu/dist/metisMenu.min.js"></script>
-
-    <!-- Morris Charts JavaScript -->
-	<!--
-    <script src="../assets/frameworks/raphael/raphael-min.js"></script>
-    <script src="../assets/frameworks/morrisjs/morris.min.js"></script>
-    <script src="../assets/js/morris-data.js"></script>
-	-->
-    <!-- Custom Theme JavaScript -->
-    <script src="../assets/frameworks/sb-admin-2.js"></script>
-
-</body>
-
-</html>
+</div>
+<!-- /#wrapper -->

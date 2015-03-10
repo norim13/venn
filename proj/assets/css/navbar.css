@@ -1,5 +1,5 @@
 #navbar{
-/*red*/
+	/*red*/
 /*
 background-color: rgb(221,77,66);
 */
@@ -12,23 +12,20 @@ background-color: rgb(51,122,183);
 /*green*/
 background-color: rgb(92,184,92);
 }
+
 #navbar-toggle-icon-black{
-background-color: rgb(51,69,79);
+	background-color: rgb(51,69,79);
 }
 
 #navbar-toggle-black{
-border-color: rgb(51,69,79);
-
+	border-color: rgb(51,69,79);
 }
 
 
 .dropdown-toggle-white{
-
-color: rgb(51,69,79);
-
+	color: rgb(51,69,79);
 }
 
-
 #navbar-brand-white{
-color:white;
+	color:white;
 }
