@@ -221,121 +221,53 @@
     </ul>
     <!-- /.navbar-top-links -->
 
-    <div class="navbar-default sidebar" role="navigation">
-        <div class="sidebar-nav navbar-collapse">
-            <ul class="nav" id="side-menu">
-                <li class="sidebar-search">
-                    <div class="input-group custom-search-form">
-                        <input type="text" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </span>
-                    </div>
-                    <!-- /input-group -->
-                </li>
-                <li>
-                    <a href="index.php"><i class="fa fa-rss fa-fw"></i> Feed</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-circle-thin fa-fw"></i> Circles<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="index.php">Friends</a>
+   <div  id="sidebar" class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                       <li class="sidebar-search">
+                            <ul class="nav nav-second-level">
+                               <li>
+                                    <a href="index.php"></a>
+                                    <i class="fa fa-home fa-2x button-toggle-grey" ></i>
+                                    <br>
+                                    <p class="button-toggle-grey"> Home </p>
+                                </li>
+                                <li id="sidebar-toggle-icon-black">
+                                    <a class="dropdown-toggle"   data-toggle="dropdown" href="#">
+                                    <i class="fa fa-circle-thin fa-2x button-toggle-grey"></i>
+                                    <p class="button-toggle-grey"> Sets </p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.php"> </a>
+                                    <i class="fa fa-globe fa-2x button-toggle-grey" ></i>
+                                    <br>
+                                    <p class="button-toggle-grey"> News </p>                                    
+                                </li>
+                                <li>
+                                    <a href="index.php" ></a>
+                                    <i class="fa fa-search fa-2x button-toggle-grey" ></i>
+                                    <br>
+                                    <p class="button-toggle-grey"> Search </p>
+                                </li>
+                                <li>
+                                    <a href="index.php"></a>
+                                    <i  class="fa fa-star-o fa-2x button-toggle-grey"></i>
+                                    <br>
+                                    <p class="button-toggle-grey"> Starred </p>
+
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
                         </li>
-                        <li>
-                            <a href="index.php">Family</a>
-                        </li>
-                        <li>
-                            <a href="index.php">Feup</a>
-                        </li>
-                        <li>
-                            <a href="index.php">Favourites</a>
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
 
-                <li>
-                    <a href="index.php"><i class="fa fa-globe fa-fw"></i>Trending</a>
-                </li>
+                   
+            </div>
+            <!-- /.navbar-static-side -->
+            </ul>
+            </div>
+            </div>
 
-<!--
-<li>
-<a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
-</li>
-<li>
-<a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
-</li>
-<li>
-<a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-<ul class="nav nav-second-level">
-<li>
-<a href="panels-wells.html">Panels and Wells</a>
-</li>
-<li>
-<a href="buttons.html">Buttons</a>
-</li>
-<li>
-<a href="notifications.html">Notifications</a>
-</li>
-<li>
-<a href="typography.html">Typography</a>
-</li>
-<li>
-<a href="icons.html"> Icons</a>
-</li>
-<li>
-<a href="grid.html">Grid</a>
-</li>
-</ul>
-
-</li>
-<li>
-<a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-<ul class="nav nav-second-level">
-<li>
-<a href="#">Second Level Item</a>
-</li>
-<li>
-<a href="#">Second Level Item</a>
-</li>
-<li>
-<a href="#">Third Level <span class="fa arrow"></span></a>
-<ul class="nav nav-third-level">
-<li>
-<a href="#">Third Level Item</a>
-</li>
-<li>
-<a href="#">Third Level Item</a>
-</li>
-<li>
-<a href="#">Third Level Item</a>
-</li>
-<li>
-<a href="#">Third Level Item</a>
-</li>
-</ul>
-
-</li>
-</ul>
-
-</li>
-<li>
-<a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-<ul class="nav nav-second-level">
-<li>
-<a href="blank.html">Blank Page</a>
-</li>
-<li>
-<a href="login.html">Login Page</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
--->
 <!-- /.sidebar-collapse -->
 </div>
 <!-- /.navbar-static-side -->
