@@ -1,3 +1,6 @@
+
+@media(max-width:768px)
+{
 #sidebar{
 /*red*/
 /*
@@ -18,6 +21,7 @@ background-color: rgb(221,77,66);
 
 
 
+}
 }
 
 #sidebar li {

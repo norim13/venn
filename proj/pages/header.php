@@ -38,6 +38,7 @@
 
         <link href="assets/css/pannels.css" rel="stylesheet">
 
+		<link rel="stylesheet" href="assets/frameworks/animate.css">
 
         <!-- Custom Fonts -->
         <link href="assets/frameworks/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">

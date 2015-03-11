@@ -1,9 +1,9 @@
 
 /*Panel*/
 #panel-feed {
-border-color:rgb(92,184,92);
-background-color:rgb(226,253,226);
+background-color:white;
 position:center;
+border-radius:0%;
 }
 
 #panel-feed .panel-body,#panel-feed .panel-heading,#panel-feed .panel-footer{
