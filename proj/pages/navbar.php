@@ -221,6 +221,15 @@
     </ul>
     <!-- /.navbar-top-links -->
 
+
+	
+	
+	
+	
+	
+	
+	
+	
     <div  id="sidebar" class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
@@ -232,7 +241,7 @@
                             <br>
                             <p class="button-toggle-grey"> Home </p>
                         </li>
-                        <li id="sidebar-toggle-icon-black">
+                        <li <!--id="sidebar-toggle-icon-black"-->>
                             <a class="dropdown-toggle"   data-toggle="dropdown" href="#">
                                 <i class="fa fa-circle-thin fa-2x button-toggle-grey"></i>
                                 <p class="button-toggle-grey"> Circles </p>
