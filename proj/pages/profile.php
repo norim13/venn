@@ -12,6 +12,7 @@
 					<button type="button" class="btn btn-success">Friend Request</button>  
 					<button type="button" class="btn btn-info">Send me a message</button>
 					-->
+					<button type="button" class="btn btn-primary"><i class="fa fa-gear "></i> Settings</button>
 					<br>
 				</div>
 			<div class="col-sm-2">
