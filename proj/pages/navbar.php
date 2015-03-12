@@ -247,6 +247,7 @@
             </div>
 
             <div class="sidebar-item">
+
                 <div class="vcentered-content">
                     <div class="vcentered-space"></div>
                     <div class="vcentered-space sidebar-item-content">

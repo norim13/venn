@@ -1,0 +1,22 @@
+.center-cropped {
+  width: 100px;
+  height: 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+.profile-thumbnail p{
+	text-align: center;
+}
+
+#btn-newCircle{
+margin-bottom: 2em;
+}
+
+#btn-writePost{
+background-color: transparent;
+border-color: transparent;
+font-size: 0.6em;
+color:rgb(51,69,79);
+}
