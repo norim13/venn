@@ -230,52 +230,72 @@
 	
 	
 	
-    <div  id="sidebar" class="navbar-default sidebar" role="navigation">
-        <div class="sidebar-nav navbar-collapse">
-            <ul class="nav" id="side-menu">
-                <li class="sidebar-search">
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="index.php"></a>
-                            <i class="fa fa-home fa-2x button-toggle-grey" ></i>
-                            <br>
-                            <p class="button-toggle-grey"> Home </p>
-                        </li>
-                        <li <!--id="sidebar-toggle-icon-black"-->>
-                            <a class="dropdown-toggle"   data-toggle="dropdown" href="#">
-                                <i class="fa fa-circle-thin fa-2x button-toggle-grey"></i>
-                                <p class="button-toggle-grey"> Circles </p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.php"> </a>
-                            <i class="fa fa-globe fa-2x button-toggle-grey" ></i>
-                            <br>
-                            <p class="button-toggle-grey"> News </p>                                    
-                        </li>
-                        <li>
-                            <a href="index.php" ></a>
-                            <i class="fa fa-search fa-2x button-toggle-grey" ></i>
-                            <br>
-                            <p class="button-toggle-grey"> Search </p>
-                        </li>
-                        <li>
-                            <a href="index.php"></a>
-                            <i  class="fa fa-star-o fa-2x button-toggle-grey"></i>
-                            <br>
-                            <p class="button-toggle-grey"> Starred </p>
-
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
+    <div  id="sidebar" class="navbar-default sidebar sidebar-nav navbar-collapse" role="navigation">
+        <div class="sidebar-ul">
+            
+            <div class="sidebar-item">
+                <div>
+                    <div></div>
+                    <div>
+                        <a href="index.php"></a>
+                        <i class="fa fa-home fa-2x button-toggle-grey"></i>
+                        <p class="button-toggle-grey"> Home </p>
+                    </div>
+                    <div></div>
+                </div>
             </div>
-            <!-- /.navbar-static-side -->
-        </ul>
+            
+            <div class="sidebar-item">
+                <div>
+                    <div></div>
+                    <div>
+                        <a href="index.php">
+                            <i class="fa fa-circle-thin fa-2x button-toggle-grey"></i>
+                            <p class="button-toggle-grey"> Circles </p>
+                        </a>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            
+            <div class="sidebar-item">
+                <div>
+                    <div></div>
+                    <div>
+                        <a href="index.php"> </a>
+                        <i class="fa fa-globe fa-2x button-toggle-grey" ></i>
+                        <p class="button-toggle-grey"> News </p>     
+                    </div>   
+                    <div></div>                            
+                </div>                               
+            </div>
+           
+            <div class="sidebar-item">
+                <div>
+                    <div></div>
+                    <div>
+                        <a href="index.php" ></a>
+                        <i class="fa fa-search fa-2x button-toggle-grey" ></i>
+                        <p class="button-toggle-grey"> Search </p>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            
+            <div class="sidebar-item">
+                <div>
+                    <div></div>
+                    <div>
+                        <a href="index.php"></a>
+                        <i  class="fa fa-star-o fa-2x button-toggle-grey"></i>
+                        <p class="button-toggle-grey"> Starred </p>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+                
+        
+        </div>
     </div>
-</div>
-
-<!-- /.sidebar-collapse -->
-</div>
-<!-- /.navbar-static-side -->
 </nav>
+

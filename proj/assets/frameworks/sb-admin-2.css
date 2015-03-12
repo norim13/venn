@@ -85,7 +85,7 @@ body {
     right: 0;
     left: auto;
 }
-
+/*
 .sidebar .sidebar-nav.navbar-collapse {
     padding-right: 0;
     padding-left: 0;
@@ -127,14 +127,14 @@ body {
 .sidebar .nav-third-level li a {
     padding-left: 52px;
 }
-
+*/
 @media(min-width:768px) {
-    .sidebar {
+   /* .sidebar {
         z-index: 1;
         position: absolute;
-       /* width: 250px;*/
+       
         margin-top: 51px;
-    }
+    }*/
 
     .navbar-top-links .dropdown-messages,
     .navbar-top-links .dropdown-tasks,

@@ -1,58 +1,66 @@
 
-@media(max-width:768px)
-{
 #sidebar{
-/*red*/
-/*
-background-color: rgb(221,77,66);
-*/
 
-/*blue*/
+	width: 70px;
 
 
+	text-align: center;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 50px; /*top navbar height*/
+	
+	 /* in the values below, 50px is top navbar's height */
+	height: -moz-calc(100vh - 50px); /* Firefox */
+	height: -webkit-calc(100vh - 50px); /* WebKit */
+	height: -o-calc(100vh - 50px); /* Opera */
+	height: calc(100vh - 50px);	/* Standard */
 
- width: 70px;
- /*
- height: 600px;
- */
- background:  white;
-
- text-align: center;
-
-
-
-}
+	/* background-color: red;*/
 }
 
-#sidebar li {
-	margin-top:20px;
-	margin-bottom:50px;
+#sidebar *{
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 
-#sidebar ul {
- background: rgb(51,69,79);
 
+.sidebar-item {
+	display: table-row;
+	width: 100%;	
+	vertical-align: middle;
+}
+
+.sidebar-item > div{
+	table-layout: fixed;
+	display: table;
+	height: 100%;
+	width: 100%;
+
+}
+
+.sidebar-item > div > div{
+	display: table-row;
+	width: 100%;	
+	height: 33%;
+}
+
+#sidebar .sidebar-ul{
+	table-layout: fixed;
+	display: table;
+	height: 100%;
+	width: 100%;
+	background: rgb(51,69,79);
 }
 
 .button-toggle-grey {
 	color: #E8E7E7;
 }
 
-#sidebar .active {
-	border: 0px;
-}
 
-
-#sidebar ul.nav.nav-second-level.collapse.in::before {
-	width: 0px;
-	height: 0px;
-	margin: 0px;
-	padding: 0px;
-
-}
-
-#sidebar li:hover {
-		background: rgb(21,49,59);
+#sidebar .sidebar-item:hover {
+	background: rgb(21,49,59);
 }
 
 #sidebar-toggle-icon-black:hover{
