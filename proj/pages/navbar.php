@@ -249,7 +249,7 @@
                 <div>
                     <div></div>
                     <div>
-                        <a href="index.php">
+                        <a a href="index.php?page=circles">
                             <i class="fa fa-circle-thin fa-2x button-toggle-grey"></i>
                             <p class="button-toggle-grey"> Circles </p>
                         </a>

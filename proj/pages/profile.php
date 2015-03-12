@@ -1,6 +1,6 @@
 <? include 'navbar.php'; ?>
 <!-- based on http://www.bootply.com/AdHpVL3xRF-->
-<div class=" page-wrapper">
+<div id="page-wrapper">
   
 	 <hr class="">
 	 <!--header profile-->
@@ -197,5 +197,5 @@
 				 
 		</div>
 			  
-	</div>
+</div>
 	

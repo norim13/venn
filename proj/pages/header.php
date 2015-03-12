@@ -31,12 +31,16 @@
 
         <!-- Custom CSS -->
         <link href="assets/frameworks/sb-admin-2.css" rel="stylesheet">
+
         <link href="assets/css/navbar.css" rel="stylesheet">
 
         <link href="assets/css/sidebar.css" rel="stylesheet">
+
         <link href="assets/css/body.css" rel="stylesheet">
 
         <link href="assets/css/pannels.css" rel="stylesheet">
+
+        <link href="assets/css/circles.css" rel="stylesheet">
 
 		<link rel="stylesheet" href="assets/frameworks/animate.css">
 

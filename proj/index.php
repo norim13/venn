@@ -16,9 +16,15 @@ switch ($currentPage) {
 	include 'pages/feed.php';
 	break;
 
+	case 'circles':
+	include 'pages/circles.php';
+	break;
+
 	default:
 	include 'pages/feed.php';
 	break;
+
+
 }
 
 include 'pages/footer.php';
