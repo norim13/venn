@@ -230,70 +230,73 @@
 	
 	
 	
-    <div  id="sidebar" class="navbar-default sidebar sidebar-nav navbar-collapse" role="navigation">
-        <div class="sidebar-ul">
+    <div  id="sidebar" class="sidebar sidebar-collapse" role="navigation">
+        <div class="sidebar-ul" >
             
             <div class="sidebar-item">
-                <div>
-                    <div></div>
-                    <div>
-                        <a href="index.php"></a>
-                        <i class="fa fa-home fa-2x button-toggle-grey"></i>
-                        <p class="button-toggle-grey"> Home </p>
+                <div class="vcentered-content">
+                    <div class="vcentered-space"></div>
+                    <div class="vcentered-space sidebar-item-content">
+                        <a href="index.php">
+                            <i class="fa fa-home fa-2x button-toggle-grey"></i>
+                            <p class="button-toggle-grey"> Home </p>
+                        </a>
                     </div>
-                    <div></div>
+                    <div class="vcentered-space"></div>
                 </div>
             </div>
-            
+
             <div class="sidebar-item">
-                <div>
-                    <div></div>
-                    <div>
+                <div class="vcentered-content">
+                    <div class="vcentered-space"></div>
+                    <div class="vcentered-space sidebar-item-content">
                         <a href="index.php">
                             <i class="fa fa-circle-thin fa-2x button-toggle-grey"></i>
                             <p class="button-toggle-grey"> Circles </p>
                         </a>
                     </div>
-                    <div></div>
+                    <div class="vcentered-space"></div>
                 </div>
             </div>
-            
+
             <div class="sidebar-item">
-                <div>
-                    <div></div>
-                    <div>
-                        <a href="index.php"> </a>
-                        <i class="fa fa-globe fa-2x button-toggle-grey" ></i>
-                        <p class="button-toggle-grey"> News </p>     
-                    </div>   
-                    <div></div>                            
-                </div>                               
+                <div class="vcentered-content">
+                    <div class="vcentered-space"></div>
+                    <div class="vcentered-space sidebar-item-content">
+                        <a href="index.php">
+                            <i class="fa fa-globe fa-2x button-toggle-grey" ></i>
+                            <p class="button-toggle-grey"> News </p>  
+                        </a>
+                    </div>
+                    <div class="vcentered-space"></div>
+                </div>
             </div>
-           
+
             <div class="sidebar-item">
-                <div>
-                    <div></div>
-                    <div>
-                        <a href="index.php" ></a>
-                        <i class="fa fa-search fa-2x button-toggle-grey" ></i>
+                <div class="vcentered-content">
+                    <div class="vcentered-space"></div>
+                    <div class="vcentered-space sidebar-item-content">
+                        <a href="index.php">
+                            <i class="fa fa-search fa-2x button-toggle-grey" ></i>
                         <p class="button-toggle-grey"> Search </p>
+                        </a>
                     </div>
-                    <div></div>
+                    <div class="vcentered-space"></div>
                 </div>
             </div>
-            
+
             <div class="sidebar-item">
-                <div>
-                    <div></div>
-                    <div>
-                        <a href="index.php"></a>
-                        <i  class="fa fa-star-o fa-2x button-toggle-grey"></i>
-                        <p class="button-toggle-grey"> Starred </p>
+                <div class="vcentered-content">
+                    <div class="vcentered-space"></div>
+                    <div class="vcentered-space sidebar-item-content">
+                        <a href="index.php">
+                            <i  class="fa fa-star-o fa-2x button-toggle-grey"></i>
+                            <p class="button-toggle-grey"> Starred </p>
+                        </a>
                     </div>
-                    <div></div>
+                    <div class="vcentered-space"></div>
                 </div>
             </div>
-                
         
         </div>
     </div>

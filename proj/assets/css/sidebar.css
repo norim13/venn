@@ -3,9 +3,9 @@
 
 	width: 70px;
 
-
 	text-align: center;
 	height: 100%;
+	display: block;
 	position: fixed;
 	left: 0;
 	top: 50px; /*top navbar height*/
@@ -32,7 +32,7 @@
 	vertical-align: middle;
 }
 
-.sidebar-item > div{
+.vcentered-content{
 	table-layout: fixed;
 	display: table;
 	height: 100%;
@@ -40,7 +40,7 @@
 
 }
 
-.sidebar-item > div > div{
+.vcentered-space{
 	display: table-row;
 	width: 100%;	
 	height: 33%;
@@ -79,5 +79,47 @@
 }
 
 
+/* ///////////// ///////// //////////// */
+/* ///////////// COLLAPSED //////////// */
+/* ///////////// ///////// //////////// */
 
 
+
+#sidebar.collapsed{
+	position: static;
+
+	display:block;
+	white-space: nowrap;
+	
+	height: auto;
+	width: 100%;
+	background: rgb(51,69,79);
+}
+
+#sidebar.collapsed .sidebar-item {
+	width: auto;
+	position: static;
+	display:inline-block;
+	white-space: normal;	
+	margin: 10px 20px;
+	
+}
+
+
+#sidebar.collapsed .vcentered-content .sidebar-item-content{
+	width: auto;
+}
+
+#sidebar.collapsed .vcentered-space{
+	width: auto;
+}
+#sidebar.collapsed .vcentered-content{
+	width: auto;
+	height: 100%;
+}
+
+#sidebar.collapsed .sidebar-ul{
+	
+	height: 100%;
+	background: rgb(51,69,79);
+}
