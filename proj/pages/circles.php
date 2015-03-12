@@ -7,7 +7,10 @@
 
 	<div class="panel panel-default target">
                 <div class="panel-heading" contenteditable="false"> 
-                	<h3>FEUP <button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button></h3>
+                	<h3>FEUP 
+                	<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
+                	<button type="button" class="btn " id="btn-writePost" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
+					</h3>
                 </div>
                 <div class="panel-body">
 	                  <div class="row">
@@ -75,7 +78,14 @@
      </div>
 <div class="panel panel-default target">
                 <div class="panel-heading" contenteditable="false"> 
-                	<h3>Family <button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button></h3>
+                	<h3>Family 
+                	
+
+                	<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
+                	<button type="button" class="btn " id="btn-writePost" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
+
+
+                	</h3>
                 </div>
                 <div class="panel-body">
 	                  <div class="row">
