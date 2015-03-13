@@ -86,14 +86,16 @@
 
 
 #sidebar.collapsed{
-	position: static;
-
+	position: fixed;
+	top: 100px;
+	z-index: 100;
 	display:block;
 	white-space: nowrap;
 	
 	height: auto;
 	width: 100%;
 	background: rgb(51,69,79);
+	/*margin-top: 100px;*/
 }
 
 #sidebar.collapsed .sidebar-item {

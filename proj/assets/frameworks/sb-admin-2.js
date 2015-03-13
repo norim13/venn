@@ -16,11 +16,13 @@ $(function() {
                 $('div.sidebar-collapse').addClass('collapsed');
                 topOffset = 100; // 2-row-menu
                 $("#sidebar").hide();
+             	$("#page-wrapper").css('margin-top', 100);   
             }
            
         } else {
             $('div.sidebar-collapse').removeClass('collapsed');
             $('div.sidebar-collapse').show();
+            $("#page-wrapper").css('margin-top', 50); 
         }
 
         height = ((this.window.innerHeight > 0) ? this.window.innerHeight : this.screen.height) - 1;
@@ -43,9 +45,9 @@ $(function() {
         if ($("#sidebar").css('display') == 'none'){
             //$("#sidebar").css('display', 'block');
             
-            $("#sidebar").slideDown(700);
+            $("#sidebar").slideDown(500);
         }
-        else $("#sidebar").slideUp(700);
+        else $("#sidebar").slideUp(500);
     })
 
 });
