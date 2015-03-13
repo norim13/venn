@@ -23,8 +23,6 @@ switch ($currentPage) {
 	default:
 	include 'pages/feed.php';
 	break;
-
-
 }
 
 include 'pages/footer.php';

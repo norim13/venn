@@ -1,16 +1,9 @@
 #navbar{
-	/*red*/
-/*
-background-color: rgb(221,77,66);
-*/
-
-/*blue*/
-/*
-background-color: rgb(51,122,183);
-*/
-
-/*green*/
-background-color: rgb(92,184,92);
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	/*green*/
+	background-color: rgb(92,184,92);
 }
 
 #navbar-toggle-icon-black{
@@ -27,6 +20,6 @@ background-color: rgb(92,184,92);
 }
 
 #navbar-brand-white{
-color:white;
+	color: white;
 }
 
