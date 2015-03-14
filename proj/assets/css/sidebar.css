@@ -88,7 +88,7 @@
 #sidebar.collapsed{
 	position: fixed;
 	top: 100px;
-	z-index: 100;
+	z-index: 1000;
 	display:block;
 	white-space: nowrap;
 	
@@ -124,4 +124,43 @@
 	
 	height: 100%;
 	background: rgb(51,69,79);
+}
+
+
+
+/* ///////////// ///////// //////////// */
+/* /////////////  SEARCH   //////////// */
+/* ///////////// ///////// //////////// */
+
+
+#search-field{
+	background: rgb(51,69,79);
+	position: fixed;
+	left: 70px;
+	width: 400px;
+	height: 80px;
+	z-index: 500;
+	display: none;
+
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#search-field input{
+	width: 90%;
+	margin: 10px 0px;
+}
+
+#search-field.collapsed{
+	left: 0px;
+	top: 170px;
+	width: 100%;
+	height: 80px;
+
+	display: none;
+
+	-webkit-border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	border-bottom-right-radius: 0px;
 }

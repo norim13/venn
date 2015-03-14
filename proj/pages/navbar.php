@@ -223,14 +223,30 @@
 </nav>
 
 <!-- SIDEBAR -->
+
 <div  id="sidebar" class="sidebar sidebar-collapse" role="navigation">
     <div class="sidebar-ul" >
+
+        <div id="search-toggle" class="sidebar-item">
+            <div class="vcentered-content">
+                <div class="vcentered-space"></div>
+                <div class="vcentered-space sidebar-item-content">
+                    <!--<a href="index.php">-->
+                        <i class="fa fa-search fa-2x button-toggle-grey" ></i>
+                        <p class="button-toggle-grey"> Search </p>
+                    <!--</a>-->
+                </div>
+                <div class="vcentered-space"></div>
+            </div>
+        </div>
+
 
         <div class="sidebar-item">
             <div class="vcentered-content">
                 <div class="vcentered-space"></div>
                 <div class="vcentered-space sidebar-item-content">
                     <a href="index.php">
+                        
                         <i class="fa fa-home fa-2x button-toggle-grey"></i>
                         <p class="button-toggle-grey"> Home </p>
                     </a>
@@ -253,44 +269,12 @@
             </div>
         </div>
 
-        <div class="sidebar-item">
-            <div class="vcentered-content">
-                <div class="vcentered-space"></div>
-                <div class="vcentered-space sidebar-item-content">
-                    <a href="index.php">
-                        <i class="fa fa-globe fa-2x button-toggle-grey" ></i>
-                        <p class="button-toggle-grey"> News </p>  
-                    </a>
-                </div>
-                <div class="vcentered-space"></div>
-            </div>
-        </div>
 
-        <div class="sidebar-item">
-            <div class="vcentered-content">
-                <div class="vcentered-space"></div>
-                <div class="vcentered-space sidebar-item-content">
-                    <a href="index.php">
-                        <i class="fa fa-search fa-2x button-toggle-grey" ></i>
-                        <p class="button-toggle-grey"> Search </p>
-                    </a>
-                </div>
-                <div class="vcentered-space"></div>
-            </div>
-        </div>
-
-        <div class="sidebar-item">
-            <div class="vcentered-content">
-                <div class="vcentered-space"></div>
-                <div class="vcentered-space sidebar-item-content">
-                    <a href="index.php">
-                        <i  class="fa fa-star-o fa-2x button-toggle-grey"></i>
-                        <p class="button-toggle-grey"> Starred </p>
-                    </a>
-                </div>
-                <div class="vcentered-space"></div>
-            </div>
-        </div>
         
+        
+    </div>
+
+    <div id="search-field" class="search-field">
+        <input type="text" name="search">
     </div>
 </div>
