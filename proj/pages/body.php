@@ -66,7 +66,7 @@
 					Mira
 				</div>
 
-				<div class="panel-body"  >
+				<div class="panel-body" >
 					<!-- voting section -->
 					<div class="vote-section" >
 						<table style="text-align:center;">
@@ -175,14 +175,8 @@
 							</div>
 						</div>
 					</div>
-
-
-
-
-
 					<!-- /.row -->
 				</div>
-
 
 				<div class=" col-lg-6 clearfix">
 					<h1>Circles</h1>

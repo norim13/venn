@@ -1,4 +1,23 @@
-<div class="container">
+<link href="assets/css/login.css" rel="stylesheet">
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header">
+	<div><span>Venn</span></div>
+</div>
+<br>
+<div class="login">
+	<input type="text" placeholder="username" name="user"><br>
+	<input type="password" placeholder="password" name="password"><br>
+	<input type="button" value="Login"><br>
+	<div>
+		<a href="index.php?page=signUp">
+			<span> Sign Up </span>
+		</a>
+	</div>
+</div>
+
+
+<!--<div class="container">
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
 			<div class="login-panel panel panel-default">
@@ -20,11 +39,11 @@
 								</label>
 							</div>
 							<!-- Change this to a button or input when using this as a form -->
-							<a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
+							<!--<a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
 						</fieldset>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</div>-->

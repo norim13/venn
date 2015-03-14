@@ -231,8 +231,8 @@
                 <div class="vcentered-space"></div>
                 <div class="vcentered-space sidebar-item-content">
                     <!--<a href="index.php">-->
-                        <i class="fa fa-search fa-2x button-toggle-grey" ></i>
-                        <p class="button-toggle-grey"> Search </p>
+                    <i class="fa fa-search fa-2x button-toggle-grey" ></i>
+                    <p class="button-toggle-grey"> Search </p>
                     <!--</a>-->
                 </div>
                 <div class="vcentered-space"></div>
@@ -244,7 +244,7 @@
             <div class="vcentered-content">
                 <div class="vcentered-space"></div>
                 <div class="vcentered-space sidebar-item-content">
-                    <a href="index.php">
+                    <a href="index.php?page=feed">
                         
                         <i class="fa fa-home fa-2x button-toggle-grey"></i>
                         <p class="button-toggle-grey"> Home </p>
@@ -280,10 +280,6 @@
                 <div class="vcentered-space"></div>
             </div>
         </div>
-
-
-        
-        
     </div>
 
     <div id="search-field" class="search-field">
