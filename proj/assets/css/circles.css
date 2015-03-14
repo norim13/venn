@@ -11,12 +11,14 @@
 }
 
 #btn-newCircle{
-margin-bottom: 2em;
+margin-bottom: auto;
+margin-top: auto;
+margin: 15px;
 }
 
 #btn-writePost{
 background-color: transparent;
 border-color: transparent;
-font-size: 0.6em;
+/*font-size: 0.6em;*/
 color:rgb(51,69,79);
 }
