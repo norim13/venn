@@ -226,7 +226,6 @@
 
 <div  id="sidebar" class="sidebar sidebar-collapse" role="navigation">
     <div class="sidebar-ul" >
-
         <div id="search-toggle" class="sidebar-item">
             <div class="vcentered-content">
                 <div class="vcentered-space"></div>
@@ -249,6 +248,19 @@
                         
                         <i class="fa fa-home fa-2x button-toggle-grey"></i>
                         <p class="button-toggle-grey"> Home </p>
+                    </a>
+                </div>
+                <div class="vcentered-space"></div>
+            </div>
+        </div>
+
+        <div class="sidebar-item">
+            <div class="vcentered-content">
+                <div class="vcentered-space"></div>
+                <div class="vcentered-space sidebar-item-content">
+                    <a href="index.php?page=profile">
+                        <i class="fa fa-user fa-2x button-toggle-grey"></i>
+                        <p class="button-toggle-grey"> Profile </p>
                     </a>
                 </div>
                 <div class="vcentered-space"></div>
