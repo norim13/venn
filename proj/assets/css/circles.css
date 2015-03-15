@@ -22,3 +22,23 @@ border-color: transparent;
 /*font-size: 0.6em;*/
 color:rgb(51,69,79);
 }
+
+.profile-circles{
+ 	display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+.circle-members .panel-heading{
+	background: transparent;
+	border: none;
+
+}
+
+.circle-group .caption h3{
+	text-align: center;
+}
+
+.circle-group .thumbnail{
+	border: none;
+}
