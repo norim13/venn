@@ -15,9 +15,6 @@
 				<div class="panel-body">
 					<form role="form">
 						<fieldset>
-							<div class="form-group" type="hidden">
-								<input class="form-control" placeholder="E-mail" name="email" type="hidden">
-							</div>
 							<div class="form-group">
 								<input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
 							</div>
@@ -26,7 +23,7 @@
 							</div>
 
 							<div id="login_btns">
-								<a href="index.php?page=signUp" class="btn btn-lg btn-success">Sign Up</a>
+								<a href="index.php?page=signUp" class="btn btn-lg btn-success">Sign up</a>
 								<input class="btn btn-lg btn-success" type="button" value="Login">
 							</div>
 						</fieldset>

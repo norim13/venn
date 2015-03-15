@@ -27,8 +27,13 @@
 							<div class="form-group">
 								<input class="form-control" placeholder="Repeat Password" name="confirmPassword" type="password" value="">
 							</div>
+							<div class="form-group">
+								<label class="radio-inline"><input type="radio" name="optradio">Male</label>
+								<label class="radio-inline"><input type="radio" name="optradio">Female</label>
+								<label class="radio-inline"><input type="radio" name="optradio">Other</label>
+							</div>
 							<div id="login_btns">
-								<a href="index.php?page=login"> Back </a>
+								<a id="signup_back" href="index.php?page=login"> Back </a>
 								<input class="btn btn-lg btn-success" type="button" value="Sign Up">
 							</div>
 						</fieldset>

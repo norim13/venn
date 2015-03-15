@@ -23,6 +23,16 @@ div#login_btns {
 	padding: 5px 10px;
 }
 
+#signup_back {
+	text-decoration: none;
+	color: green;
+}
+
+#login_container input:focus {
+    border-color: green;
+}
+
 #login_container{
 	margin-top: 50px;
 }
+
