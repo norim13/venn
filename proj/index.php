@@ -8,7 +8,7 @@ switch ($currentPage) {
 	include 'pages/login.php';
 	break;
 
-	case 'signUp':
+	case 'signup':
 	include 'pages/signup.php';
 	break;
 

@@ -38,6 +38,8 @@
 
         <link href="assets/css/body.css" rel="stylesheet">
 
+        <link href="assets/css/footer.css" rel="stylesheet">
+
         <link href="assets/css/pannels.css" rel="stylesheet">
 
         <link href="assets/frameworks/animate.css" rel="stylesheet">

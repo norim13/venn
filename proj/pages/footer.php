@@ -1,5 +1,5 @@
-	<footer >
-		<p style="text-align:center;">Copyright © 2015 Venn</p>
+	<footer>
+		<p>Copyright © 2015 Venn</p>
 	</footer>
 
 	<!-- jQuery -->

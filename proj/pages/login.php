@@ -13,9 +13,9 @@
 		<div class="row">
 			<div class="col-md-4 col-md-offset-4">
 				<div class="login-panel panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">Please Sign In</h3>
-					</div>
+					<!--<div class="panel-heading">
+						<h3 class="panel-title">Sign in</h3>
+					</div>-->
 					<div class="panel-body">
 						<form role="form">
 							<fieldset>
@@ -27,7 +27,7 @@
 								</div>
 
 								<div id="login_btns">
-									<a href="index.php?page=signUp" class="btn btn-lg btn-success">Sign up</a>
+									<a id="signup_back" href="index.php?page=signup"> Create an account </a>
 									<input class="btn btn-lg btn-success" type="button" value="Login">
 								</div>
 							</fieldset>

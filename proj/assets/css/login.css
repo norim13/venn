@@ -1,3 +1,7 @@
+body {
+	background-color: #B5D8A2;
+}
+
 .header {
 	margin-top: 10%;
 	margin-left: 5%;
@@ -6,7 +10,7 @@
 	font-weight: 200;
 }
 
-.header div span{
+.header div span {
 	color: rgb(92,184,92) !important;
 }
 
@@ -36,3 +40,6 @@ div#login_btns {
 	margin-top: 50px;
 }
 
+footer {
+	display: none;
+}
