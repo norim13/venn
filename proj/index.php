@@ -1,8 +1,6 @@
 <?php
 include 'pages/header.php';
 
-
-
 $currentPage = isset($_GET['page']) ? $_GET['page'] : 'feed';
 
 switch ($currentPage) {

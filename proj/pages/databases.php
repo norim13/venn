@@ -1,6 +1,4 @@
-<?php include 'pages/header.php'; ?>
-
-
+    <?php include 'pages/header.php'; ?>
     <!-- Custom CSS -->
     <link href="assets/frameworks/sb-admin.css" rel="stylesheet">
     <link href="assets/css/admin.css" rel="stylesheet"> 
@@ -21,7 +19,7 @@
             <!-- /.navbar-header -->
 
             <div class="logoutButton">
-            <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
             </div>
             <!-- /.navbar-top-links -->
 
@@ -32,7 +30,7 @@
                         <li>
                             <a href="index.html"><i class="fa fa-cogs fa-fw"></i> Main panel</a>
                         </li>
-                             
+                        
                         <li>
                             <a href="#"><i class="fa fa-database fa-fw"></i> Databases<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -61,8 +59,8 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-                    
-                                          
+                        
+                        
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -118,196 +116,196 @@
                         </a>
                     </div>
                 </div>
-              
+                
                 
             </div>
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
-                                       <!-- /.panel -->
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <i class="fa fa-inbox fa-fw"></i> User report log
-                            <div class="pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                        Actions
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="#">Action</a>
-                                        </li>
-                                        <li><a href="#">Another action</a>
-                                        </li>
-                                        <li><a href="#">Something else here</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                   <!-- /.panel -->
+                   <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <i class="fa fa-inbox fa-fw"></i> User report log
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    Actions
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li><a href="#">Action</a>
+                                    </li>
+                                    <li><a href="#">Another action</a>
+                                    </li>
+                                    <li><a href="#">Something else here</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered table-hover table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>UserID</th>
-                                                    <th>Date</th>
-                                                    <th>Type</th>
-                                                    <th>Description</th>
-                                                    <th>Status</th>
-
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>3326</td>
-                                                    <td>1230459</td>
-                                                    <td>10/21/2013 3:29 PM</td>
-                                                    <td>Bug</td>
-                                                    <td>The site crashed when I tried to use the fridge</td>
-                                                    <td>Dismissed</td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>3325</td>
-                                                    <td>1230574</td>
-                                                    <td>9/21/2013 3:29 PM</td>
-                                                    <td>Report</td>
-                                                    <td>Someone posted a photo of mine without my permission </td>
-                                                    <td>Closed</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3324</td>
-                                                    <td>1230459</td>
-                                                    <td>10/21/2013 3:29 PM</td>
-                                                    <td>Bug</td>
-                                                    <td>Photos don't load automatically when my profile is updated</td>
-                                                    <td>Open</td>
-                                                </tr>
-                                             
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <!-- /.table-responsive -->
-                                </div>
-                                <!-- /.col-lg-4 (nested) -->
-                                <div class="col-lg-8">
-                                    <div id="morris-bar-chart"></div>
-                                </div>
-                                <!-- /.col-lg-8 (nested) -->
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /.panel-body -->
                     </div>
-                    <!-- /.panel -->
-                   
-                    <!-- /.panel -->
-                </div>
-               
-            </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>UserID</th>
+                                                <th>Date</th>
+                                                <th>Type</th>
+                                                <th>Description</th>
+                                                <th>Status</th>
 
-              <div class="row">
-                <div class="col-lg-12">
-                                       <!-- /.panel -->
-                    <div class="panel panel-danger">
-                        <div class="panel-heading">
-                            <i class="fa fa-wrench fa-fw"></i> System report log
-                            <div class="pull-right">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                        Actions
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu pull-right" role="menu">
-                                        <li><a href="#">Action</a>
-                                        </li>
-                                        <li><a href="#">Another action</a>
-                                        </li>
-                                        <li><a href="#">Something else here</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a>
-                                        </li>
-                                    </ul>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>3326</td>
+                                                <td>1230459</td>
+                                                <td>10/21/2013 3:29 PM</td>
+                                                <td>Bug</td>
+                                                <td>The site crashed when I tried to use the fridge</td>
+                                                <td>Dismissed</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>3325</td>
+                                                <td>1230574</td>
+                                                <td>9/21/2013 3:29 PM</td>
+                                                <td>Report</td>
+                                                <td>Someone posted a photo of mine without my permission </td>
+                                                <td>Closed</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3324</td>
+                                                <td>1230459</td>
+                                                <td>10/21/2013 3:29 PM</td>
+                                                <td>Bug</td>
+                                                <td>Photos don't load automatically when my profile is updated</td>
+                                                <td>Open</td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
                                 </div>
+                                <!-- /.table-responsive -->
                             </div>
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered table-hover table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>UserID</th>
-                                                    <th>Date</th>
-                                                    <th>Type</th>
-                                                    <th>Description</th>
-                                                    <th>Status</th>
-
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>3326</td>
-                                                    <td>1230459</td>
-                                                    <td>10/21/2013 3:29 PM</td>
-                                                    <td>Bug</td>
-                                                    <td>The site crashed when I tried to use the fridge</td>
-                                                    <td>Dismissed</td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>3325</td>
-                                                    <td>1230574</td>
-                                                    <td>9/21/2013 3:29 PM</td>
-                                                    <td>Report</td>
-                                                    <td>Someone posted a photo of mine without my permission </td>
-                                                    <td>Closed</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3324</td>
-                                                    <td>1230459</td>
-                                                    <td>10/21/2013 3:29 PM</td>
-                                                    <td>Bug</td>
-                                                    <td>Photos don't load automatically when my profile is updated</td>
-                                                    <td>Open</td>
-                                                </tr>
-                                             
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <!-- /.table-responsive -->
-                                </div>
-                                <!-- /.col-lg-4 (nested) -->
-                                <div class="col-lg-8">
-                                    <div id="morris-bar-chart"></div>
-                                </div>
-                                <!-- /.col-lg-8 (nested) -->
+                            <!-- /.col-lg-4 (nested) -->
+                            <div class="col-lg-8">
+                                <div id="morris-bar-chart"></div>
                             </div>
-                            <!-- /.row -->
+                            <!-- /.col-lg-8 (nested) -->
                         </div>
-                        <!-- /.panel-body -->
+                        <!-- /.row -->
                     </div>
-                    <!-- /.panel -->
-                   
-                    <!-- /.panel -->
+                    <!-- /.panel-body -->
                 </div>
-             
+                <!-- /.panel -->
+                
+                <!-- /.panel -->
             </div>
-            <!-- /.row -->
+            
         </div>
-        <!-- /#page-wrapper -->
 
+        <div class="row">
+            <div class="col-lg-12">
+               <!-- /.panel -->
+               <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <i class="fa fa-wrench fa-fw"></i> System report log
+                    <div class="pull-right">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                Actions
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu pull-right" role="menu">
+                                <li><a href="#">Action</a>
+                                </li>
+                                <li><a href="#">Another action</a>
+                                </li>
+                                <li><a href="#">Something else here</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>UserID</th>
+                                            <th>Date</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th>Status</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>3326</td>
+                                            <td>1230459</td>
+                                            <td>10/21/2013 3:29 PM</td>
+                                            <td>Bug</td>
+                                            <td>The site crashed when I tried to use the fridge</td>
+                                            <td>Dismissed</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>3325</td>
+                                            <td>1230574</td>
+                                            <td>9/21/2013 3:29 PM</td>
+                                            <td>Report</td>
+                                            <td>Someone posted a photo of mine without my permission </td>
+                                            <td>Closed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3324</td>
+                                            <td>1230459</td>
+                                            <td>10/21/2013 3:29 PM</td>
+                                            <td>Bug</td>
+                                            <td>Photos don't load automatically when my profile is updated</td>
+                                            <td>Open</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.col-lg-4 (nested) -->
+                        <div class="col-lg-8">
+                            <div id="morris-bar-chart"></div>
+                        </div>
+                        <!-- /.col-lg-8 (nested) -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+            
+            <!-- /.panel -->
+        </div>
+        
     </div>
-    <!-- /#wrapper -->
+    <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
