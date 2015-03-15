@@ -43,7 +43,12 @@ margin: 15px;
 
 .circle-group .thumbnail{
 	border: none;
+	margin:0px;
 
+}
+
+.circle-group .thumbnail h3{
+	margin: none;
 }
 
 .profile-thumbnail p{
