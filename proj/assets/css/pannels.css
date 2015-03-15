@@ -4,6 +4,15 @@
 	border-radius: 0px;
 }
 
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+}
+
+
+
+
+
 #btn-comment{
 	float: right;
 	background-color:transparent;
