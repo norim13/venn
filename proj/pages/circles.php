@@ -1,7 +1,8 @@
 <? include 'navbar.php'; ?>
 <!-- based on http://www.bootply.com/AdHpVL3xRF-->
 <div id="page-wrapper">
-		<div>
+
+<div>
 		<h1 class="">Circles</h1>
 		
 </div>
@@ -198,246 +199,33 @@
  </div>
 
 
-	<!--
 
-		<div class="panel panel-default target col-md-6">
-	                <div class="panel-heading" contenteditable="false"> 
-	                	<h3>FEUP 
-	                	<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
-	                	<button type="button" class="btn " id="btn-transparent" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
-						</h3>
-	                </div>
-	                <div class="panel-body">
-		                  <div class="row">
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles" class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class=" col-md-1 profile-thumbnail"style="float:left">
-										<img alt="200x200" class="profile-circles" class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/2">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail"style="float:left">
-										<img alt="200x200" class="profile-circles" class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/3">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles" class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles" class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles" class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles" class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles" class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles" class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles" class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles" class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles" class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles" class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles" class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-									
-	                 
-	            			</div>
-	                     
-	      			</div>
-	     </div>
-	<div class="panel panel-default target col-md-6">
-	                <div class="panel-heading" contenteditable="false"> 
-	                	<h3>Family 
-	                	
-
-	                	<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
-	                	<button type="button" class="btn " id="btn-transparent" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
+<div>
+		<h1 class="">Friend Requests</h1>
+		
+</div>
 
 
-	                	</h3>
-	                </div>
-	                <div class="panel-body">
-		                  <div class="row">
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class=" col-md-1 profile-thumbnail"style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail"style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-									
-	                 
-	            			</div>
-	                     
-	      			</div>
-	     </div>
+<div class="panel panel-default target col-md-12 circle-members" id="circle-members">
+            <div class="panel-body">
+                  <div class="row">
+						<div class="col-md-1 profile-thumbnail">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people">
+								<p>John L.</p>
+								<table  cellpadding="0" cellspacing="0" style="width: 100%; text-align:center" class="col-md-2">
+									<tr>
+										<td><a href=""><i class="fa fa-check"></i></a></td>
+										<td><a href=""><i class="fa fa-times"></i></a></td>
+									</tr>
+								</table>
+						</div>
+							
+             
+        			</div>
+                 
+  			</div>
+ </div>
 
-		<div class="panel panel-default target col-md-6">
-	                <div class="panel-heading" contenteditable="false"> 
-	                	<h3>FEUP 
-	                	<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
-	                	<button type="button" class="btn " id="btn-transparent" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
-						</h3>
-	                </div>
-	                <div class="panel-body">
-		                  <div class="row">
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class=" col-md-1 profile-thumbnail"style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/2">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail"style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/3">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-									
-	                 
-	            			</div>
-	                     
-	      			</div>
-	     </div>
-	<div class="panel panel-default target col-md-6">
-	                <div class="panel-heading" contenteditable="false"> 
-	                	<h3>Family 
-	                	
-
-	                	<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
-	                	<button type="button" class="btn " id="btn-transparent" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
-
-
-	                	</h3>
-	                </div>
-	                <div class="panel-body">
-		                  <div class="row">
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class=" col-md-1 profile-thumbnail"style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail"style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200"  class="img-circle img-responsive" src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-									
-	                 
-	            			</div>
-	                     
-	      			</div>
-	     </div>
-	-->
 
 </div>
 
