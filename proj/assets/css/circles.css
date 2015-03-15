@@ -16,12 +16,7 @@ margin-top: auto;
 margin: 15px;
 }
 
-#btn-writePost{
-background-color: transparent;
-border-color: transparent;
-/*font-size: 0.6em;*/
-color:rgb(51,69,79);
-}
+
 
 .profile-circles{
  	display: block;
@@ -35,10 +30,20 @@ color:rgb(51,69,79);
 
 }
 
-.circle-group .caption h3{
+
+
+.circle-group .caption{
 	text-align: center;
+}
+
+.circle-group .caption #btn-transparent{
+    margin-left: auto;
+    margin-right: auto 
 }
 
 .circle-group .thumbnail{
 	border: none;
+
 }
+
+

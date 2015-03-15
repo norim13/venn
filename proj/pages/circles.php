@@ -16,12 +16,15 @@
 
 			<div class="col-md-3">
 				<div class="thumbnail">
-					<img alt="300x300" class="img-circle img-responsive"src="http://lorempixel.com/150/150/people">
+					<a href=""><img alt="300x300" class="img-circle img-responsive"src="http://lorempixel.com/100/100/people"></a>
 					<div class="caption">
-						<h3>FEUP</h3>
+						<h3 class="fill-flow">FEUP <br/>
+						<button class="btn " id="btn-transparent"type="button" data-toggle="collapse" data-target="#circle-members" aria-expanded="false" aria-controls="comments">
+							Show more	
+						</button></h3>
 						<p>
 							<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
-            				<button type="button" class="btn " id="btn-writePost" >
+            				<button type="button" class="btn " id="btn-transparent" >
             					<i class="fa fa-pencil-square-o "></i> Write to this Circle
         					</button>
 						</p>
@@ -31,12 +34,15 @@
 
 			<div class="col-md-3">
 				<div class="thumbnail">
-					<img alt="300x300" class="img-circle img-responsive"src="http://lorempixel.com/150/150/people/3">
+					<a href=""><img alt="300x300" class="img-circle img-responsive"src="http://lorempixel.com/100/100/people/10"></a>
 					<div class="caption">
-						<h3>Family</h3>
+						<h3 class="fill-flow">Family <br/>
+						<button class="btn " id="btn-transparent"type="button" data-toggle="collapse" data-target="#circle-members2" aria-expanded="false" aria-controls="comments">
+							Show more	
+						</button></h3>
 						<p>
 							<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
-            				<button type="button" class="btn " id="btn-writePost" >
+            				<button type="button" class="btn " id="btn-transparent" >
             					<i class="fa fa-pencil-square-o "></i> Write to this Circle
         					</button>
 						</p>
@@ -47,77 +53,149 @@
 	</div>
 </div>
 
-		<div class="panel panel-default target col-md-12 circle-members">
-	                <div class="panel-heading" contenteditable="false"> 
-	                	<h3>FEUP - Members
-	                	<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
-	                	<button type="button" class="btn " id="btn-writePost" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
-						</h3>
-	                </div>
-	                <div class="panel-body">
-		                  <div class="row">
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people">
-										<p>John</p>
-								</div>
-								<div class=" col-md-1 profile-thumbnail"style="float:left">
-										<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/2">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail"style="float:left">
-										<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/3">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-								<div class="col-md-1 profile-thumbnail" style="float:left">
-										<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
-										<p>John</p>
-								</div>
-									
-	                 
-	            			</div>
-	                     
-	      			</div>
-	     </div>
+<div class="panel panel-default target col-md-12 circle-members collapse" id="circle-members">
+            <div class="panel-heading" contenteditable="false"> 
+            	<h3>FEUP - 17 Members
+            	<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
+            	<button type="button" class="btn " id="btn-transparent" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
+				</h3>
+            </div>
+            <div class="panel-body">
+                  <div class="row">
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people">
+								<p>John</p>
+						</div>
+						<div class=" col-md-1 profile-thumbnail"style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/2">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail"style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/3">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+							
+             
+        			</div>
+                 
+  			</div>
+ </div>
+
+ <div class="panel panel-default target col-md-12 circle-members collapse" id="circle-members2">
+            <div class="panel-heading" contenteditable="false"> 
+            	<h3>Family - 17 Members
+            	<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
+            	<button type="button" class="btn " id="btn-transparent" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
+				</h3>
+            </div>
+            <div class="panel-body">
+                  <div class="row">
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people">
+								<p>John</p>
+						</div>
+						<div class=" col-md-1 profile-thumbnail"style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/2">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail"style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/3">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+						<div class="col-md-1 profile-thumbnail" style="float:left">
+								<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+								<p>John</p>
+						</div>
+							
+             
+        			</div>
+                 
+  			</div>
+ </div>
 
 
 	<!--
@@ -126,7 +204,7 @@
 	                <div class="panel-heading" contenteditable="false"> 
 	                	<h3>FEUP 
 	                	<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
-	                	<button type="button" class="btn " id="btn-writePost" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
+	                	<button type="button" class="btn " id="btn-transparent" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
 						</h3>
 	                </div>
 	                <div class="panel-body">
@@ -199,7 +277,7 @@
 	                	
 
 	                	<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
-	                	<button type="button" class="btn " id="btn-writePost" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
+	                	<button type="button" class="btn " id="btn-transparent" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
 
 
 	                	</h3>
@@ -245,7 +323,7 @@
 	                <div class="panel-heading" contenteditable="false"> 
 	                	<h3>FEUP 
 	                	<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
-	                	<button type="button" class="btn " id="btn-writePost" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
+	                	<button type="button" class="btn " id="btn-transparent" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
 						</h3>
 	                </div>
 	                <div class="panel-body">
@@ -318,7 +396,7 @@
 	                	
 
 	                	<button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
-	                	<button type="button" class="btn " id="btn-writePost" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
+	                	<button type="button" class="btn " id="btn-transparent" ><i class="fa fa-pencil-square-o "></i> Write to this Circle</button>
 
 
 	                	</h3>

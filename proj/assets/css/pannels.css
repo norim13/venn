@@ -1,9 +1,16 @@
 /*Panel*/
+
+.panel, .col{
+	border-radius: 0px;
+}
+
+
 #panel-feed {
 	background-color:white;
 	position:center;
 	border-radius:0%;
 }
+
 
 #panel-feed .panel-body,#panel-feed .panel-heading,#panel-feed .panel-footer{
 	padding-bottom:8px;
@@ -69,4 +76,15 @@
 #{
 	padding:5px;
 	border-top:1px;
+}
+
+
+#btn-transparent{
+background-color: transparent;
+border-color: transparent;
+/*font-size: 0.6em;*/
+color:rgb(51,69,79);
+}
+#btn-transparent:focus {
+	outline: none;
 }
