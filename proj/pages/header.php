@@ -51,5 +51,19 @@
         <!-- Custom Fonts -->
         <link href="assets/frameworks/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+
+         <link href="assets/css/navbar.css" rel="stylesheet">
+
+        <link href="assets/css/sidebar.css" rel="stylesheet">
+
+        <link href="assets/css/profile.css" rel="stylesheet">
+
+        <link href="assets/css/body.css" rel="stylesheet">
+
+        <link href="assets/css/pannels.css" rel="stylesheet">
+
+        <link href="assets/css/circles.css" rel="stylesheet">
+
+
     </head>
     <body>

@@ -34,7 +34,7 @@
                         </li>
                              
                         <li>
-                            <a href="pages/databases.php"><i class="fa fa-database fa-fw"></i> Databases<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-database fa-fw"></i> Databases<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 
                                 <li>
