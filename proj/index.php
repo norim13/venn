@@ -8,6 +8,10 @@ switch ($currentPage) {
 	include 'pages/login.php';
 	break;
 
+	case 'signUp':
+	include 'pages/signup.php';
+	break;
+
 	case 'profile':
 	include 'pages/profile.php';
 	break;

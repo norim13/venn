@@ -38,6 +38,8 @@
 
         <link href="assets/css/profile.css" rel="stylesheet">
 
+        <link href="assets/css/login.css" rel="stylesheet">
+
         <link href="assets/css/body.css" rel="stylesheet">
 
         <link href="assets/css/pannels.css" rel="stylesheet">

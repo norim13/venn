@@ -10,24 +10,26 @@
 		<div class="col-md-4 col-md-offset-4">
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Please Sign In</h3>
+					<h3 class="panel-title"> Sign Up</h3>
 				</div>
 				<div class="panel-body">
 					<form role="form">
 						<fieldset>
-							<div class="form-group" type="hidden">
-								<input class="form-control" placeholder="E-mail" name="email" type="hidden">
+							<div class="form-group">
+								<input class="form-control" placeholder="Name" name="username" type="text" autofocus>
 							</div>
 							<div class="form-group">
-								<input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+								<input class="form-control" placeholder="E-mail" name="email" type="email">
 							</div>
 							<div class="form-group">
 								<input class="form-control" placeholder="Password" name="password" type="password" value="">
 							</div>
-
+							<div class="form-group">
+								<input class="form-control" placeholder="Repeat Password" name="confirmPassword" type="password" value="">
+							</div>
 							<div id="login_btns">
-								<a href="index.php?page=signUp" class="btn btn-lg btn-success">Sign Up</a>
-								<input class="btn btn-lg btn-success" type="button" value="Login">
+								<a href="index.php?page=login"> Back </a>
+								<input class="btn btn-lg btn-success" type="button" value="Sign Up">
 							</div>
 						</fieldset>
 					</form>
