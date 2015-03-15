@@ -2,7 +2,7 @@
 	<div class=" col-lg-6 clearfix">
 		<h1>People</h1>
 		<!--publication-->
-		<div class=" panel panel-default   animated  fadeInUp" id="panel-feed">
+		<div class=" panel panel-default   " id="panel-feed">
 			<!-- user's name -->
 			<div class="panel-heading ">
 				Mira
@@ -60,7 +60,7 @@
 			</div>
 
 			<!--publication-->
-			<div class=" panel panel-default   animated  fadeInUp" id="panel-feed">
+			<div class=" panel panel-default   " id="panel-feed">
 				<!-- user's name -->
 				<div class="panel-heading ">
 					Mira
@@ -119,7 +119,7 @@
 
 
 				<!--publication-->
-				<div class="panel panel-default   animated  fadeInUp" id="panel-feed">
+				<div class="panel panel-default   " id="panel-feed">
 					<!-- user's name -->
 					<div class="panel-heading ">
 						Mira
@@ -181,7 +181,7 @@
 				<div class=" col-lg-6 clearfix">
 					<h1>Circles</h1>
 					<!--publication-->
-					<div class=" panel panel-default   animated  fadeInUp" id="panel-feed">
+					<div class=" panel panel-default   " id="panel-feed">
 						<!-- user's name -->
 						<div class="panel-heading ">
 							Mira
@@ -239,7 +239,7 @@
 						</div>
 
 						<!--publication-->
-						<div class="panel panel-default   animated  fadeInUp" id="panel-feed">
+						<div class="panel panel-default   " id="panel-feed">
 							<!-- user's name -->
 							<div class="panel-heading ">
 								Mira
@@ -296,7 +296,7 @@
 
 
 							<!--publication-->
-							<div class="panel panel-default   animated  fadeInUp" id="panel-feed">
+							<div class="panel panel-default   " id="panel-feed">
 								<!-- user's name -->
 								<div class="panel-heading ">
 									Mira

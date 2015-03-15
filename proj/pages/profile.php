@@ -49,7 +49,7 @@
 			<div class=" col-lg-12 clearfix">
 				<h2 id="myPostsh2">My posts</h2>
 				<!--publication-->
-				<div class=" panel panel-default   animated  fadeInUp" id="panel-feed">
+				<div class=" panel panel-default   " id="panel-feed">
 					<!-- user's name -->
 					<div class="panel-heading ">
 						Mira
@@ -108,7 +108,7 @@
 					</div>
 
 					<!--publication-->
-					<div class="panel panel-default   animated  fadeInUp" id="panel-feed">
+					<div class="panel panel-default   " id="panel-feed">
 						<!-- user's name -->
 						<div class="panel-heading ">
 							Mira
@@ -166,7 +166,7 @@
 
 
 						<!--publication-->
-						<div class="panel panel-default   animated  fadeInUp" id="panel-feed">
+						<div class="panel panel-default   " id="panel-feed">
 							<!-- user's name -->
 							<div class="panel-heading ">
 								Mira
