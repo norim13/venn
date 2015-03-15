@@ -4,6 +4,12 @@
 	border-radius: 0px;
 }
 
+#btn-comment{
+	float: right;
+	background-color:transparent;
+	border-color:transparent;
+}
+
 
 #panel-feed {
 	background-color:white;

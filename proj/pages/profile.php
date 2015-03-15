@@ -87,6 +87,7 @@
 									<i class="fa fa-comments"></i> Comments
 								</button>
 								<button class="btn btn-default" id="btn-comment"><i class="fa fa-retweet"></i> Repost</button>
+								<button class="btn btn-default" id="btn-comment"><i class="fa fa-trash-o"></i> Delete</button>
 							</div>
 
 							<!-- comment section-->
@@ -143,6 +144,7 @@
 										<i class="fa fa-comments"></i> Comments
 									</button>
 									<button class="btn btn-default" id="btn-comment"><i class="fa fa-retweet"></i> Repost</button>
+									<button class="btn btn-default" id="btn-comment"><i class="fa fa-trash-o"></i> Delete</button>
 								</div>
 
 								<!-- comment section-->
@@ -199,6 +201,7 @@
 										<i class="fa fa-comments"></i> Comments
 									</button>
 									<button class="btn btn-default" id="btn-comment"><i class="fa fa-retweet"></i> Repost</button>
+									<button class="btn btn-default" id="btn-comment"><i class="fa fa-trash-o"></i> Delete</button>
 								</div>
 
 								<!-- comment section-->
