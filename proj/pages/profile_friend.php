@@ -51,7 +51,7 @@
 				<!--bio collum-->
 
 				<div class=" col-lg-12 clearfix">
-					<h2 id="myPostsh2">Recent posts</h2>
+					<h2 id="myPostsh2">Posts</h2>
 					<!--publication-->
 					<br/>
 					<h3>Send Friend request to see recent posts from Mira</h3>
