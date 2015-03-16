@@ -24,6 +24,10 @@ switch ($currentPage) {
 	include 'pages/circles.php';
 	break;
 
+	case 'home':
+	include 'pages/home.html';
+	break;
+
 	default:
 	include 'pages/feed.php';
 	break;
