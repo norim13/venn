@@ -9,6 +9,27 @@
     transition: none;
 }
 
+.btn-success{
+background-color: rgb(92,184,92);
+}
+
+.btn-info{
+	background-color: rgb(58, 94, 115);
+	border-color: rgb(51,69,79);
+}
+
+.btn-info:hover{
+background-color: rgb(51,69,79);
+border-color: rgb(51,69,79);
+}
+.btn-info:focus{
+background-color: rgb(51,69,79);
+border-color: rgb(51,69,79);
+}
+
+
+
+
 
 
 
