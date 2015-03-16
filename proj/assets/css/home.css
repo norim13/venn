@@ -48,6 +48,7 @@ img.grayscale {
    padding:15px;
    background-color:transparent;
    color:#ffffff;
+   float: right;
 }
 
 .header .btn-lg:hover {
