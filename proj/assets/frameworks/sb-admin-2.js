@@ -8,6 +8,15 @@ var width = 0;
 //collapses the sidebar on window resize.
 // Sets the min-height of #page-wrapper to window size
 $(function() {
+
+
+    /* used in sidebar scroll */
+    var $sidebar   = $("#sidebar"), 
+        $window    = $(window),
+        offset     = $sidebar.offset(),
+        topPadding = 50;
+    /* partial end */
+
     $(window).bind("load resize", function() {
         topOffset = 50;
         width = (this.window.innerWidth > 0) ? this.window.innerWidth : this.screen.width;
@@ -33,12 +42,22 @@ $(function() {
             $('div.sidebar-collapse').show();
             $("#page-wrapper").css('margin-top', 50); 
 
-            var search_position = $("#search-toggle").offset();
             
+
+            var search_position = $("#search-toggle").offset();
             $("#search-field").hide();
             $("#search-field").removeClass('collapsed');
-            $("#search-field").css({"top": search_position['top']});
+            $("#search-field").css({"top": 50});
+
+
+            /* sidebar reposition */
+            $sidebar.stop().animate({
+                marginTop: $window.scrollTop() - offset.top + topPadding
+            });
+            /*   */
         }
+
+
 
         height = ((this.window.innerHeight > 0) ? this.window.innerHeight : this.screen.height) - 1;
         height = height - topOffset;
@@ -48,18 +67,10 @@ $(function() {
         }
     });
 
-   /* var url = window.location;
-    var element = $('ul.nav a').filter(function() {
-        return this.href == url || url.href.indexOf(this.href) == 0;
-    }).addClass('active').parent().parent().addClass('in').parent();
-    if (element.is('li')) {
-        element.addClass('active');
-    }*/
+
    
     $("#navbar-toggle-black").click(function(){
         if ($("#sidebar").css('display') == 'none'){
-            //$("#sidebar").css('display', 'block');
-            
             $("#sidebar").slideDown(500);
         }
         else{
@@ -100,6 +111,25 @@ $(function() {
     	
 
     })
+
+
+
+   
+
+    $window.scroll(function() {
+        if (width < 768) 
+            return;
+       /* if ($window.scrollTop() > offset.top) {*/
+            $sidebar.stop().animate({
+                marginTop: $window.scrollTop() - offset.top + topPadding
+            });
+       /* } else {
+            $sidebar.stop().animate({
+                marginTop: 0
+            });
+        }*/
+    });
 });
+
 
 
