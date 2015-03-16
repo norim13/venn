@@ -25,7 +25,7 @@ switch ($currentPage) {
 	break;
 
 	case 'home':
-	include 'pages/home.html';
+	include 'pages/home.php';
 	break;
 
 	default:

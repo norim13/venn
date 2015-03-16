@@ -23,6 +23,8 @@
     <!-- Custom actions -->
     <script type="text/javascript" src="assets/js/login-tp-signup.js"></script>
 
+  	<script type="text/javascript" src="assets/js/home-scripts.js"></script>
+
     <!-- slide search field -->
     <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
     <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
