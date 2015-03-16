@@ -24,6 +24,10 @@ switch ($currentPage) {
 	include 'pages/profile_friend_added.php';
 	break;
 
+	case 'profile_settings':
+	include 'pages/profile_settings.php';
+	break;
+
 	case 'feed':
 	include 'pages/feed.php';
 	break;
