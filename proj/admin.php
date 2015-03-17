@@ -32,7 +32,7 @@
                     </li>
                     
                     <li>
-                        <a href="pages/databases.php"><i class="fa fa-database fa-fw"></i> Databases<span class="fa arrow"></span></a>
+                        <a href="database.php"><i class="fa fa-database fa-fw"></i> Databases<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             
                             <li>
@@ -48,15 +48,8 @@
 
 
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Statistics <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="flot.html"> User stats </a>
-                            </li>
-                            <li>
-                                <a href="morris.html"> Post stats </a>
-                            </li>
-                        </ul>
+                        <a href="stats.php"><i class="fa fa-bar-chart-o fa-fw"></i> Statistics <span class="fa arrow"></span></a>
+                        
                         <!-- /.nav-second-level -->
                     </li>
                     
@@ -85,7 +78,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#">
+                    <a href="">
                         <div class="panel-footer">
                             <span class="pull-left">View Details</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
