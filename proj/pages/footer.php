@@ -29,5 +29,9 @@
     <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
     <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
 
+    <!-- drop down menus-->
+    <script type="text/javascript" src="assets/frameworks/bootstrap/js/dropdowns-enhancement.js"></script>
+    
+
 </body>
 </html>
