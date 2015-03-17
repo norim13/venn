@@ -61,6 +61,13 @@ border-color: rgb(51,69,79);
 	padding-bottom:3px;
 	padding-left:25px;
 }
+#panel-feed .panel-heading img{
+	margin-right: 10px;
+}
+
+#panel-feed .panel-heading h4{
+	margin-top: 10px;
+}
 
 
 /*Panel Body*/

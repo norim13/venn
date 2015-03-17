@@ -67,59 +67,59 @@
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people">
 									<p>John</p>
 								</div>
 								<div class=" col-md-1 profile-thumbnail"style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/2">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/2">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail"style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/3">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/3">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 
@@ -139,59 +139,59 @@
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people">
 									<p>John</p>
 								</div>
 								<div class=" col-md-1 profile-thumbnail"style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/2">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/2">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail"style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/3">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/3">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 								<div class="col-md-1 profile-thumbnail" style="float:left">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people/4">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people/4">
 									<p>John</p>
 								</div>
 
@@ -213,7 +213,7 @@
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-md-1 profile-thumbnail">
-									<img alt="200x200" class="profile-circles"  src="http://lorempixel.com/70/70/people">
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people">
 									<p>John L.</p>
 									<table  cellpadding="0" cellspacing="0" style="width: 100%; text-align:center" class="col-md-2">
 										<tr>

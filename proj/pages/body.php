@@ -5,7 +5,8 @@
 		<div class=" panel panel-default   " id="panel-feed">
 			<!-- user's name -->
 			<div class="panel-heading ">
-				Mira
+				<img alt="200x200" class="profile-circles img-circle img-responsive"  style="float:left"src="http://lorempixel.com/40/40/people/4">
+					   <h4>Mira</h4>
 			</div>
 
 			<div class="panel-body"  >
@@ -62,8 +63,9 @@
 			<!--publication-->
 			<div class=" panel panel-default   " id="panel-feed">
 				<!-- user's name -->
-				<div class="panel-heading ">
-					Mira
+				<div class="panel-heading fill-flow">
+				 	<img alt="200x200" class="profile-circles img-circle img-responsive"  style="float:left"src="http://lorempixel.com/40/40/people/4">
+					 <h4>Mira</h4>
 				</div>
 
 				<div class="panel-body" >
@@ -122,7 +124,8 @@
 				<div class="panel panel-default   " id="panel-feed">
 					<!-- user's name -->
 					<div class="panel-heading ">
-						Mira
+						<img alt="200x200" class="profile-circles img-circle img-responsive"  style="float:left"src="http://lorempixel.com/40/40/people/5">
+					   <h4>Joaquim</h4>
 					</div>
 
 					<div class="panel-body"  >
@@ -184,7 +187,8 @@
 					<div class=" panel panel-default   " id="panel-feed">
 						<!-- user's name -->
 						<div class="panel-heading ">
-							Mira
+							<img alt="200x200" class="profile-circles img-circle img-responsive"  style="float:left"src="http://lorempixel.com/40/40/people/9">
+					   <h4>Joana</h4>
 						</div>
 
 						<div class="panel-body"  >
@@ -242,7 +246,8 @@
 						<div class="panel panel-default   " id="panel-feed">
 							<!-- user's name -->
 							<div class="panel-heading ">
-								Mira
+								<img alt="200x200" class="profile-circles img-circle img-responsive"  style="float:left"src="http://lorempixel.com/40/40/people/6">
+					   <h4>Beatriz</h4>
 							</div>
 
 							<div class="panel-body"  >
@@ -299,7 +304,8 @@
 							<div class="panel panel-default   " id="panel-feed">
 								<!-- user's name -->
 								<div class="panel-heading ">
-									Mira
+									<img alt="200x200" class="profile-circles img-circle img-responsive"  style="float:left"src="http://lorempixel.com/40/40/people/7">
+					   <h4>André</h4>
 								</div>
 
 								<div class="panel-body"  >

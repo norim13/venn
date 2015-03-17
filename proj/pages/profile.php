@@ -87,7 +87,8 @@
 					<div class="panel panel-default   " id="panel-feed">
 						<!-- user's name -->
 						<div class="panel-heading ">
-							Mira
+							<img alt="200x200" class="profile-circles img-circle img-responsive"  style="float:left"src="http://lorempixel.com/40/40/people/4">
+					   <h4>Mira</h4>
 						</div>
 
 						<div class="panel-body"  >
@@ -144,7 +145,8 @@
 					<div class="panel panel-default   " id="panel-feed">
 						<!-- user's name -->
 						<div class="panel-heading ">
-							Mira
+							<img alt="200x200" class="profile-circles img-circle img-responsive"  style="float:left"src="http://lorempixel.com/40/40/people/4">
+					   <h4>Mira</h4>
 						</div>
 
 						<div class="panel-body"  >
