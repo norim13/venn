@@ -21,7 +21,7 @@
     <script type="text/javascript" src="assets/frameworks/sb-admin-2.js"></script>
 
     <!-- Custom actions -->
-    <script type="text/javascript" src="assets/js/login-tp-signup.js"></script>
+    <script type="text/javascript" src="assets/js/login-to-signup.js"></script>
 
   	<script type="text/javascript" src="assets/js/home-scripts.js"></script>
 
