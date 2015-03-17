@@ -74,7 +74,7 @@
 }
 
 #sidebar button {
-	background-color: transparent;
+	/*background-color: transparent;*/
 	border: 0px;
 }
 
@@ -162,4 +162,12 @@
 	-webkit-border-bottom-right-radius: 0px;
 	-moz-border-radius-bottomright: 0px;
 	border-bottom-right-radius: 0px;
+}
+
+button#search-btn.btn{
+	float: right;
+	margin-right: 5%;
+	background-color: rgb(92,184,92);
+	padding: 4px 12px;
+	color: white;
 }

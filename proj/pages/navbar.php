@@ -284,5 +284,6 @@
 
     <div id="search-field" class="search-field">
         <input type="text" name="search">
+		<button id="search-btn" type="button" class="btn">Search</button>  
     </div>
 </div>

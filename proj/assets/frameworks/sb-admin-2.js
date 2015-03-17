@@ -122,7 +122,7 @@ $(function() {
        /* if ($window.scrollTop() > offset.top) {*/
             $sidebar.stop().animate({
                 marginTop: $window.scrollTop() - offset.top + topPadding
-            });
+            }, 0);
        /* } else {
             $sidebar.stop().animate({
                 marginTop: 0
