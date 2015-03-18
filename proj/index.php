@@ -36,6 +36,12 @@ switch ($currentPage) {
 	include 'pages/circles.php';
 	break;
 
+	case 'circles_new':
+	include 'pages/circles_new.php';
+	break;
+
+	
+
 	case 'home':
 	include 'pages/home.php';
 	break;
