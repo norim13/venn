@@ -28,7 +28,24 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                       
+                       <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                        <input type="text" class="form-control" placeholder="Search...">
+                                        <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </span>
+                            </div>
+                            <div>
+                                <div class="radio">
+                                  <label><input type="radio" name="optradio">Users</label>
+                                </div>
+                                <div class="radio">
+                                  <label><input type="radio" name="optradio">Posts</label>
+                                </div>
+                            </div>
+                        </li>
                         <li>
                             <a href="admin.php"><i class="fa fa-cogs fa-fw"></i> Main panel</a>
                         </li>
@@ -38,10 +55,10 @@
                             <ul class="nav nav-second-level">
                                 
                                 <li>
-                                    <a href="#"> Posts  </a>
+                                    <a href="#"> Users  </a>
                                 </li>
                                 <li>
-                                    <a href="#"> Users <span class="fa arrow"></span></a>
+                                    <a href="#"> Posts </a>
                                     <!-- /.nav-third-level -->
                                 </li>
                             </ul>
@@ -73,7 +90,7 @@
                                        <!-- /.panel -->
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                            User database
+                            User database - Most Recent
                             <div class="pull-right">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
@@ -112,7 +129,7 @@
                                                     <th>Reposts</th>
                                                     <th>Upvotes</th>
                                                     <th>Downvotes</th>
-
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -127,6 +144,8 @@
                                                     <td>46</td>
                                                     <td>976</td>
                                                     <td>1034</td>
+                                                    <td><button class="btn btn-danger"><i class="fa fa-trash-o"> </i>  Delete</button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>#</td>
@@ -139,6 +158,8 @@
                                                     <td>46</td>
                                                     <td>976</td>
                                                     <td>1034</td>
+                                                    <td><button class="btn btn-danger"><i class="fa fa-trash-o"> </i>  Delete</button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                    <td>#</td>
@@ -151,10 +172,13 @@
                                                     <td>46</td>
                                                     <td>976</td>
                                                     <td>1034</td>
+                                                    <td><button class="btn btn-danger"><i class="fa fa-trash-o"> </i>  Delete</button>
+                                                    </td>
                                                 </tr>
-                                             
+                                            
                                             </tbody>
                                         </table>
+                                         See more
                                     </div>
                                     <!-- /.table-responsive -->
                                 </div>
@@ -180,7 +204,7 @@
                                        <!-- /.panel -->
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                             Posts database
+                             Posts database - Most Recent
                             <div class="pull-right">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
@@ -219,6 +243,7 @@
                                                     <th>Reposts</th>
                                                     <th>Upvotes</th>
                                                     <th>Downvotes</th>
+                                                    <th>Action</th>
 
                                                 </tr>
                                             </thead>
@@ -234,6 +259,8 @@
                                                     <td>46</td>
                                                     <td>976</td>
                                                     <td>1034</td>
+                                                    <td><button class="btn btn-danger"><i class="fa fa-trash-o"> </i>  Delete</button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>#</td>
@@ -246,6 +273,8 @@
                                                     <td>46</td>
                                                     <td>976</td>
                                                     <td>1034</td>
+                                                    <td><button class="btn btn-danger"><i class="fa fa-trash-o"> </i>  Delete</button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                    <td>#</td>
@@ -258,10 +287,13 @@
                                                     <td>46</td>
                                                     <td>976</td>
                                                     <td>1034</td>
+                                                    <td><button class="btn btn-danger"><i class="fa fa-trash-o"> </i>  Delete</button>
+                                                    </td>
                                                 </tr>
                                              
                                             </tbody>
                                         </table>
+                                         See more
                                     </div>
                                     <!-- /.table-responsive -->
                                 </div>

@@ -91,10 +91,12 @@
 								<!-- section with the time and comments button -->
 								<div class="fill-flow">
 									<a href="" class="btn btn-default" id="clock-panel"><i class="fa fa-clock-o"></i> 3 days ago</a>
+
 									<button class="btn btn-default" id="btn-comment"type="button" data-toggle="collapse" data-target="#comments" aria-expanded="false" aria-controls="comments">
 										<i class="fa fa-comments"></i> Comments
 									</button>
-									<button class="btn btn-default" id="btn-comment"><i class="fa fa-retweet"></i> Repost</button>
+									<button class="btn btn-default" id="btn-comment"><i class="fa fa-retweet"></i> Repost</button> <a href="" class="btn btn-default" id="btn-comment"><i class="fa fa-flag-o"></i> Report</a>
+
 								</div>
 
 								<!-- comment section-->
@@ -151,7 +153,7 @@
 										<button class="btn btn-default" id="btn-comment"type="button" data-toggle="collapse" data-target="#comments" aria-expanded="false" aria-controls="comments">
 											<i class="fa fa-comments"></i> Comments
 										</button>
-										<button class="btn btn-default" id="btn-comment"><i class="fa fa-retweet"></i> Repost</button>
+										<button class="btn btn-default" id="btn-comment"><i class="fa fa-retweet"></i> Repost</button> <a href="" class="btn btn-default" id="btn-comment"><i class="fa fa-flag-o"></i> Report</a>
 									</div>
 
 									<!-- comment section-->
@@ -208,7 +210,8 @@
 										<button class="btn btn-default" id="btn-comment"type="button" data-toggle="collapse" data-target="#comments" aria-expanded="false" aria-controls="comments">
 											<i class="fa fa-comments"></i> Comments
 										</button>
-										<button class="btn btn-default" id="btn-comment"><i class="fa fa-retweet"></i> Repost</button>
+										<button class="btn btn-default" id="btn-comment"><i class="fa fa-retweet"></i> Repost</button> 
+										<a href="" class="btn btn-default" id="btn-comment"><i class="fa fa-flag-o"></i> Report</a>
 									</div>
 
 									<!-- comment section-->
