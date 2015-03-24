@@ -28,6 +28,8 @@
 				<!-- publication -->
 				<p>Eux maudite pendant eparses ces facteur general ans legumes. Habitent ete fillette continue cantines galopent ils ces.
 					Nos rouge passa rirez roidi soirs dur.</p>
+
+				<p><a href="">#hashtag</a> , <a href="">#venn</a></p>
 				</div> 
 
 				<!--footer-->
@@ -89,6 +91,8 @@
 						Nos rouge passa rirez roidi soirs dur foi peu temps. Le diables un dragons xv grosses dessert se. Pressent lui des precieux lampions. 
 						Instrument eu maintenant gouverneur et claquaient oh boulevards ca. Cime hors tard des agit face vif bout. Jeterent au il je pressent 
 						derriere preparer.</p>
+
+					<p><a href="">#hashtag</a> </p>
 					</div> 
 
 					<!--footer-->
@@ -182,7 +186,20 @@
 				</div>
 
 				<div class=" col-lg-6 clearfix">
-					<h1>Circles</h1>
+					<h1>Circles
+					<div class="dropdown" style="float:right">
+				                    <div class="btn-group">
+		                                <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle pull-right" data-placeholder="Visibility" >Circles <span class="caret"></span></button>
+		                                <ul class="dropdown-menu dropdown-menu-form">
+			                                <li><input id="ex3_1" name="ex3" value="1" type="checkbox"><label for="ex3_1">FEUP</label></li>
+			                                <li><input id="ex3_2" name="ex3" value="2" type="checkbox"><label for="ex3_2">Family</label></li>
+			                                <li><input id="ex3_3" name="ex3" value="3" type="checkbox"><label for="ex3_3">Best friends</label></li>
+			                                <li><input id="ex3_4" name="ex3" value="4" type="checkbox"><label for="ex3_4">Football friends</label></li>
+			                                <li><input id="ex3_5" name="ex3" value="5" type="checkbox"><label for="ex3_5">Public</label></li>
+		                                </ul>
+		                            </div>
+	                            </div>
+					</h1>
 					<!--publication-->
 					<div class=" panel panel-default   " id="panel-feed">
 						<!-- user's name -->
@@ -212,6 +229,7 @@
 								Nos rouge passa rirez roidi soirs dur foi peu temps. Le diables un dragons xv grosses dessert se. Pressent lui des precieux lampions. 
 								Instrument eu maintenant gouverneur et claquaient oh boulevards ca. Cime hors tard des agit face vif bout. Jeterent au il je pressent 
 								derriere preparer.</p>
+								<p><a href="">#hashtag</a> , <a href="">#venn</a></p>
 							</div> 
 
 							<!--footer-->

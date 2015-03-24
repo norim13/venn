@@ -1,4 +1,9 @@
 
+#table {
+      overflow: auto;
+      word-wrap: normal;
+      white-space: pre;
+    }
 .logoutButton { 
 
 	float: right;
