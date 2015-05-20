@@ -1,37 +1,34 @@
 <?php
 include_once('../../config/init.php');
-include_once('../../database/users.php');  
+include_once('../../database/users.php');
 
-if (!$_POST['username'] || !$_POST['email'] || !$_POST['password']) {
-  $_SESSION['error_messages'][] = 'All fields are mandatory';
-  $_SESSION['form_values'] = $_POST;
-  //header("Location: $BASE_URL" . 'pages/users/register.php');
-  exit;
+$return_messages = array();
+
+if (!$_POST['username'] || !$_POST['email'] || !$_POST['gender'] || !$_POST['password'] || !$_POST['confirmPassword']) {
+    $return_messages['errors'][] = 'All fields are mandatory';
+}
+else{
+    $username = htmlspecialchars($_POST['username']);
+    $email = htmlspecialchars($_POST['email']);
+    $password = htmlspecialchars($_POST['password']);
+    $password2 = htmlspecialchars($_POST['confirmPassword']);
+
+    $gender = htmlspecialchars($_POST['gender']);
+
+    if($password != $password2) {
+        $return_messages['errors'][] = 'Passwords don\'t match';
+    }
+    else{
+        try {
+            if (createUser($username, $email, $password, $gender) === false)
+                $return_messages['errors'][] = 'Email already registered...';
+        } catch (PDOException $e) {
+            $return_messages['errors'][] = 'Unknown error!';
+            //$return_messages['errors'][] = $e->getMessage();
+        }
+    }
 }
 
-$username = strip_tags($_POST['username']);
-$email = strip_tags($_POST['email']);
-$password = $_POST['password'];
-//$gender = $_POST['gender'];
-$gender = 'M';
-
-try {
-  createUser($username, $email, $password, $gender);
-} catch (PDOException $e) {
-echo "<br/>";
-echo $e->getMessage();
-echo "<br/>";
-  if (strpos($e->getMessage(), 'users_pkey') !== false) {
-  $_SESSION['error_messages'][] = 'Duplicate username';
-  $_SESSION['field_errors']['username'] = 'Username already exists';
-  }
-  else $_SESSION['error_messages'][] = 'Error creating user';
-
-  $_SESSION['form_values'] = $_POST;
-  //header("Location: $BASE_URL" . 'pages/users/register.php');
-  exit;
-}
-
-$_SESSION['success_messages'][] = 'User registered successfully'; 
-header("Location: $BASE_URL");
-?>
+if (!isset($return_messages['errors']))
+    $return_messages['success'] = 'Success';
+echo json_encode($return_messages);

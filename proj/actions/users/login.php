@@ -1,25 +1,26 @@
 <?php
 include_once('../../config/init.php');
-include_once('../../database/users.php');  
+include_once('../../database/users.php');
 
+$return_messages = array();
 
-  if (!$_POST['email'] || !$_POST['password']) {
-    $_SESSION['error_messages'][] = 'Invalid login';
-    $_SESSION['form_values'] = $_POST;
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
-    exit;
-  }
+if (!$_POST['email'] || !$_POST['password']) {
+    $return_messages['errors'][] = 'Please, fill in both fields';
+}
+else{
+    $email = htmlspecialchars($_POST['email']);
+    $password = htmlspecialchars($_POST['password']);
 
-  $email = $_POST['email'];
-  $password = $_POST['password'];
-  
-  if (isLoginCorrect($email, $password)) {
-    $_SESSION['email'] = $email;
-    $_SESSION['success_messages'][] = 'Login successful';  
-    header('Location: ' . $BASE_URL . 'pages/users/feed.php');
-  } else {
-    $_SESSION['error_messages'][] = 'Login failed';  
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
-  }
+    if (isLoginCorrect($email, $password)) {
+        $_SESSION['email'] = $email;
+        $_SESSION['id']=getUserFromEmail($email)['id'];
+        updateLogin($email);
+    } else {
+        $return_messages['errors'][] = 'Wrong email and/or password';
+    }
+}
 
-?>
+if (!isset($return_messages['errors']))
+    $return_messages['success'] = 'Success';
+echo json_encode($return_messages);
+

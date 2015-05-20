@@ -1,87 +1,7 @@
-<?php include '../pages/header.php'; ?>
+{include file="common/navbar_admin.tpl"}
 
 
-    <!-- Custom CSS -->
-    <link href="../assets/frameworks/sb-admin.css" rel="stylesheet">
-    <link href="../css/admin.css" rel="stylesheet"> 
-
-
-    <div id="wrapper">
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"> Venn admin panel </a>
-            </div>
-            <!-- /.navbar-header -->
-
-            <div class="logoutButton">
-            <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-            </div>
-            <!-- /.navbar-top-links -->
-
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                       <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                        <input type="text" class="form-control" placeholder="Search...">
-                                        <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </span>
-                            </div>
-                            <div>
-                                <div class="radio">
-                                  <label><input type="radio" name="optradio">Users</label>
-                                </div>
-                                <div class="radio">
-                                  <label><input type="radio" name="optradio">Posts</label>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="admin.php"><i class="fa fa-cogs fa-fw"></i> Main panel</a>
-                        </li>
-                             
-                        <li>
-                            <a href="database.php"><i class="fa fa-database fa-fw"></i> Databases<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                
-                                <li>
-                                    <a href="#"> Users  </a>
-                                </li>
-                                <li>
-                                    <a href="#"> Posts </a>
-                                    <!-- /.nav-third-level -->
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-
-
-                        <li>
-                            <a href="stats.php"><i class="fa fa-bar-chart-o fa-fw"></i> Statistics <span class="fa arrow"></span></a>
-                       
-                            <!-- /.nav-second-level -->
-                        </li>
-                    
-                                          
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
-            </div>
-            <!-- /.navbar-static-side -->
-        </nav>
-
-        <div id="page-wrapper">
+<div id="page-wrapper">
             <br>
             <!-- /.row -->
          
@@ -120,63 +40,38 @@
                                         <table class="table table-bordered table-hover table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th>#</th>
-                                                    <th>UserID</th>
+                                                    <th>ID</th>
                                                     <th>Name</th>
-                                                    <th>Registration</th>
+                                                    <th>Email</th>
                                                     <th>Gender</th>
-                                                    <th>Warnings</th>
-                                                    <th>Comments</th>
-                                                    <th>Reposts</th>
-                                                    <th>Upvotes</th>
-                                                    <th>Downvotes</th>
+                                                    <th>Last Login</th>
+                                                    <th>Signup Date</th>
                                                     <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                            {foreach $users as $user}
                                                 <tr>
-                                                    <td>12</td>
-                                                    <td>09123</td>
-                                                    <td>Joaquim Nandes</td>
-                                                    <td>19/5/2014</td>
-                                                    <td>Male</td>
-                                                    <td>4</td>
-                                                    <td>123</td>
-                                                    <td>46</td>
-                                                    <td>976</td>
-                                                    <td>1034</td>
-                                                    <td><button class="btn btn-danger"><i class="fa fa-trash-o"> </i>  Delete</button>
+                                                    <td>{$user.id}</td>
+                                                    <td>{$user.name}</td>
+                                                    <td>{$user.email}</td>
+                                                    <td>{$user.gender}</td>
+                                                    <td>{$user.last_login}</td>
+                                                    <td>{$user.signup_login}</td>
+                                                    <td>
+                                                        {if $user.id neq 1}
+
+
+                                                        <form id="form" action="../../actions/admin/delete_user.php" method="post">
+                                                            <input type="hidden" name="user_id" value={$user.id}>
+                                                            <input type="submit" value="Delete" class="btn btn-danger">
+                                                        </form>
+                                                        {/if}
+
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>#</td>
-                                                    <td>09123</td>
-                                                    <td>Joaquim Nandes</td>
-                                                    <td>19/5/2014</td>
-                                                    <td>Male</td>
-                                                    <td>4</td>
-                                                    <td>123</td>
-                                                    <td>46</td>
-                                                    <td>976</td>
-                                                    <td>1034</td>
-                                                    <td><button class="btn btn-danger"><i class="fa fa-trash-o"> </i>  Delete</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                   <td>#</td>
-                                                    <td>09123</td>
-                                                    <td>Joaquim Nandes</td>
-                                                    <td>19/5/2014</td>
-                                                    <td>Male</td>
-                                                    <td>4</td>
-                                                    <td>123</td>
-                                                    <td>46</td>
-                                                    <td>976</td>
-                                                    <td>1034</td>
-                                                    <td><button class="btn btn-danger"><i class="fa fa-trash-o"> </i>  Delete</button>
-                                                    </td>
-                                                </tr>
-                                            
+                                             {/foreach}
+
                                             </tbody>
                                         </table>
                                          See more
@@ -233,65 +128,50 @@
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-hover table-striped">
                                             <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>UserID</th>
-                                                    <th>Name</th>
-                                                    <th>Registration</th>
-                                                    <th>Gender</th>
-                                                    <th>Warnings</th>
-                                                    <th>Comments</th>
-                                                    <th>Reposts</th>
-                                                    <th>Upvotes</th>
-                                                    <th>Downvotes</th>
-                                                    <th>Action</th>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <!--
+                                                <th>Name</th>
+                                                <th>Registration</th>
+                                                <th>Gender</th>
+                                                <th>Warnings</th>
+                                                <th>Comments</th>
+                                                <th>Reposts</th>
+                                                <th>Upvotes</th>
+                                                <th>Downvotes</th>-->
+                                                <th>Post Date</th>
+                                                <th>Start Date</th>
+                                                <th>Expiration Date</th>
+                                                <th>Vote Diference</th>
+                                                <th>Number of Comments</th>
+                                                <th>Action</th>
 
-                                                </tr>
+                                            </tr>
                                             </thead>
                                             <tbody>
+                                            {foreach $posts as $post}
                                                 <tr>
-                                                    <td>12</td>
-                                                    <td>09123</td>
-                                                    <td>Joaquim Nandes</td>
-                                                    <td>19/5/2014</td>
-                                                    <td>Male</td>
-                                                    <td>4</td>
-                                                    <td>123</td>
-                                                    <td>46</td>
-                                                    <td>976</td>
-                                                    <td>1034</td>
-                                                    <td><button class="btn btn-danger"><i class="fa fa-trash-o"> </i>  Delete</button>
+                                                    <td>{$post.id}</td>
+                                                    <td>{$post.name}</td>
+                                                    <td>{$post.post_date}</td>
+                                                    <td>{$post.start_date}</td>
+                                                    <td>{$post.expiration_date}</td>
+                                                    <td>{$post.votedifference}</td>
+                                                    <td>
+                                                        {if $post.number_of_comments eq null}
+                                                            0
+                                                        {/if}
+                                                        {$post.number_of_comments}</td>
+                                                    <td>
+                                                        <form id="form" action="../../actions/admin/delete_post.php" method="post">
+                                                            <input type="hidden" name="post_id" value={$post.id}>
+                                                            <input type="submit" value="Delete" class="btn btn-danger">
+                                                        </form>
+
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>#</td>
-                                                    <td>09123</td>
-                                                    <td>Joaquim Nandes</td>
-                                                    <td>19/5/2014</td>
-                                                    <td>Male</td>
-                                                    <td>4</td>
-                                                    <td>123</td>
-                                                    <td>46</td>
-                                                    <td>976</td>
-                                                    <td>1034</td>
-                                                    <td><button class="btn btn-danger"><i class="fa fa-trash-o"> </i>  Delete</button>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                   <td>#</td>
-                                                    <td>09123</td>
-                                                    <td>Joaquim Nandes</td>
-                                                    <td>19/5/2014</td>
-                                                    <td>Male</td>
-                                                    <td>4</td>
-                                                    <td>123</td>
-                                                    <td>46</td>
-                                                    <td>976</td>
-                                                    <td>1034</td>
-                                                    <td><button class="btn btn-danger"><i class="fa fa-trash-o"> </i>  Delete</button>
-                                                    </td>
-                                                </tr>
-                                             
+                                            {/foreach}
                                             </tbody>
                                         </table>
                                          See more
@@ -320,3 +200,4 @@
 
     </div>
     <!-- /#wrapper -->
+{include file="common/footer.tpl"}

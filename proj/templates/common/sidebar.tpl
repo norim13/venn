@@ -44,7 +44,7 @@
             <div class="vcentered-content">
                 <div class="vcentered-space"></div>
                 <div class="vcentered-space sidebar-item-content">
-                    <a href="{$BASE_URL}/pages/users/circles.php">
+                    <a href="{$BASE_URL}pages/users/circles.php">
                         <i class="fa fa-circle-thin fa-2x button-toggle-grey"></i>
                         <p class="button-toggle-grey"> Circles </p>
                     </a>

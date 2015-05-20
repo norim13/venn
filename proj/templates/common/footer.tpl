@@ -12,17 +12,11 @@
 	<!-- Metis Menu Plugin JavaScript -->
 	<script type="text/javascript" src="../../assets/frameworks/metisMenu/dist/metisMenu.min.js"></script>
 
-	<!-- Morris Charts JavaScript -->
-    <!--<script src="assets/frameworks/raphael/raphael-min.js"></script>
-    <script src="assets/frameworks/morrisjs/morris.min.js"></script>
-    <script src="assets/js/morris-data.js"></script>-->
 
     <!-- Custom Theme JavaScript -->
     <script type="text/javascript" src="../../assets/frameworks/sb-admin-2.js"></script>
 
     <!-- Custom actions -->
-    <script type="text/javascript" src="../../assets/js/login-to-signup.js"></script>
-
   	<script type="text/javascript" src="../../assets/js/home-scripts.js"></script>
 
     <!-- slide search field -->
@@ -31,7 +25,17 @@
 
     <!-- drop down menus-->
     <script type="text/javascript" src="../../assets/frameworks/bootstrap/js/dropdowns-enhancement.js"></script>
-    
+
+
+    {assign var=current_page value="/~***REMOVED***/proto/pages/"|explode:$smarty.server.REQUEST_URI}
+    {if $current_page[1] == 'home/home.php'}
+        <script type="text/javascript" src="../../js/posts/post.js"></script>
+        <script type="text/javascript" src="../../js/users/home.js"></script>
+    {elseif $current_page[1] == 'users/profile.php'}
+        <script type="text/javascript" src="../../js/posts/post.js"></script>
+    {elseif $current_page[1] == 'users/tagview.php'}
+        <script type="text/javascript" src="../../js/posts/post.js"></script>
+    {/if}
 
 </body>
 </html>

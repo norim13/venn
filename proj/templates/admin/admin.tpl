@@ -1,7 +1,7 @@
-
+{include file="common/header.tpl"}
 <!-- Custom CSS -->
-<link href="assets/frameworks/sb-admin.css" rel="stylesheet">
-<link href="css/admin.css" rel="stylesheet"> 
+<link href="../../assets/frameworks/sb-admin.css" rel="stylesheet">
+<link href="../../css/admin.css" rel="stylesheet">
 </head>
 <body>
 
@@ -316,3 +316,5 @@
 <!-- /#wrapper -->
 
 </body>
+
+{include file="common/footer.tpl"}

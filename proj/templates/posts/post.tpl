@@ -1,62 +1,86 @@
-<?php include 'navbar.php'; ?>
-
-<div id="page-wrapper">
-    <div class=" panel panel-default   " id="panel-feed">
-
-  <div class="panel col-lg-8 clearfix col-md-offset-2" style="margin-top:40px" >
-    <!-- user's name -->
+<!--publication-->
+<div class="panel panel-default panel-feed" id="panel-feed-{$post.id}">
     <div class="panel-heading ">
-      <img alt="200x200" class="profile-circles img-circle img-responsive"  style="float:left"src="http://lorempixel.com/50/50/people/4">
-      <h3>Mira</h3>
+        <img alt="200x200" class="profile-circles img-circle img-responsive"  style="float:left"src="http://lorempixel.com/40/40/people/4">
+        <h4>{$userFromID=getUserFromID($post.user_id)}
+            <a href="{$BASE_URL}pages/users/profile.php?user={$userFromID.hashid}" style="text-decoration: none; color: inherit"> {$userFromID.name} </a>
+        </h4>
     </div>
 
     <div class="panel-body"  >
-      <!-- voting section -->
-      <div class="vote-section" >
-        <table style="text-align:center;">
-          <tr>
-            <td><i class="fa fa-sort-asc"></i></td>
-          </tr>
-          <tr>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-sort-desc"></i></td>
-          </tr>
-        </table>
-      </div>
+        <!-- voting section -->
+        <div class="vote-section" >
+            <table style="text-align:center;">
+                {$vote = getVote($smarty.session.id, $post.id)}
+                <tr>
+                    <td><i id="upvote-{$post.id}" class="fa fa-sort-asc upvote-btn"
+                           style="{if $vote.positive == '1'} color:rgb(92,184,92) {/if}"}></i></td>
+                </tr>
+                <tr>
+                    <td id="td-votedifference-{$post.id}">{if $post.votedifference < 0} <i class="fa fa-minus-square-o" style="color:rgb(176, 49, 33)"></i> {else} {$post.votedifference} {/if} </td>
+                </tr>
+                <tr>
+                    <td><i id="downvote-{$post.id}" class="fa fa-sort-desc downvote-btn"
+                           style="{if $vote.positive == '0'} color:rgb(176, 49, 33) {/if}"}></i>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
-      <!-- publication -->
-      <p>Eux maudite pendant eparses ces facteur general ans legumes. Habitent ete fillette continue cantines galopent ils ces.
-        Nos rouge passa rirez roidi soirs dur.</p>
+        <!-- publication -->
+        <p>{$post.message}</p>
+        {$tags = getTagsFromPost($post.id)}
+        {if $tags != NULL}
+            <p>
+                {foreach $tags as $tag}
+                    <a href="{$BASE_URL}pages/posts/tagview.php?tagname={$tag.name}">#{$tag.name}</a> {if not $tag@last} , {/if}
+                {/foreach}
+            </p>
+        {/if}
+        {if $post.url}
+            <p><a href={$post.url}>{$post.url}</a></p>
+        {/if}
+    </div>
 
-        <p><a href="">#hashtag</a> , <a href="">#venn</a></p>
-      </div> 
-
-      <!--footer-->
-      <div class="panel-footer clearfix ">
+    <!--footer-->
+    <div class="panel-footer clearfix ">
         <!-- section with the time and comments button -->
         <div class="fill-flow">
-          <a href="" class="btn btn-default" id="clock-panel"><i class="fa fa-clock-o"></i> 3 days ago</a>
-
-          <button class="btn btn-default" id="btn-comment"><i class="fa fa-retweet"></i> Repost</button>
-
+            <a href="{$BASE_URL}pages/posts/single_post.php?post_id={$post.id}" class="btn btn-default" id="clock-panel"><i class="fa fa-clock-o"></i>
+                {if $post.start_date} {$post.start_date} {else} {$post.post_date} {/if} </a>
+            <button class="btn btn-default btn-comments" id="btn-comments-{$post.id}" type="button" data-toggle="collapse" data-target="#comments-{$post.id}" aria-expanded="false" aria-controls="comments">
+                <i class="fa fa-comments"></i> Comments
+            </button>
+            {if $post.user_id != $smarty.session.id}
+                <button class="btn btn-default btn-repost" id="btn-repost-{$post.id}"><i class="fa fa-retweet"></i> Repost</button>
+            {/if}
+            {if $post.user_id == $smarty.session.id}
+                <button class="btn btn-default btn-delete" id="btn-delete-{$post.id}"><i class="fa fa-trash-o"></i> Delete</button>
+            {/if}
         </div>
 
         <!-- comment section-->
-        <div class="" id="comments">
-          <div class="col-lg-20" id="comments_section" >
-            <h4>Comments</h4>
-            (....)
-            <br>
-            <br>
-            <!-- write a comment -->
-            <div class="input-group">
-              <textarea class="form-control" rows="1" style="resize:none"></textarea> 
-              <span class="input-group-addon btn btn-primary">Send</span>
+        {$comments = getCommentsFromPost($post)}
+        <div class="collapse" id="comments-{$post.id}">
+            <div class="col-lg-20" id="comments_section" >
+                <h4>Comments</h4>
+                {foreach $comments as $comment}
+                    <div class="panel panel-default">
+                        <div class="panel-heading">{$comment.message}</div>
+                        <div class="panel-body">
+                            {$comment_owner=getUserFromID($comment.user_id)}
+                            <a href="{$BASE_URL}pages/users/profile.php?user={$comment_owner.hashid}" style="text-decoration: none; color: inherit"> {$comment_owner.name} </a>
+                            , on {$comment.date}
+                        </div>
+                    </div>
+                {/foreach}
+
+                <div class="input-group commentform" id="commentform-{$post.id}">
+                    <textarea placeholder="Type comment" class="form-control" rows="1" style="resize:none"></textarea>
+                    <span class="input-group-addon btn btn-primary btn-comment">Comment</span>
+                    <div id="error_message"></div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div></div>
+</div>

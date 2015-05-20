@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-05 23:15:12
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-16 22:25:24
          compiled from "/opt/lbaw/***REMOVED***/public_html/proto/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:756898544553fd88bed9fa4-22254726%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf7f406a194a4bec52490dee5aef9bfb5b0f335d' => 
     array (
       0 => '/opt/lbaw/***REMOVED***/public_html/proto/templates/common/header.tpl',
-      1 => 1430860503,
+      1 => 1431807917,
       2 => 'file',
     ),
   ),
@@ -17,10 +17,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.15',
   'unifunc' => 'content_553fd88c00f393_62494729',
-  'variables' => 
-  array (
-    'USERNAME' => 0,
-  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_553fd88c00f393_62494729')) {function content_553fd88c00f393_62494729($_smarty_tpl) {?><!DOCTYPE html>
@@ -70,10 +66,4 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <!-- Custom Fonts -->
     <!--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">-->
     <link href="../../assets/frameworks/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-
-    <?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
-        <?php echo $_smarty_tpl->getSubTemplate ('navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-    <?php }?>
-        <?php }} ?>
+<?php }} ?>

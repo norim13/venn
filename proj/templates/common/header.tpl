@@ -45,9 +45,3 @@
     <!-- Custom Fonts -->
     <!--<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">-->
     <link href="../../assets/frameworks/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-
-    {if $USERNAME}
-        {include file='navbar.tpl'}
-    {/if}
-        

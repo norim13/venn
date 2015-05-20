@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-05 23:15:12
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-16 22:14:30
          compiled from "/opt/lbaw/***REMOVED***/public_html/proto/templates/common/navbar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17428123555548fca4d65395-29471352%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b70c92497587a1dafaec5c66f03077f772205754' => 
     array (
       0 => '/opt/lbaw/***REMOVED***/public_html/proto/templates/common/navbar.tpl',
-      1 => 1430860503,
+      1 => 1431807137,
       2 => 'file',
     ),
   ),
@@ -240,11 +240,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/users/profile.php"><i class="fa fa-user fa-fw"></i> User Profile</a>
                 </li>
-                <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/users/profile_settings.php"><i class="fa fa-gear fa-fw"></i> Settings</a>
                 </li>
                 <li class="divider"></li>
                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-pages/users/logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+actions/users/logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                 </li>
             </ul>
             <!-- /.dropdown-user -->

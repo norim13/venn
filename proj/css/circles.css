@@ -1,65 +1,58 @@
 .center-cropped {
-  width: 100px;
-  height: 100px;
-  background-position: center center;
-  background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 
 .profile-thumbnail p{
-	text-align: center;
+    text-align: center;
 }
 
 #btn-newCircle{
-margin-bottom: auto;
-margin-top: auto;
-margin: 15px;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin: 15px;
+    margin-left: 0px;
 }
-
 
 
 .profile-circles{
- 	display: block;
+    display: block;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto
 }
 
 .circle-members .panel-heading{
-	background: transparent;
-	border: none;
+    background: transparent;
+    border: none;
 
 }
 
-
-
 .circle-group .caption{
-	text-align: center;
+    text-align: center;
 }
 
 .circle-group .caption #btn-transparent{
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto
 }
 
 .circle-group .thumbnail{
-	border: none;
-	margin:0px;
+    border: none;
+    margin:0px;
 
 }
 
 .circle-group .thumbnail h3{
-	margin: none;
+    margin: none;
 }
 
 .profile-thumbnail p{
-	margin-top:5px;
-	margin-bottom:5px;
+    margin-top:5px;
+    margin-bottom:5px;
 }
-
-
-
-
-
 
 
 /* 
@@ -69,56 +62,56 @@ margin: 15px;
 */
 
 .listrap {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            cursor: default;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
-        .listrap li {
-            margin: 0;
-            padding: 10px;
-        }
+.listrap li {
+    margin: 0;
+    padding: 10px;
+}
 
-        .listrap li.active, .listrap li:hover {
-            background-color: #d9edf7;
-        }
+.listrap li.active, .listrap li:hover {
+    background-color: #d9edf7;
+}
 
-        .listrap strong {
-            margin-left: 10px;
-        }
+.listrap strong {
+    margin-left: 10px;
+}
 
-        .listrap .listrap-toggle {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-        }
+.listrap .listrap-toggle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
 
-        .listrap .listrap-toggle span {
-            background-color: #428bca;
-            opacity: 0.8;
-            z-index: 100;
-            width: 40px;
-            height: 40px;
-            display: none;
-            position: absolute;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            vertical-align: middle;
-            color: #ffffff;
-        }
+.listrap .listrap-toggle span {
+    background-color: #428bca;
+    opacity: 0.8;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    display: none;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    color: #ffffff;
+}
 
-        .listrap .listrap-toggle span:before {
-            font-family: 'Glyphicons Halflings';
-            content: "\e013";
-        }
+.listrap .listrap-toggle span:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e013";
+}
 
-        .listrap li.active .listrap-toggle span {
-            display: block;
-        }
+.listrap li.active .listrap-toggle span {
+    display: block;
+}
