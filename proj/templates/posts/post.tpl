@@ -60,21 +60,10 @@
         </div>
 
         <!-- comment section-->
-        {$comments = getCommentsFromPost($post)}
         <div class="collapse" id="comments-{$post.id}">
             <div class="col-lg-20" id="comments_section" >
                 <h4>Comments</h4>
-                {foreach $comments as $comment}
-                    <div class="panel panel-default">
-                        <div class="panel-heading">{$comment.message}</div>
-                        <div class="panel-body">
-                            {$comment_owner=getUserFromID($comment.user_id)}
-                            <a href="{$BASE_URL}pages/users/profile.php?user={$comment_owner.hashid}" style="text-decoration: none; color: inherit"> {$comment_owner.name} </a>
-                            , on {$comment.date}
-                        </div>
-                    </div>
-                {/foreach}
-
+                <!-- this area is shown with ajax -->
                 <div class="input-group commentform" id="commentform-{$post.id}">
                     <textarea placeholder="Type comment" class="form-control" rows="1" style="resize:none"></textarea>
                     <span class="input-group-addon btn btn-primary btn-comment">Comment</span>

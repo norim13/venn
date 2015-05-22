@@ -61,32 +61,3 @@ function deletePost(event) {
 }
 
 $(".btn-delete").click(deletePost);
-
-
-function comment(event) {
-    var parentdiv = $(this).parent();
-    var post_id = parentdiv.attr('id').split('-')[1];
-    var msg = parentdiv.children()[0].value;
-
-    $.ajax({
-        url: "../../actions/post/comment.php",
-        type: "post",
-        data: {"post_id":post_id, "msg":msg},
-        success: function(data){
-            parentdiv.children()[0].value = '';
-
-            var response = $.parseJSON(data);
-            var newmsg = response['comment']['msg'];
-            var msgowner = response['comment']['user'];
-            var date = response['comment']['date'];
-
-            $('<div class="panel panel-default">' +
-            '<div class="panel-heading">' + newmsg + '</div>' +
-            '<div class="panel-body">' + msgowner + ', on ' + date +
-            '</div></div>').insertBefore(parentdiv);
-        },
-        error: function(){}
-    });
-}
-
-$(".btn-comment").click(comment);

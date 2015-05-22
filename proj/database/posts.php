@@ -137,6 +137,15 @@ function getCommentsFromPost($post) {
     return $stmt->fetchAll();
 }
 
+function getCommentsFromPostID($postid) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT \"Comment\".id, \"Comment\".message, \"Comment\".date, \"User\".name, \"User\".hashid
+      FROM \"Comment\", \"User\"
+      WHERE post_id = ? AND \"Comment\".user_id = \"User\".id");
+    $stmt->execute(array($postid));
+    return $stmt->fetchAll();
+}
+
 function createComment($user_id,$post_id,$message) {
     global $conn;
     $stmt = $conn->prepare("INSERT INTO \"Comment\" (user_id, post_id, message, date)

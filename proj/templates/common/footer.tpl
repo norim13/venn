@@ -30,11 +30,14 @@
     {assign var=current_page value="/~***REMOVED***/proto/pages/"|explode:$smarty.server.REQUEST_URI}
     {if $current_page[1] == 'home/home.php'}
         <script type="text/javascript" src="../../js/posts/post.js"></script>
+        <script type="text/javascript" src="../../js/posts/comments.js"></script>
         <script type="text/javascript" src="../../js/users/home.js"></script>
     {elseif $current_page[1] == 'users/profile.php'}
         <script type="text/javascript" src="../../js/posts/post.js"></script>
+        <script type="text/javascript" src="../../js/posts/comments.js"></script>
     {elseif $current_page[1] == 'users/tagview.php'}
         <script type="text/javascript" src="../../js/posts/post.js"></script>
+        <script type="text/javascript" src="../../js/posts/comments.js"></script>
     {/if}
 
 </body>

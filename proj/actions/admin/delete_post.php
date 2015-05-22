@@ -14,5 +14,3 @@ deletePost($post_id);
 
 header('Location: ' . '../../pages/admin/database.php');
 exit;
-
-/***/

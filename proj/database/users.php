@@ -91,3 +91,10 @@ function getNameFromID($id){
     $stmt->execute(array($id));
     return $stmt->fetch();
 }
+
+function getHashID($id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT hashid FROM \"User\" WHERE id = ?");
+    $stmt->execute(array($id));
+    return $stmt->fetch();
+}
