@@ -4,8 +4,8 @@
 
   error_reporting(E_ERROR | E_WARNING); // E_NOTICE by default
 
-  $BASE_DIR = '/opt/lbaw/***REMOVED***/public_html/proto/';
-  $BASE_URL = '/~***REMOVED***/proto/';
+  $BASE_DIR = '/opt/lbaw/***REMOVED***/public_html/final/';
+  $BASE_URL = '/~***REMOVED***/final/';
 
   $conn = new PDO('pgsql:host=vdbm;dbname=***REMOVED***', '***REMOVED***', '***REMOVED***');
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);

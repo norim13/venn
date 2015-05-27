@@ -33,37 +33,42 @@ $(".btn-comment").click(comment);
 function togglecomments(event) {
     var post_id = $(this).attr('id').split('-')[2];
 
-    $.ajax({
-        url: "../../actions/post/getComment.php",
-        type: "post",
-        data: {"post_id":post_id},
-        success: function(data){
+    if($(this).hasClass("expanded")) {
+        $(this).removeClass("expanded");
+        $("#commentform-"+post_id).remove('.comment-panel');
+    } else {
+        $.ajax({
+            url: "../../actions/post/getComment.php",
+            type: "post",
+            data: {"post_id":post_id},
+            success: function(data){
 
-            console.log(data);
-            var response = $.parseJSON(data);
 
-            var parentdiv = $('#commentform-'+ post_id);
+                var response = $.parseJSON(data);
 
-            var comments = response['comments'];
-            comments.forEach(function(entry) {
+                var parentdiv = $('#commentform-'+ post_id);
 
-                var newmsg = entry['message'];
-                var date = entry['date'];
+                var comments = response['comments'];
+                comments.forEach(function(entry) {
 
-                var msgowner = entry['name'];
-                var hashowner = entry['hashid'];
+                    var newmsg = entry['message'];
+                    var date = entry['date'];
 
-                var linkToProfile = '<a href="{$BASE_URL}pages/users/profile.php?user=' + hashowner +
-                    ' style="text-decoration: none; color: inherit">'+ msgowner +'</a>';
+                    var msgowner = entry['name'];
+                    var hashowner = entry['hashid'];
 
-                $('<div class="panel panel-default">' +
-                '<div class="panel-heading">' + newmsg + '</div>' +
-                '<div class="panel-body">' + linkToProfile + ', on ' + date +
-                '</div></div>').insertBefore(parentdiv);
-            });
-        },
-        error: function(){}
-    });
+                    var linkToProfile = '<a href="{$BASE_URL}pages/users/profile.php?user=' + hashowner +
+                        ' style="text-decoration: none; color: inherit">'+ msgowner +'</a>';
+
+                    $('<div class="panel panel-default comment-panel">' +
+                    '<div class="panel-heading">' + newmsg + '</div>' +
+                    '<div class="panel-body">' + linkToProfile + ', on ' + date +
+                    '</div></div>').insertBefore(parentdiv);
+                });
+            },
+            error: function(){}
+        });
+    }
 }
 
 $(".btn-comments").click(togglecomments);
