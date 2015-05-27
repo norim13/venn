@@ -1,4 +1,4 @@
-{include file="common/header.tpl"}
+{include file="common/header.tpl" title = {"Venn - "|cat:$tagname}}
 
 {include file="common/navbar.tpl"}
 

@@ -1,4 +1,4 @@
-{include file='common/header.tpl'}
+{include file='common/header.tpl' title="Venn - Settings"}
 
 <!-- Custom CSS for this page -->
 <link href="../../css/profile.css" rel="stylesheet">

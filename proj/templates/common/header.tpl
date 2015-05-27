@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../images/assets/logo.ico">
+    <link rel="icon" href="../../images/assets/logo.png">
 
-    <title>Venn</title>
+    <title>{$title|default:"Venn"}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../assets/frameworks/bootstrap/css/bootstrap.min.css" rel="stylesheet">

@@ -1,5 +1,5 @@
 
-{include file='common/header.tpl'}
+{include file='common/header.tpl' title = $user.name}
 
 <link href="../../css/profile.css" rel="stylesheet">
 </head>

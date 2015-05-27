@@ -1,4 +1,4 @@
-{include file="common/header.tpl"}
+{include file="common/header.tpl" title="Venn - Post"}
 
 {include file="common/navbar.tpl"}
 

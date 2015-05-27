@@ -1,7 +1,6 @@
 <!-- Custom CSS for this page -->
 
-{include file='common/header.tpl'}
-
+{include file='common/header.tpl' }
 
 <link href="../../css/circles.css" rel="stylesheet">
 </head>
