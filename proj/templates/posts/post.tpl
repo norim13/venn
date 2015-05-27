@@ -61,7 +61,7 @@
 
         <!-- comment section-->
         <div class="collapse" id="comments-{$post.id}">
-            <div class="col-lg-20" id="comments_section" >
+            <div class="col-lg-20 " id="comments_section">
                 <h4>Comments</h4>
                 <!-- this area is shown with ajax -->
                 <div class="input-group commentform" id="commentform-{$post.id}">

@@ -27,7 +27,11 @@
     <script type="text/javascript" src="../../assets/frameworks/bootstrap/js/dropdowns-enhancement.js"></script>
 
 
-    {assign var=current_page value="/~***REMOVED***/proto/pages/"|explode:$smarty.server.REQUEST_URI}
+    <script>
+        var base_url = "{$BASE_URL}";
+    </script>
+
+    {assign var=current_page value={$BASE_URL|cat:'pages/'}|explode:$smarty.server.REQUEST_URI}
     {if $current_page[1] == 'home/home.php'}
         <script type="text/javascript" src="../../js/posts/post.js"></script>
         <script type="text/javascript" src="../../js/posts/comments.js"></script>
@@ -38,6 +42,8 @@
     {elseif $current_page[1] == 'users/tagview.php'}
         <script type="text/javascript" src="../../js/posts/post.js"></script>
         <script type="text/javascript" src="../../js/posts/comments.js"></script>
+    {elseif $current_page[1] == 'users/circles.php'}
+        <script type="text/javascript" src="../../js/users/circles.js"></script>
     {/if}
 
 </body>

@@ -32,17 +32,18 @@ $(".btn-comment").click(comment);
 
 function togglecomments(event) {
     var post_id = $(this).attr('id').split('-')[2];
+    var button = $(this);
 
-    if($(this).hasClass("expanded")) {
-        $(this).removeClass("expanded");
-        $("#commentform-"+post_id).remove('.comment-panel');
+    if($(this).hasClass('expanded')) {
+        $(this).removeClass('expanded');
+        $("#comments-" + post_id + " .comment-panel").remove();
     } else {
         $.ajax({
             url: "../../actions/post/getComment.php",
             type: "post",
             data: {"post_id":post_id},
             success: function(data){
-
+                button.addClass('expanded');
 
                 var response = $.parseJSON(data);
 
@@ -57,7 +58,7 @@ function togglecomments(event) {
                     var msgowner = entry['name'];
                     var hashowner = entry['hashid'];
 
-                    var linkToProfile = '<a href="{$BASE_URL}pages/users/profile.php?user=' + hashowner +
+                    var linkToProfile = '<a href=' + base_url + 'pages/users/profile.php?user=' + hashowner +
                         ' style="text-decoration: none; color: inherit">'+ msgowner +'</a>';
 
                     $('<div class="panel panel-default comment-panel">' +
