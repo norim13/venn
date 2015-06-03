@@ -17,8 +17,12 @@
                 <div class="btn-group">
                     <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle pull-right" data-placeholder="Visibility" >Circles <span class="caret"></span></button>
                     <ul class="dropdown-menu dropdown-menu-form">
+                        {counter start=0 skip=1 print=false}
+                        {$n = {counter}}
+                        <li><input id="ex3_{$n}" name="ex3" value="{$n}" type="checkbox"><label for="ex3_{$n}">Public</label></li>
                         {foreach $user_circles as $circle}
-                            <li><input id="ex3_1" name="ex3" value="1" type="checkbox"><label for="ex3_1">{$circle.name}</label></li>
+                            {$n = {counter}}
+                            <li><input id="ex3_{$n}" name="ex3" value="{$n}" type="checkbox"><label for="ex3_{$n}">{$circle.name}</label></li>
                         {/foreach}
                     </ul>
                 </div>

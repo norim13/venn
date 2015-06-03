@@ -15,9 +15,9 @@ function showWhoVoted(event) {
 
                 var voteContent = "";
                 response['votes'].forEach(function (entry) {
-                        voteContent += '<a href=' + base_url + 'pages/users/profile.php?user='
+                        voteContent += '<p><a href=' + base_url + 'pages/users/profile.php?user='
                         + entry['hashid'] +
-                        ' style="text-decoration: none; color: inherit">'+ entry['name'] + '</a>';
+                        ' style="text-decoration: none; color: inherit">'+ entry['name'] + '</a></p>';
                     }
                 );
 

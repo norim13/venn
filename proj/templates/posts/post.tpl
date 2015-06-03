@@ -18,7 +18,7 @@
                                style="{if $vote.positive == '1'} color:rgb(92,184,92) {/if}"}></i></td>
                     </tr>
                     <tr>
-                        <td class="votedifference" id="td-votedifference-{$post.id}">{if $post.votedifference < 0} <i class="fa fa-minus-square-o" style="color:rgb(176, 49, 33)"></i> {else} {$post.votedifference} {/if} </td>
+                        <td class="votedifference" id="td-votedifference-{$post.id}">{if $post.votedifference < 0} <i class="fa fa-minus-square-o" style="color:rgb(176, 49, 33)"></i> {else} <i class="fa">{$post.votedifference}</i> {/if} </td>
                     </tr>
                     <tr>
                         <td><i id="downvote-{$post.id}" class="fa fa-sort-desc downvote-btn"
