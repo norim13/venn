@@ -10,10 +10,10 @@ if (!$_POST['message'] ) {
     exit;
 }
 
-$user_id=getUserFromEmail($_SESSION['email'])['id'];
-$message=htmlspecialchars($_POST['message']);
-$url=htmlspecialchars($_POST['url']);
-$tags=preg_split("/[\s,]+/",htmlspecialchars($_POST['tags']));
+$user_id = getUserFromEmail($_SESSION['email'])['id'];
+$message = htmlspecialchars($_POST['message']);
+$url = htmlspecialchars($_POST['url']);
+$tags = preg_split("/[\s,]+/",htmlspecialchars($_POST['tags']));
 
 $new_post=createPost($user_id,$message,$url);
 

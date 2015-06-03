@@ -14,8 +14,10 @@ if($_SESSION['email']) {
         if ($user == null) {
             $smarty->display('../../templates/users/profile_error.tpl');
         } elseif ($_SESSION['id'] == $user['id']) {
+            include_once '../../database/circles.php';
             $posts = getPostsFromUser($user['id']);
             $smarty->assign('user_posts', $posts);
+            $smarty->assign('user_circles', getAllCirclesFromUser($_SESSION['id']));
             $smarty->display('../../templates/users/profile.tpl');
         } elseif (isFriend($_SESSION['id'], $hashId)) {
             $posts = getPostsFromUser($user['id']);
@@ -27,10 +29,12 @@ if($_SESSION['email']) {
             $smarty->display('../../templates/users/profile_friend.tpl');
         }
     } else {
+        include_once '../../database/circles.php';
         $user = getUserFromEmail($_SESSION['email']);
         $smarty->assign('user', $user);
         $posts = getPostsFromUser($user['id']);
         $smarty->assign('user_posts', $posts);
+        $smarty->assign('user_circles', getAllCirclesFromUser($_SESSION['id']));
         $smarty->display('../../templates/users/profile.tpl');
     }
 }

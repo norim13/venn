@@ -19,11 +19,9 @@
         <div class="btn-group">
             <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle pull-right" data-placeholder="Visibility" >Visibility <span class="caret"></span></button>
             <ul class="dropdown-menu dropdown-menu-form">
-                <li><input id="ex3_1" name="ex3" value="1" type="checkbox"><label for="ex3_1">FEUP</label></li>
-                <li><input id="ex3_2" name="ex3" value="2" type="checkbox"><label for="ex3_2">Family</label></li>
-                <li><input id="ex3_3" name="ex3" value="3" type="checkbox"><label for="ex3_3">Best friends</label></li>
-                <li><input id="ex3_4" name="ex3" value="4" type="checkbox"><label for="ex3_4">Football friends</label></li>
-                <li><input id="ex3_5" name="ex3" value="5" type="checkbox"><label for="ex3_5">Public</label></li>
+                {foreach $user_circles as $circle}
+                    <li><input id="ex3_1" name="ex3" value="1" type="checkbox"><label for="ex3_1">{$circle.name}</label></li>
+                {/foreach}
             </ul>
         </div>
     </div>
