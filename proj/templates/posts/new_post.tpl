@@ -19,6 +19,7 @@
         <div class="btn-group">
             <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle pull-right" data-placeholder="Visibility" >Visibility <span class="caret"></span></button>
             <ul class="dropdown-menu dropdown-menu-form">
+                <li><input id="ex3_1" name="ex3" value="1" type="checkbox"><label for="ex3_1">Public</label></li>
                 {foreach $user_circles as $circle}
                     <li><input id="ex3_1" name="ex3" value="1" type="checkbox"><label for="ex3_1">{$circle.name}</label></li>
                 {/foreach}

@@ -15,7 +15,6 @@ function getFriendsFromCircle($circleId,$userId) {
       ((SELECT \"friendship_user2_id\" FROM \"CircleFriendship\" WHERE
       \"friendship_user1_id\" = ? AND \"circle_id\" = ?
         ) UNION
-
       (SELECT \"friendship_user1_id\" FROM \"CircleFriendship\" WHERE
       \"friendship_user2_id\" = ? AND \"circle_id\" = ?)) ");
     $stmt->execute(array($userId,$circleId,$userId,$circleId));

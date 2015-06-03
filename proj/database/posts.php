@@ -180,3 +180,26 @@ function isMyPost($post_id,$myID) {
     $stmt->execute(array($post_id,$myID));
     return isset($stmt->fetch()['id']);
 }
+
+function isVisibleTo($post_id,$post_owner,$user_id) {
+    include_once('../../database/circles.php');
+
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM \"PostVisibleTo\" WHERE
+                            post_id = ?");
+    $stmt->execute(array($post_id));
+    $postVisibleTo = $stmt->fetchAll();
+
+    if(!isset($postVisibleTo[0]['post_id'])) {
+        return true;
+    }
+    foreach($postVisibleTo as $circle) {
+        $friends = getFriendsFromCircle($circle['circle_id'], $post_owner);
+
+        foreach ($friends as $friend) {
+            if ($user_id == $friend['id'])
+                return true;
+        }
+    }
+    return false;
+}

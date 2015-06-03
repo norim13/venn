@@ -1,75 +1,77 @@
-<!--publication-->
-<div class="panel panel-default panel-feed" id="panel-feed-{$post.id}">
-    <div class="panel-heading ">
-        <img alt="200x200" class="profile-circles img-circle img-responsive"  style="float:left"src="http://lorempixel.com/40/40/people/4">
-        <h4>{$userFromID=getUserFromID($post.user_id)}
-            <a href="{$BASE_URL}pages/users/profile.php?user={$userFromID.hashid}" style="text-decoration: none; color: inherit"> {$userFromID.name} </a>
-        </h4>
-    </div>
-
-    <div class="panel-body"  >
-        <!-- voting section -->
-        <div class="vote-section" >
-            <table style="text-align:center;">
-                {$vote = getVote($smarty.session.id, $post.id)}
-                <tr>
-                    <td><i id="upvote-{$post.id}" class="fa fa-sort-asc upvote-btn"
-                           style="{if $vote.positive == '1'} color:rgb(92,184,92) {/if}"}></i></td>
-                </tr>
-                <tr>
-                    <td class="votedifference" id="td-votedifference-{$post.id}">{if $post.votedifference < 0} <i class="fa fa-minus-square-o" style="color:rgb(176, 49, 33)"></i> {else} {$post.votedifference} {/if} </td>
-                </tr>
-                <tr>
-                    <td><i id="downvote-{$post.id}" class="fa fa-sort-desc downvote-btn"
-                           style="{if $vote.positive == '0'} color:rgb(176, 49, 33) {/if}"}></i>
-                    </td>
-                </tr>
-            </table>
+{if isVisibleTo($post.id,$post.user_id,$smarty.session.id)}
+    <!--publication-->
+    <div class="panel panel-default panel-feed" id="panel-feed-{$post.id}">
+        <div class="panel-heading ">
+            <img alt="200x200" class="profile-circles img-circle img-responsive"  style="float:left"src="http://lorempixel.com/40/40/people/4">
+            <h4>{$userFromID=getUserFromID($post.user_id)}
+                <a href="{$BASE_URL}pages/users/profile.php?user={$userFromID.hashid}" style="text-decoration: none; color: inherit"> {$userFromID.name} </a>
+            </h4>
         </div>
 
-        <!-- publication -->
-        <p>{$post.message}</p>
-        {$tags = getTagsFromPost($post.id)}
-        {if $tags != NULL}
-            <p>
-                {foreach $tags as $tag}
-                    <a href="{$BASE_URL}pages/posts/tagview.php?tagname={$tag.name}">#{$tag.name}</a> {if not $tag@last} , {/if}
-                {/foreach}
-            </p>
-        {/if}
-        {if $post.url}
-            <p><a href={$post.url}>{$post.url}</a></p>
-        {/if}
-    </div>
+        <div class="panel-body">
+            <!-- voting section -->
+            <div class="vote-section" >
+                <table style="text-align:center;">
+                    {$vote = getVote($smarty.session.id, $post.id)}
+                    <tr>
+                        <td><i id="upvote-{$post.id}" class="fa fa-sort-asc upvote-btn"
+                               style="{if $vote.positive == '1'} color:rgb(92,184,92) {/if}"}></i></td>
+                    </tr>
+                    <tr>
+                        <td class="votedifference" id="td-votedifference-{$post.id}">{if $post.votedifference < 0} <i class="fa fa-minus-square-o" style="color:rgb(176, 49, 33)"></i> {else} {$post.votedifference} {/if} </td>
+                    </tr>
+                    <tr>
+                        <td><i id="downvote-{$post.id}" class="fa fa-sort-desc downvote-btn"
+                               style="{if $vote.positive == '0'} color:rgb(176, 49, 33) {/if}"}></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
 
-    <!--footer-->
-    <div class="panel-footer clearfix ">
-        <!-- section with the time and comments button -->
-        <div class="fill-flow">
-            <a href="{$BASE_URL}pages/posts/single_post.php?post_id={$post.id}" class="btn btn-default" id="clock-panel"><i class="fa fa-clock-o"></i>
-                {if $post.start_date} {$post.start_date} {else} {$post.post_date} {/if} </a>
-            <button class="btn btn-default btn-comments" id="btn-comments-{$post.id}" type="button" data-toggle="collapse" data-target="#comments-{$post.id}" aria-expanded="false" aria-controls="comments">
-                <i class="fa fa-comments"></i> Comments
-            </button>
-            {if $post.user_id != $smarty.session.id}
-                <button class="btn btn-default btn-repost" id="btn-repost-{$post.id}"><i class="fa fa-retweet"></i> Repost</button>
+            <!-- publication -->
+            <p>{$post.message}</p>
+            {$tags = getTagsFromPost($post.id)}
+            {if $tags != NULL}
+                <p>
+                    {foreach $tags as $tag}
+                        <a href="{$BASE_URL}pages/posts/tagview.php?tagname={$tag.name}">#{$tag.name}</a> {if not $tag@last} , {/if}
+                    {/foreach}
+                </p>
             {/if}
-            {if $post.user_id == $smarty.session.id}
-                <button class="btn btn-default btn-delete" id="btn-delete-{$post.id}"><i class="fa fa-trash-o"></i> Delete</button>
+            {if $post.url}
+                <p><a href={$post.url}>{$post.url}</a></p>
             {/if}
         </div>
 
-        <!-- comment section-->
-        <div class="collapse" id="comments-{$post.id}">
-            <div class="col-lg-20 " id="comments_section">
-                <h4>Comments</h4>
-                <!-- this area is shown with ajax -->
-                <div class="input-group commentform" id="commentform-{$post.id}">
-                    <textarea placeholder="Type comment" class="form-control" rows="1" style="resize:none"></textarea>
-                    <span class="input-group-addon btn btn-primary btn-comment">Comment</span>
-                    <div id="error_message"></div>
+        <!--footer-->
+        <div class="panel-footer clearfix ">
+            <!-- section with the time and comments button -->
+            <div class="fill-flow">
+                <a href="{$BASE_URL}pages/posts/single_post.php?post_id={$post.id}" class="btn btn-default" id="clock-panel"><i class="fa fa-clock-o"></i>
+                    {if $post.start_date} {$post.start_date} {else} {$post.post_date} {/if} </a>
+                <button class="btn btn-default btn-comments" id="btn-comments-{$post.id}" type="button" data-toggle="collapse" data-target="#comments-{$post.id}" aria-expanded="false" aria-controls="comments">
+                    <i class="fa fa-comments"></i> Comments
+                </button>
+                {if $post.user_id != $smarty.session.id}
+                    <button class="btn btn-default btn-repost" id="btn-repost-{$post.id}"><i class="fa fa-retweet"></i> Repost</button>
+                {/if}
+                {if $post.user_id == $smarty.session.id}
+                    <button class="btn btn-default btn-delete" id="btn-delete-{$post.id}"><i class="fa fa-trash-o"></i> Delete</button>
+                {/if}
+            </div>
+
+            <!-- comment section-->
+            <div class="collapse" id="comments-{$post.id}">
+                <div class="col-lg-20 " id="comments_section">
+                    <h4>Comments</h4>
+                    <!-- this area is shown with ajax -->
+                    <div class="input-group commentform" id="commentform-{$post.id}">
+                        <textarea placeholder="Type comment" class="form-control" rows="1" style="resize:none"></textarea>
+                        <span class="input-group-addon btn btn-primary btn-comment">Comment</span>
+                        <div id="error_message"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+{/if}
