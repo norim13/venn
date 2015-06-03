@@ -220,5 +220,7 @@
     </div>
 </div>
 
+{include file="posts/voteModal.tpl"}
+
 {include file="common/footer.tpl"}
 

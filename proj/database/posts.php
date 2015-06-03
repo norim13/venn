@@ -157,3 +157,26 @@ function createComment($user_id,$post_id,$message) {
         $message,
         date('Y-m-d H:i:s')));
 }
+
+function getVotesFromPostID($postid) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM \"Vote\", \"User\" WHERE post_id = ?
+                            AND \"Vote\".user_id = \"User\".id");
+    $stmt->execute(array($postid));
+    return $stmt->fetchAll();
+}
+
+function searchPosts($string){
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM \"Post\" WHERE message @@ to_tsquery(?)");
+    $stmt->execute(array($string));
+    return $stmt->fetchAll();
+}
+
+function isMyPost($post_id,$myID) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM \"Post\" WHERE id = ?
+                            AND \"Post\".user_id = ?");
+    $stmt->execute(array($post_id,$myID));
+    return isset($stmt->fetch()['id']);
+}
