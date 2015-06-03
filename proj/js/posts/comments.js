@@ -49,14 +49,16 @@ function togglecomments(event) {
 
                 var parentdiv = $('#commentform-'+ post_id);
 
+                var base_url = response['base_url'];
+
                 var comments = response['comments'];
                 comments.forEach(function(entry) {
-
                     var newmsg = entry['message'];
                     var date = entry['date'];
 
                     var msgowner = entry['name'];
                     var hashowner = entry['hashid'];
+
 
                     var linkToProfile = '<a href=' + base_url + 'pages/users/profile.php?user=' + hashowner +
                         ' style="text-decoration: none; color: inherit">'+ msgowner +'</a>';

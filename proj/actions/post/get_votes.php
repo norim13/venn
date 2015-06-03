@@ -15,6 +15,7 @@ else{
         $return_messages['votes'] = $votes;
         $return_messages['post_id'] = $post_id;
         $return_messages['can_view'] = 'true';
+        $return_messages['base_url'] = $BASE_URL;
     }
     else {
         $return_messages['errors']['not_owner'] = 'Not my post!';

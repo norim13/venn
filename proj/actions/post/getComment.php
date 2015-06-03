@@ -12,6 +12,7 @@ else{
     $post_id = htmlspecialchars($_POST['post_id']);
     $comments = getCommentsFromPostID($post_id);
     $return_messages['comments'] = $comments;
+    $return_messages['base_url'] = $BASE_URL;
 }
 
 if (!isset($return_messages['errors']))
