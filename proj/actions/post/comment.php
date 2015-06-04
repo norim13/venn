@@ -14,8 +14,9 @@ else{
     createComment($_SESSION['id'], $post_id, $comment);
     $return_messages['comment']['msg'] = $comment;
     $return_messages['comment']['user'] = getNameFromID($_SESSION['id'])['name'];
-    $return_messages['comment']['user_hashid'] = getHashID($_SESSION['id']);
+    $return_messages['comment']['user_hashid'] = getHashID($_SESSION['id'])['hashid'];
     $return_messages['comment']['date'] = date('Y-m-d');
+    $return_messages['base_url'] = $BASE_URL;
 }
 
 if (!isset($return_messages['errors']))

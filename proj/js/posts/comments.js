@@ -16,8 +16,10 @@ function comment(event) {
             var hashowner = response['comment']['user_hashid'];
             var date = response['comment']['date'];
 
-            var linkToProfile = '<a href="{$BASE_URL}pages/users/profile.php?user=' + hashowner +
-                ' style="text-decoration: none; color: inherit">'+ msgowner +'</a>';
+            var base_url = response['base_url'];
+
+            var linkToProfile = '<a href=\"' + base_url + 'pages/users/profile.php?user=' + hashowner +
+                '\" style=\"text-decoration: none; color: inherit\">'+ msgowner +'</a>';
 
             $('<div class="panel panel-default">' +
             '<div class="panel-heading">' + newmsg + '</div>' +
