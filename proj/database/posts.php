@@ -166,6 +166,13 @@ function getVotesFromPostID($postid) {
     return $stmt->fetchAll();
 }
 
+function getVotesFromUser($userID) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM \"Vote\" WHERE user_id = ?");
+    $stmt->execute(array($userID));
+    return $stmt->fetchAll();
+}
+
 function searchPosts($string){
     global $conn;
     $stmt = $conn->prepare("SELECT * FROM \"Post\" WHERE message @@ to_tsquery(?)");

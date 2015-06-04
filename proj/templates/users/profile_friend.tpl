@@ -38,8 +38,7 @@
                 </ul>
                 <ul class="list-group">
                     <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Shares</strong></span> <i class="fa fa-eye-slash"></i></li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Upvotes</strong></span> <i class="fa fa-eye-slash"></i></li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Votes</strong></span> <i class="fa fa-eye-slash"></i></li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong class="">Posts</strong></span> <i class="fa fa-eye-slash"></i></li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong class="">Friends</strong></span> <i class="fa fa-eye-slash"></i></li>
                 </ul>

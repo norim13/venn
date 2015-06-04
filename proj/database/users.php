@@ -30,7 +30,6 @@ function isLoginCorrect($email, $password) {
 }
 
 function getUserFromHash($hashId){
-
     global $conn;
     $stmt = $conn->prepare("SELECT *
     FROM \"User\"
@@ -39,7 +38,6 @@ function getUserFromHash($hashId){
 
     return $stmt->fetch();
 }
-
 
 function emailAlreadyTaken($email) {
     global $conn;
@@ -56,7 +54,6 @@ function getUserFromEmail($email){
     return $stmt->fetch();
 }
 
-
 function updateLogin($email) {
     global $conn;
     $stmt = $conn->prepare("UPDATE \"User\"
@@ -65,7 +62,6 @@ function updateLogin($email) {
 
     $stmt->execute(array($email));
 }
-
 
 function isFriend($myId, $hashId) {
     $otherUser=getUserFromHash($hashId)['id'];
