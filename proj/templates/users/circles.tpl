@@ -1,6 +1,6 @@
 <!-- Custom CSS for this page -->
 
-{include file='common/header.tpl' }
+{include file='common/header.tpl' title='Venn - Circles'}
 
 <link href="../../css/circles.css" rel="stylesheet">
 </head>
@@ -89,27 +89,23 @@
     </div>
 
     {foreach $user_friend_requests as $friend_request}
-
-        <div class="panel panel-default target col-md-12 circle-members" id="friend-members-{$friend_request.name}">
+        {$username = getUserFromID($friend_request.requestedBy_id)}
+        <div class="panel panel-default target col-md-12 circle-members" id="friend-members-{$username.name}">
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-1 profile-thumbnail">
                         <img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people">
-                        <p> {$friend_request.name} </p>
-                        <table  cellpadding="0" cellspacing="0" style="width: 100%; text-align:center" class="col-md-2">
+                        <p> {$username.name} </p>
+                        <table cellpadding="0" cellspacing="0" style="width: 100%; text-align:center" class="col-md-2">
                             <tr>
-                                <td><a href="../../actions/circles/accept_friend_request.php?user_id={$friend_request.id}"><i class="fa fa-check"></i></a></td>
-                                <td><a href="../../actions/circles/decline_friend_request.php"><i class="fa fa-times"></i></a></td>
+                                <td><a class="accept_friend_request" id="accept_friend_request-{$friend_request.requestedBy_id}"><i class="fa fa-check"></i></a></td>
+                                <td><a class="decline_friend_request" id="decline_friend_request-{$friend_request.requestedBy_id}"><i class="fa fa-times"></i></a></td>
                             </tr>
                         </table>
                     </div>
-
-
                 </div>
-
             </div>
         </div>
-
     {/foreach}
 
 

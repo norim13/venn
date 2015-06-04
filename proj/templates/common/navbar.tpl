@@ -31,10 +31,10 @@
                         </div>
                         <div>
                             <span class="pull-left text-muted">
-                                <a href=""> <span class="text-muted"> Accept </span></a>
+                                <a href="" class="accept_friend_request" id="accept_friend_request-{$friendRequest.requestedBy_id}"> <span class="text-muted"> Accept </span></a>
                             </span>
                             <span class="pull-right text-muted">
-                                <a href=""><span class="text-muted"> Decline </span></a>
+                                <a href="" class="decline_friend_request" id="decline_friend_request-{$friendRequest.requestedBy_id}"><span class="text-muted"> Decline </span></a>
                             </span>
                         </div>
                     </li>

@@ -25,6 +25,14 @@ function acceptFriendRequest($myId,$newFriendId) {
     global $conn;
     $stmt = $conn->prepare("INSERT INTO \"Friendship\" (user1_id, user2_id, date) VALUES (?,?,?)");
     $stmt->execute(array($myId,$newFriendId,date('Y-m-d H:i:s')));
+    return $stmt->fetch();
+}
+
+function declineFriendRequest($myId,$newFriendId) {
+    global $conn;
+    $stmt = $conn->prepare("DELETE FROM \"FriendRequest\" WHERE \"requestedBy_id\"=? AND \"requestedTo_id\"=?");
+    $stmt->execute(array($newFriendId,$myId));
+    return $stmt->fetch();
 }
 
 function getFriendRequestsOfUser($userId) {
@@ -73,4 +81,3 @@ function deleteCircle($circle_id,$my_id) {
     $stmt->execute(array($circle_id,$my_id));
 }
 
-?>

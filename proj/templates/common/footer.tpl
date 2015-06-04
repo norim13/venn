@@ -37,14 +37,17 @@
         <script type="text/javascript" src="../../js/posts/comments.js"></script>
         <script type="text/javascript" src="../../js/posts/votes.js"></script>
         <script type="text/javascript" src="../../js/users/home.js"></script>
+        <script type="text/javascript" src="../../js/users/circles.js"></script>
     {elseif $current_page[1] == 'users/profile.php'}
         <script type="text/javascript" src="../../js/posts/votes.js"></script>
         <script type="text/javascript" src="../../js/posts/post.js"></script>
         <script type="text/javascript" src="../../js/posts/comments.js"></script>
+        <script type="text/javascript" src="../../js/users/circles.js"></script>
     {elseif $current_page[1] == 'users/tagview.php'}
         <script type="text/javascript" src="../../js/posts/votes.js"></script>
         <script type="text/javascript" src="../../js/posts/post.js"></script>
         <script type="text/javascript" src="../../js/posts/comments.js"></script>
+        <script type="text/javascript" src="../../js/users/circles.js"></script>
     {elseif $current_page[1] == 'users/circles.php'}
         <script type="text/javascript" src="../../js/users/circles.js"></script>
     {/if}
