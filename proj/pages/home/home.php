@@ -26,6 +26,8 @@ if($_SESSION['email']) {
     $smarty->assign('circles_users', $circlesUsers);
     $smarty->assign('circles_posts', $circlePosts);
 
+    $smarty->assign('friendRequests', getFriendRequestsOfUser($_SESSION['id']));
+
     $smarty->display('../../templates/posts/feed.tpl');
 }
 else

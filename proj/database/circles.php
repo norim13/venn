@@ -29,9 +29,9 @@ function acceptFriendRequest($myId,$newFriendId) {
 
 function getFriendRequestsOfUser($userId) {
     global $conn;
-    $stmt = $conn->prepare("SELECT * FROM \"User\" WHERE id IN
-      (SELECT \"requestedBy_id\" FROM \"FriendRequest\" WHERE
-      \"requestedTo_id\" = ?)");
+    $stmt = $conn->prepare("SELECT * FROM
+                            \"FriendRequest\" WHERE
+                            \"requestedTo_id\" = ?");
     $stmt->execute(array($userId));
 
     return $stmt->fetchAll();

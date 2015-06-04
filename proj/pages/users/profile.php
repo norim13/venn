@@ -5,6 +5,9 @@ include_once '../../config/init.php';
 if($_SESSION['email']) {
     include_once '../../database/users.php';
     include_once '../../database/posts.php';
+    include_once '../../database/circles.php';
+
+    $smarty->assign('friendRequests', getFriendRequestsOfUser($_SESSION['id']));
 
     if (isset($_GET['user'])) {
         $hashId = $_GET['user'];
