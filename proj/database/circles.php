@@ -98,3 +98,10 @@ function deleteCircle($circle_id,$my_id) {
     $stmt->execute(array($circle_id,$my_id));
 }
 
+function removeFriendship($myId,$user_id) {
+    global $conn;
+    $stmt = $conn->prepare("DELETE FROM \"Friendship\" WHERE
+                            (user1_id=? AND user2_id=?)
+                            OR (user2_id=? AND user1_id=?)");
+    $stmt->execute(array($myId,$user_id,$myId,$user_id));
+}

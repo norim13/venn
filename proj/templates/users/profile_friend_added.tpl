@@ -30,13 +30,11 @@
         <div class="row">
             <div class="col-sm-3">
                 <!--left col-->
-
                 <ul class="list-group">
                     <li class="list-group-item text-muted" contenteditable="false">Profile</li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span> 2.13.2014</li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last seen</strong></span> <i class="fa fa-eye-slash"></i></li>
-                    <li class="list-group-item text-right"><span class="pull-left"><a href=""><strong class="">Remove me from friends</strong></span> <i class="fa fa-trash-o"></i></a></li>
-
+                    <li class="list-group-item text-right"><span class="pull-left"><a href="" class="remove-friendship-btn" id="remove-friendship-btn-{$user.id}"><strong class="">Remove me from friends</strong></span> <i class="fa fa-trash-o"></i></a></li>
                 </ul>
                 <ul class="list-group">
                     <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
@@ -49,7 +47,6 @@
 
             <div class="col-sm-9" contenteditable="false" style="">
                 <!--bio collum-->
-
                 <div class=" col-lg-12 clearfix">
                     <h2 id="myPostsh2">Posts</h2>
                     {foreach $user_posts as $post}
@@ -58,6 +55,5 @@
                 </div>
             </div>
         </div>
-
 
 {include file='common/footer.tpl'}

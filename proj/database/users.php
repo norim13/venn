@@ -71,10 +71,10 @@ function isFriend($myId, $hashId) {
     $otherUser=getUserFromHash($hashId)['id'];
     global $conn;
     $stmt = $conn->prepare("SELECT *
-  FROM \"Friendship\"
-  WHERE ( user1_id = ? AND user2_id = ? )
-  OR  ( user2_id = ? AND user1_id = ? )  ");
-    $stmt->execute(array($myId,$otherUser,$otherUser,$myId));
+                            FROM \"Friendship\"
+                            WHERE ( user1_id = ? AND user2_id = ? )
+                            OR ( user2_id = ? AND user1_id = ? )  ");
+    $stmt->execute(array($myId,$otherUser,$myId,$otherUser));
     return $stmt->fetch() == true;
 }
 

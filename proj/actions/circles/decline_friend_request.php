@@ -6,3 +6,5 @@ $user_id = htmlspecialchars($_POST['user_id']);
 $myId = $_SESSION['id'];
 
 declineFriendRequest($myId,$user_id);
+
+echo json_encode($user_id);

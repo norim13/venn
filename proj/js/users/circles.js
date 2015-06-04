@@ -1,4 +1,4 @@
-$("#botao_novo_circulo").click(function(event) {
+function createNewCircle(event) {
     var id_array = [];
 
     $("li.active").each( function( index, element ){
@@ -15,11 +15,11 @@ $("#botao_novo_circulo").click(function(event) {
         },
         error: function(){}
     });
-});
+}
+
+$("#botao_novo_circulo").click(createNewCircle);
 
 function acceptFriendRequest(event) {
-    event.preventDefault();
-
     var user_id = $( this ).attr("id").split('-')[1];
 
     $.ajax({
@@ -27,6 +27,13 @@ function acceptFriendRequest(event) {
         type: 'post',
         data: {"user_id" :  user_id},
         success: function(data){
+            var response = $.parseJSON(data);
+            $('#friendship-request-panel-' + response).animate({
+                    "opacity" : "0"},
+                700,
+                function () {
+                    $('#friendship-request-panel-' + response).remove();
+                });
         },
         error: function(){}
     });
@@ -35,7 +42,6 @@ function acceptFriendRequest(event) {
 $('.accept_friend_request').click(acceptFriendRequest);
 
 function declineFriendRequest(event) {
-    event.preventDefault();
     var user_id = $( this ).attr("id").split('-')[1];
 
     $.ajax({
@@ -43,6 +49,13 @@ function declineFriendRequest(event) {
         type: 'post',
         data: {"user_id" :  user_id},
         success: function(data){
+            var response = $.parseJSON(data);
+            $('#friendship-request-panel-' + response).animate({
+                    "opacity" : "0"},
+                700,
+                function () {
+                    $('#friendship-request-panel-' + response).remove();
+                });
         },
         error: function(){}
     });
@@ -66,3 +79,18 @@ function createFriendRequest(event) {
 }
 
 $('.new_friend_request-btn').click(createFriendRequest);
+
+function removeFriendship(event) {
+    var user_id = $( this ).attr("id").split('-')[3];
+
+    $.ajax({
+        url: '../../actions/circles/removeFriendship.php',
+        type: 'post',
+        data: {"user_id" :  user_id},
+        success: function(data){
+        },
+        error: function(){}
+    });
+}
+
+$('.remove-friendship-btn').click(removeFriendship);

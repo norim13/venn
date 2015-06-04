@@ -85,12 +85,12 @@
     {/foreach}
 
     <div>
-        <h1 class="">Friend Requests</h1>
+        <h1>Friend Requests</h1>
     </div>
 
     {foreach $user_friend_requests as $friend_request}
         {$username = getUserFromID($friend_request.requestedBy_id)}
-        <div class="panel panel-default target col-md-12 circle-members" id="friend-members-{$username.name}">
+        <div class="panel panel-default target col-md-12 friendshiprequest--panel" id="friendship-request-panel-{$username.id}">
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-1 profile-thumbnail">
@@ -107,8 +107,6 @@
             </div>
         </div>
     {/foreach}
-
-
 </div>
 
 {include file='common/footer.tpl'}

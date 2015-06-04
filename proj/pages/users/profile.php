@@ -29,8 +29,6 @@ if($_SESSION['email']) {
         } else {
             $requestSent = hasFriendRequest($_SESSION['id'],$user['id']);
 
-            //print_r($requestSent);
-
             $smarty->assign('requestSent', $requestSent);
             $smarty->display('../../templates/users/profile_friend.tpl');
         }
