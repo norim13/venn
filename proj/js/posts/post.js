@@ -62,6 +62,10 @@ function deletePost(event) {
 
 $(".btn-delete").click(deletePost);
 
+$('#example1').datepicker({
+    format: "dd/mm/yyyy"
+});
+
 function repost(event) {
     var post_id = $(this).attr('id').split('-')[2];
 

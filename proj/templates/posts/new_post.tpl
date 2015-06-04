@@ -11,10 +11,6 @@
     <input type="submit" value="Post" class=" btn btn-info" style="margin-left:10px">
     <input  name="date" type="text" placeholder="click to show datepicker"  id="example1">
 
-    <h6 class="pull-right" id="counter">600 characters remaining   </h6>
-    <button class="btn btn-default" id="clock-panel"type=""><i class="fa fa-picture-o"></i>  Upload Photo</button>
-    <!-- <button class="btn btn-default" id="clock-panel"type=""><i class="fa fa-clock-o"></i>  Set timer</button>-->
-
     <div class="dropdown">
         <div class="btn-group">
             <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle pull-right" data-placeholder="Visibility" >Visibility <span class="caret"></span></button>
@@ -29,4 +25,10 @@
             </ul>
         </div>
     </div>
+
+    <h6 class="pull-right" id="counter">600 characters remaining   </h6>
+    <button class="btn btn-default" id="clock-panel"type=""><i class="fa fa-picture-o"></i>  Upload Photo</button>
+    <!-- <button class="btn btn-default" id="clock-panel"type=""><i class="fa fa-clock-o"></i>  Set timer</button>-->
+
+
 </form>
