@@ -23,7 +23,6 @@ if($_SESSION['email']) {
 
     $smarty->assign('recent_posts', getRecentPosts());
     $smarty->assign('user_circles', $circles);
-    $smarty->assign('circles_users', $circlesUsers);
     $smarty->assign('circles_posts', $circlePosts);
 
     $smarty->assign('friendRequests', getFriendRequestsOfUser($_SESSION['id']));

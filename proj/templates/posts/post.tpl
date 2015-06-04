@@ -61,9 +61,15 @@
             <div class="fill-flow">
                 <a href="{$BASE_URL}pages/posts/single_post.php?post_id={$post.id}" class="btn btn-default" id="clock-panel"><i class="fa fa-clock-o"></i>
                     {if $post.start_date} {$post.start_date} {else} {$post.post_date} {/if} </a>
-                <button class="btn btn-default btn-comments" id="btn-comments-{$post.id}" type="button" data-toggle="collapse" data-target="#comments-{$post.id}" aria-expanded="false" aria-controls="comments">
-                    <i class="fa fa-comments"></i> Comments
-                </button>
+                {if $isRightFeed}
+                    <button class="btn btn-default btn-comments rightFeed" id="btn-comments-{$post.id}" type="button" data-toggle="collapse" data-target="#comments-rightfeed-{$post.id}" aria-expanded="false" aria-controls="comments">
+                        <i class="fa fa-comments"></i> Comments
+                    </button>
+                {else}
+                    <button class="btn btn-default btn-comments" id="btn-comments-{$post.id}" type="button" data-toggle="collapse" data-target="#comments-{$post.id}" aria-expanded="false" aria-controls="comments">
+                        <i class="fa fa-comments"></i> Comments
+                    </button>
+                {/if}
                 {if $post.user_id != $smarty.session.id}
                     <button class="btn btn-default btn-repost" id="btn-repost-{$post.id}"><i class="fa fa-retweet"></i> Repost</button>
                 {/if}
@@ -73,17 +79,29 @@
             </div>
 
             <!-- comment section-->
-            <div class="collapse" id="comments-{$post.id}">
-                <div class="col-lg-20 " id="comments_section">
-                    <h4>Comments</h4>
-                    <!-- this area is shown with ajax -->
-                    <div class="input-group commentform" id="commentform-{$post.id}">
-                        <textarea placeholder="Type comment" class="form-control" rows="1" style="resize:none"></textarea>
-                        <span class="input-group-addon btn btn-primary btn-comment">Comment</span>
-                        <div id="error_message"></div>
+            {if $isRightFeed}
+                <div class="collapse" id="comments-rightfeed-{$post.id}">
+                    <div class="col-lg-20" id="comments_section">
+                        <h4>Comments</h4>
+                        <div class="input-group commentform" id="commentform-rightfeed-{$post.id}">
+                            <textarea placeholder="Type comment" class="form-control" rows="1" style="resize:none"></textarea>
+                            <span class="input-group-addon btn btn-primary btn-comment">Comment</span>
+                            <div id="error_message"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            {else}
+                <div class="collapse" id="comments-{$post.id}">
+                    <div class="col-lg-20" id="comments_section">
+                        <h4>Comments</h4>
+                        <div class="input-group commentform" id="commentform-{$post.id}">
+                            <textarea placeholder="Type comment" class="form-control" rows="1" style="resize:none"></textarea>
+                            <span class="input-group-addon btn btn-primary btn-comment">Comment</span>
+                            <div id="error_message"></div>
+                        </div>
+                    </div>
+                </div>
+            {/if}
         </div>
     </div>
 {/if}

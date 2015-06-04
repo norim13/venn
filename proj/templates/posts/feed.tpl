@@ -30,6 +30,7 @@
         </h1>
 
         <!--publication-->
+        {$isRightFeed = true}
         {foreach $circles_posts as $user_in_circle}
             {foreach $user_in_circle as $post}
                 {include file="posts/post.tpl"}
