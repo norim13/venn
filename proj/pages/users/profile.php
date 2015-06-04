@@ -27,8 +27,11 @@ if($_SESSION['email']) {
             $smarty->assign('user_posts', $posts);
             $smarty->display('../../templates/users/profile_friend_added.tpl');
         } else {
-            $posts = getPostsFromUser($user['id']);
-            $smarty->assign('user_posts', $posts);
+            $requestSent = hasFriendRequest($_SESSION['id'],$user['id']);
+
+            //print_r($requestSent);
+
+            $smarty->assign('requestSent', $requestSent);
             $smarty->display('../../templates/users/profile_friend.tpl');
         }
     } else {

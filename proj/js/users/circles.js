@@ -27,7 +27,6 @@ function acceptFriendRequest(event) {
         type: 'post',
         data: {"user_id" :  user_id},
         success: function(data){
-            console.log('accept');
         },
         error: function(){}
     });
@@ -44,10 +43,26 @@ function declineFriendRequest(event) {
         type: 'post',
         data: {"user_id" :  user_id},
         success: function(data){
-            console.log('decline');
         },
         error: function(){}
     });
 }
 
 $('.decline_friend_request').click(declineFriendRequest);
+
+function createFriendRequest(event) {
+    var user_id = $( this ).attr("id").split('-')[2];
+
+    $.ajax({
+        url: '../../actions/circles/create_new_friend_request.php',
+        type: 'post',
+        data: {"user_id" :  user_id},
+        success: function(data){
+            $('#new_friend_request-btn-'+user_id).removeClass('new_friend_request-btn');
+            $('#new_friend_request-btn-'+user_id).html('Friend Request Sent');
+        },
+        error: function(){}
+    });
+}
+
+$('.new_friend_request-btn').click(createFriendRequest);

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-20 12:12:55
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-04 05:05:55
          compiled from "../../templates/users/circles.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18536193865549162558dcd8-43500815%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f095cc3a28ad07c03e05de77f6d4003511c4ac82' => 
     array (
       0 => '../../templates/users/circles.tpl',
-      1 => 1431886935,
+      1 => 1433387151,
       2 => 'file',
     ),
   ),
@@ -26,13 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'friend' => 0,
     'user_friend_requests' => 0,
     'friend_request' => 0,
+    'username' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_55491625631474_43906087')) {function content_55491625631474_43906087($_smarty_tpl) {?><!-- Custom CSS for this page -->
 
-<?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
+<?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('title'=>'Venn - Circles'), 0);?>
 
 
 <link href="../../css/circles.css" rel="stylesheet">
@@ -149,30 +149,27 @@ $_smarty_tpl->tpl_vars['friend']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['friend_request']->key => $_smarty_tpl->tpl_vars['friend_request']->value) {
 $_smarty_tpl->tpl_vars['friend_request']->_loop = true;
 ?>
-
-        <div class="panel panel-default target col-md-12 circle-members" id="friend-members-<?php echo $_smarty_tpl->tpl_vars['friend_request']->value['name'];?>
+        <?php $_smarty_tpl->tpl_vars['username'] = new Smarty_variable(getUserFromID($_smarty_tpl->tpl_vars['friend_request']->value['requestedBy_id']), null, 0);?>
+        <div class="panel panel-default target col-md-12 circle-members" id="friend-members-<?php echo $_smarty_tpl->tpl_vars['username']->value['name'];?>
 ">
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-1 profile-thumbnail">
                         <img alt="200x200" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people">
-                        <p> <?php echo $_smarty_tpl->tpl_vars['friend_request']->value['name'];?>
+                        <p> <?php echo $_smarty_tpl->tpl_vars['username']->value['name'];?>
  </p>
-                        <table  cellpadding="0" cellspacing="0" style="width: 100%; text-align:center" class="col-md-2">
+                        <table cellpadding="0" cellspacing="0" style="width: 100%; text-align:center" class="col-md-2">
                             <tr>
-                                <td><a href="../../actions/circles/accept_friend_request.php?user_id=<?php echo $_smarty_tpl->tpl_vars['friend_request']->value['id'];?>
+                                <td><a class="accept_friend_request" id="accept_friend_request-<?php echo $_smarty_tpl->tpl_vars['friend_request']->value['requestedBy_id'];?>
 "><i class="fa fa-check"></i></a></td>
-                                <td><a href="../../actions/circles/decline_friend_request.php"><i class="fa fa-times"></i></a></td>
+                                <td><a class="decline_friend_request" id="decline_friend_request-<?php echo $_smarty_tpl->tpl_vars['friend_request']->value['requestedBy_id'];?>
+"><i class="fa fa-times"></i></a></td>
                             </tr>
                         </table>
                     </div>
-
-
                 </div>
-
             </div>
         </div>
-
     <?php } ?>
 
 

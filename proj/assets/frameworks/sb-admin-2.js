@@ -114,7 +114,7 @@ $(function() {
 
 
 
-   
+
 
     $window.scroll(function() {
         if (width < 768) 
@@ -170,8 +170,25 @@ jQuery.fn.extend({
         return listrap;
     }
 });
+
+
+
 $(document).ready(function () {
+
+
+
     $(".listrap").listrap().on("selection-changed", function (event, selection) {
         console.log(selection);
+    });
+
+
+    $("button#search-btn").click(function(){
+
+        var stringForSearch = $("#text-search").val();
+
+        console.log(stringForSearch);
+        if(stringForSearch.length > 0){
+            location.replace("../../pages/posts/post_search.php?search="+stringForSearch);
+        }
     });
 });

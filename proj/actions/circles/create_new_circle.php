@@ -1,12 +1,20 @@
 <?php
 
 include_once('../../config/init.php');
-include('../../database/circles.php');
+include_once('../../database/circles.php');
 
 $circle_name=htmlspecialchars($_POST['circle_name']);
 $myId = $_SESSION['id'];
+$friends = $_POST['friends'];
 
-createNewCircle($circle_name,$myId);
+$circle_id = createNewCircle($circle_name,$myId);
 
-header('Location: ' . '../../pages/users/circles.php');
-exit;
+foreach($friends as $friend) {
+    addFriendToCircle($circle_id,$myId,$friend);
+}
+
+
+
+
+
+//header('Location: ' . '../../pages/users/circles.php');

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-20 12:02:01
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-04 02:18:42
          compiled from "../../templates/posts/single_post.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:662351503555c5b996e2597-94353754%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a250e12587dcbd576a8ef3fb75bd69f89e03d4e2' => 
     array (
       0 => '../../templates/posts/single_post.tpl',
-      1 => 1431884972,
+      1 => 1433330064,
       2 => 'file',
     ),
   ),
@@ -15,16 +15,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_555c5b997bb4f0_21255891',
   'variables' => 
   array (
     'post' => 0,
     'BASE_URL' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_555c5b997bb4f0_21255891',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_555c5b997bb4f0_21255891')) {function content_555c5b997bb4f0_21255891($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("common/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_555c5b997bb4f0_21255891')) {function content_555c5b997bb4f0_21255891($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("common/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('title'=>"Venn - Post"), 0);?>
 
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/navbar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -43,6 +43,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </div>
     <?php }?>
 </div>
+
+<?php echo $_smarty_tpl->getSubTemplate ("posts/voteModal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 

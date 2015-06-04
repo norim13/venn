@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-19 14:56:40
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-22 13:36:47
          compiled from "/opt/lbaw/***REMOVED***/public_html/proto/templates/posts/post.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:285002808554e5fc82afcd3-31885083%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cf3b265b3f2240788cfc01904f8da7cfd695c4e4' => 
     array (
       0 => '/opt/lbaw/***REMOVED***/public_html/proto/templates/posts/post.tpl',
-      1 => 1431887238,
+      1 => 1432294484,
       2 => 'file',
     ),
   ),
@@ -25,9 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'vote' => 0,
     'tags' => 0,
     'tag' => 0,
-    'comments' => 0,
-    'comment' => 0,
-    'comment_owner' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -123,31 +120,11 @@ pages/posts/single_post.php?post_id=<?php echo $_smarty_tpl->tpl_vars['post']->v
         </div>
 
         <!-- comment section-->
-        <?php $_smarty_tpl->tpl_vars['comments'] = new Smarty_variable(getCommentsFromPost($_smarty_tpl->tpl_vars['post']->value), null, 0);?>
         <div class="collapse" id="comments-<?php echo $_smarty_tpl->tpl_vars['post']->value['id'];?>
 ">
             <div class="col-lg-20" id="comments_section" >
                 <h4>Comments</h4>
-                <?php  $_smarty_tpl->tpl_vars['comment'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['comment']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['comments']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['comment']->key => $_smarty_tpl->tpl_vars['comment']->value) {
-$_smarty_tpl->tpl_vars['comment']->_loop = true;
-?>
-                    <div class="panel panel-default">
-                        <div class="panel-heading"><?php echo $_smarty_tpl->tpl_vars['comment']->value['message'];?>
-</div>
-                        <div class="panel-body">
-                            <?php $_smarty_tpl->tpl_vars['comment_owner'] = new Smarty_variable(getUserFromID($_smarty_tpl->tpl_vars['comment']->value['user_id']), null, 0);?>
-                            <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-pages/users/profile.php?user=<?php echo $_smarty_tpl->tpl_vars['comment_owner']->value['hashid'];?>
-" style="text-decoration: none; color: inherit"> <?php echo $_smarty_tpl->tpl_vars['comment_owner']->value['name'];?>
- </a>
-                            , on <?php echo $_smarty_tpl->tpl_vars['comment']->value['date'];?>
-
-                        </div>
-                    </div>
-                <?php } ?>
-
+                <!-- this area is shown with ajax -->
                 <div class="input-group commentform" id="commentform-<?php echo $_smarty_tpl->tpl_vars['post']->value['id'];?>
 ">
                     <textarea placeholder="Type comment" class="form-control" rows="1" style="resize:none"></textarea>

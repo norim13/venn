@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-16 22:27:12
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-04 00:49:04
          compiled from "../../templates/users/profile_settings.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9716760715557a529591747-82373811%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3604cee365e8a18f465919987ac1bba5757cfe30' => 
     array (
       0 => '../../templates/users/profile_settings.tpl',
-      1 => 1431808028,
+      1 => 1432726185,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_5557a529632776_00518519',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5557a529632776_00518519')) {function content_5557a529632776_00518519($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5557a529632776_00518519')) {function content_5557a529632776_00518519($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('title'=>"Venn - Settings"), 0);?>
 
 
 <!-- Custom CSS for this page -->

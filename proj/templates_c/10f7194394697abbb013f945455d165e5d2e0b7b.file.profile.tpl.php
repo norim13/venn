@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-16 22:29:36
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-04 16:28:42
          compiled from "../../templates/users/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2145186425549488d326bc8-14187107%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10f7194394697abbb013f945455d165e5d2e0b7b' => 
     array (
       0 => '../../templates/users/profile.tpl',
-      1 => 1431808170,
+      1 => 1433384429,
       2 => 'file',
     ),
   ),
@@ -25,8 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5549488d3cb679_65589756')) {function content_5549488d3cb679_65589756($_smarty_tpl) {?>
-<?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5549488d3cb679_65589756')) {function content_5549488d3cb679_65589756($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('title'=>$_smarty_tpl->tpl_vars['user']->value['name']), 0);?>
 
 
 <link href="../../css/profile.css" rel="stylesheet">
@@ -105,6 +104,8 @@ $_smarty_tpl->tpl_vars['post']->_loop = true;
         </div>
     </div>
 </div>
+
+<?php echo $_smarty_tpl->getSubTemplate ("posts/voteModal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
 <?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
