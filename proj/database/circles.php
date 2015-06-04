@@ -1,6 +1,5 @@
 <?php
 
-
 function getAllCirclesFromUser($userId) {
     global $conn;
     $stmt = $conn->prepare("SELECT * FROM \"Circle\" WHERE owner_id = ?");

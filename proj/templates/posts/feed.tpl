@@ -11,7 +11,7 @@
     </div>
 
     <!-- right column -->
-    <div class=" col-lg-6 clearfix">
+    <div class="col-lg-6 clearfix">
         <h1>Circles
             <div class="dropdown" style="float:right">
                 <div class="btn-group">

@@ -61,3 +61,20 @@ function deletePost(event) {
 }
 
 $(".btn-delete").click(deletePost);
+
+function repost(event) {
+    var post_id = $(this).attr('id').split('-')[2];
+
+    $.ajax({
+        url: "../../actions/post/repost.php",
+        type: "post",
+        data: {"post_id":post_id},
+        success: function (data) {
+            console.log(data);
+            var response = $.parseJSON(data);
+        },
+        error: function () {}
+    });
+}
+
+$(".btn-repost").click(repost);

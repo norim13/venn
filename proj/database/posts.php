@@ -28,7 +28,7 @@ function getPostFromID($post_id) {
     return $stmt->fetch();
 }
 
-function createPost($user_id,$message,$url) {
+function createPost($user_id,$message,$url,$date) {
     global $conn;
     $stmt = $conn->prepare("INSERT INTO \"Post\" (user_id, message, url, post_date, start_date, expiration_date)
   VALUES (?,?,?,?,?,?) RETURNING id");
@@ -39,7 +39,7 @@ function createPost($user_id,$message,$url) {
         $url,
         date('Y-m-d H:i:s'),
         date('Y-m-d H:i:s'),
-        date('2016-m-d H:i:s')));
+        $date));
     return $stmt->fetch();
 }
 

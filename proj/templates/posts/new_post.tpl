@@ -1,8 +1,7 @@
 
 <form accept-charset="UTF-8" action="../../actions/post/new_post.php" method="POST">
 
-    <textarea class="form-control counted" name="message" placeholder="Type in your post" rows="5" style="margin-bottom:10px;">
-    </textarea>
+    <textarea class="form-control counted" name="message" placeholder="Type in your post" rows="5" style="margin-bottom:10px;"></textarea>
 
     Url: <input class="form-control" name="url" placeholder="Share a website" style="margin-bottom:10px;">
 
@@ -10,10 +9,11 @@
 
     <!--class="pull-right btn btn-info"-->
     <input type="submit" value="Post" class=" btn btn-info" style="margin-left:10px">
+    <input  name="date" type="text" placeholder="click to show datepicker"  id="example1">
 
     <h6 class="pull-right" id="counter">600 characters remaining   </h6>
     <button class="btn btn-default" id="clock-panel"type=""><i class="fa fa-picture-o"></i>  Upload Photo</button>
-    <button class="btn btn-default" id="clock-panel"type=""><i class="fa fa-clock-o"></i>  Set timer</button>
+    <!-- <button class="btn btn-default" id="clock-panel"type=""><i class="fa fa-clock-o"></i>  Set timer</button>-->
 
     <div class="dropdown">
         <div class="btn-group">
