@@ -15,15 +15,16 @@ if($_SESSION['email']) {
             $c[] = $friend;
     }
 
-    $circlesUsers = array_unique($c);
-
-    foreach($circlesUsers as $circleUser) {
-        $circlePosts[] = getPostsFromUser($circleUser['id']);
+    if($c) {
+        $circlesUsers = array_unique($c);
+        foreach($circlesUsers as $circleUser) {
+            $circlePosts[] = getPostsFromUser($circleUser['id']);
+        }
+        $smarty->assign('circles_posts', $circlePosts);
     }
 
     $smarty->assign('recent_posts', getRecentPosts());
     $smarty->assign('user_circles', $circles);
-    $smarty->assign('circles_posts', $circlePosts);
 
     $smarty->assign('friendRequests', getFriendRequestsOfUser($_SESSION['id']));
 
