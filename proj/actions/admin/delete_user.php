@@ -1,8 +1,8 @@
 <?php
 
 include_once('../../config/init.php');
+include_once('../../database/admin.php');
 
-include('../../database/admin.php');
 if (!$_POST['user_id']) {
     header('Location: ' . '../../pages/admin/database.php');
     exit;

@@ -6,6 +6,7 @@
             <h4>{$userFromID=getUserFromID($post.user_id)}
                 <a href="{$BASE_URL}pages/users/profile.php?user={$userFromID.hashid}" style="text-decoration: none; color: inherit"> {$userFromID.name} </a>
             </h4>
+
         </div>
 
         <div class="panel-body">
@@ -61,6 +62,7 @@
             <div class="fill-flow">
                 <a href="{$BASE_URL}pages/posts/single_post.php?post_id={$post.id}" class="btn btn-default" id="clock-panel"><i class="fa fa-clock-o"></i>
                     {if $post.start_date} {$post.start_date} {else} {$post.post_date} {/if} </a>
+
                 {if $isRightFeed}
                     <button class="btn btn-default btn-comments rightFeed" id="btn-comments-{$post.id}" type="button" data-toggle="collapse" data-target="#comments-rightfeed-{$post.id}" aria-expanded="false" aria-controls="comments">
                         <i class="fa fa-comments"></i> Comments
@@ -76,6 +78,7 @@
                 {if $post.user_id == $smarty.session.id}
                     <button class="btn btn-default btn-delete" id="btn-delete-{$post.id}"><i class="fa fa-trash-o"></i> Delete</button>
                 {/if}
+                <button class="btn btn-default btn-report" id="btn-report-{$post.id}"> <i class="fa fa-flag"></i></button>
             </div>
 
             <!-- comment section-->

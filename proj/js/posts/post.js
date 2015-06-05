@@ -74,6 +74,25 @@ function repost(event) {
         type: "post",
         data: {"post_id":post_id},
         success: function (data) {
+        },
+        error: function () {}
+    });
+}
+
+$(".btn-repost").click(repost);
+
+function report(event) {
+    var post_id = $(this).attr('id').split('-')[2];
+
+    console.log(post_id);
+
+    var msg = "isto e um report!";
+
+    $.ajax({
+        url: "../../actions/admin/report.php",
+        type: "post",
+        data: {"post_id":post_id, "msg":msg},
+        success: function (data) {
             console.log(data);
             var response = $.parseJSON(data);
         },
@@ -81,4 +100,4 @@ function repost(event) {
     });
 }
 
-$(".btn-repost").click(repost);
+$(".btn-report").click(report);
