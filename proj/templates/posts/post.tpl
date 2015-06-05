@@ -19,13 +19,13 @@
                     </tr>
                     <tr>
                         {if $post.user_id != $smarty.session.id}
-                            <td class="votedifference" id="td-votedifference-{$post.id}">
+                            <td class="votedifference-x" id="td-votedifference-{$post.id}">
                                 {if $post.votedifference < 0} <i class="fa fa-minus-square-o" style="color:rgb(176, 49, 33)"></i>
                                 {else} <i class="fa">{$post.votedifference}</i>
                                 {/if}
                             </td>
                         {else}
-                            <td class="votedifference-x" id="td-votedifference-{$post.id}" style="cursor: pointer">
+                            <td class="votedifference" id="td-votedifference-{$post.id}" style="cursor: pointer">
                                 {if $post.votedifference < 0} <i class="fa fa-minus-square-o" style="color:rgb(176, 49, 33)"></i>
                                 {else} <i class="fa">{$post.votedifference}</i>
                                 {/if}
