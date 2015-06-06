@@ -79,8 +79,9 @@ function getAllFriendsOfUser($userId) {
 
 function createNewCircle($circle_name,$my_id) {
     global $conn;
-    $stmt = $conn->prepare("INSERT INTO \"Circle\" (\"owner_id\", name) VALUES (?,?)");
+    $stmt = $conn->prepare("INSERT INTO \"Circle\" (\"owner_id\", name) VALUES (?,?) RETURNING id");
     $stmt->execute(array($my_id,$circle_name));
+    return $stmt->fetch();
 }
 
 function renameCircle($circle_new_name,$circle_id,$my_id) {
@@ -104,4 +105,23 @@ function removeFriendship($myId,$user_id) {
                             (user1_id=? AND user2_id=?)
                             OR (user2_id=? AND user1_id=?)");
     $stmt->execute(array($myId,$user_id,$myId,$user_id));
+}
+
+function isMyFriend($myId, $userId) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT *
+                            FROM \"Friendship\"
+                            WHERE ( user1_id = ? AND user2_id = ? )
+                            OR ( user2_id = ? AND user1_id = ? )  ");
+    $stmt->execute(array($myId,$userId,$myId,$userId));
+    return $stmt->fetch() == true;
+}
+
+function addFriendToCircle($circle_id,$myId,$friend) {
+    if(isMyFriend($myId,$friend)) {
+        global $conn;
+        $stmt = $conn->prepare("INSERT INTO \"CircleFriendship\" (circle_id, friendship_user1_id,
+                                friendship_user2_id) VALUES (?,?,?)");
+        $stmt->execute(array($circle_id, $myId, $friend));
+    }
 }
