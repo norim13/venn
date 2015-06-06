@@ -54,6 +54,15 @@
             {if $post.url}
                 <p><a href={$post.url}>{$post.url}</a></p>
             {/if}
+
+            {$image=getImagePathFromPost($post.id)}
+
+                {if ($image[0].path != NULL)}
+
+            <img src="../../databaseImages/{$image[0].path}" alt="" class="img-responsive" style="border: 1px solid #fff;" />
+
+            {else}
+            {/if}
         </div>
 
         <!--footer-->
