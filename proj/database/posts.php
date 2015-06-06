@@ -63,9 +63,17 @@ function newTag($name){
     return $stmt->fetch();
 }
 
-function getTagsFromPost($post_id) {
+function getTagNamesFromPost($post_id) {
     global $conn;
     $stmt = $conn->prepare("SELECT name FROM \"TagPost\", \"Tag\" WHERE \"TagPost\".post_id=? AND
+                            \"TagPost\".tag_id=\"Tag\".id");
+    $stmt->execute(array($post_id));
+    return $stmt->fetchAll();
+}
+
+function getTagsFromPost($post_id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM \"TagPost\", \"Tag\" WHERE \"TagPost\".post_id=? AND
                             \"TagPost\".tag_id=\"Tag\".id");
     $stmt->execute(array($post_id));
     return $stmt->fetchAll();
@@ -78,7 +86,6 @@ function addTagToPost($post_id,$tag_name){
         $new_tag=newTag($tag_name);
     }
     $new_tag_id=$new_tag['id'];
-    echo $new_tag_id;
 
     $stmt = $conn->prepare("INSERT INTO \"TagPost\" (tag_id,post_id)
   VALUES (?,?)");
@@ -211,8 +218,6 @@ function isVisibleTo($post_id,$post_owner,$user_id) {
     return false;
 }
 
-
-
 function createImage($path,$owner_id) {
     global $conn;
     $stmt = $conn->prepare("INSERT INTO \"Image\" (path,owner_id)
@@ -235,7 +240,6 @@ function createImagePost($path,$owner_id,$post_id) {
         $post_id));
     return $stmt->fetch();
 }
-
 
 function getImagePathFromPost($post_id) {
     global $conn;

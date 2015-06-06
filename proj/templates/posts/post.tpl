@@ -42,7 +42,7 @@
 
             <!-- publication -->
             <div class="post-msg-div">{$post.message}</div>
-            {$tags = getTagsFromPost($post.id)}
+            {$tags = getTagNamesFromPost($post.id)}
             {if $tags != NULL}
                 <p>
                     {foreach $tags as $tag}

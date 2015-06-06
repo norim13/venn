@@ -12,6 +12,7 @@ function createNewCircle(event) {
         type: 'post',
         data: {"friends":id_array,"circle_name":name},
         success: function(data){
+            $('#btn-newCircle').click();
         },
         error: function(){}
     });
@@ -94,3 +95,45 @@ function removeFriendship(event) {
 }
 
 $('.remove-friendship-btn').click(removeFriendship);
+function addFriendToCircle(event) {
+
+    console.log("Entrou aqui");
+
+    $.ajax({
+        url: "../../actions/circles/get_circles.php",
+        type: "post",
+        success: function (data) {
+
+            console.log("SUCESSAO");
+
+            var response = $.parseJSON(data);
+            var modal = $("#circlesModal .modal-body");
+            var base_url = response['base_url'];
+
+            var userContent = "";
+
+            response['circles'].forEach(function (entry) {
+                    userContent +=
+                        '<div class="col-md-3 modal-friend">'+
+                        '<img alt="10x10" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people">'+
+
+                        '<p>' +
+                        entry['name'] +
+                        '</p>' +
+                        '</div>';
+                }
+            );
+
+            modal.html(userContent);
+
+            $('#circlesModal').modal({
+                show: 'false'
+            });
+
+        },
+        error: function () {}
+    });
+}
+
+
+$("#addToCircleButton").click(addFriendToCircle);

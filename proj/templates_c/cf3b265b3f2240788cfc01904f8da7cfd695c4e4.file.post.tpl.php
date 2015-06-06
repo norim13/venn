@@ -68,7 +68,7 @@ pages/users/profile.php?user=<?php echo $_smarty_tpl->tpl_vars['userFromID']->va
         <!-- publication -->
         <p><?php echo $_smarty_tpl->tpl_vars['post']->value['message'];?>
 </p>
-        <?php $_smarty_tpl->tpl_vars['tags'] = new Smarty_variable(getTagsFromPost($_smarty_tpl->tpl_vars['post']->value['id']), null, 0);?>
+        <?php $_smarty_tpl->tpl_vars['tags'] = new Smarty_variable(getTagNamesFromPost($_smarty_tpl->tpl_vars['post']->value['id']), null, 0);?>
         <?php if ($_smarty_tpl->tpl_vars['tags']->value!=null) {?>
             <p>
                 <?php  $_smarty_tpl->tpl_vars['tag'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['tag']->_loop = false;

@@ -6,7 +6,6 @@
 {include file='common/navbar.tpl'}
 
 <div id="page-wrapper">
-
     <hr class="">
     <!--header profile-->
     <div class="container target">

@@ -16,7 +16,16 @@ else{
     <i class=\"fa fa-retweet\"></i> ". getUserFromID($post['user_id'])['name'] ."</a> <p></p>".
         $post['message'];
 
-    createPost($_SESSION['id'], $message, $post['url'], $post['expiration_date']);
+    $new_post_id = createPost($_SESSION['id'], $message, $post['url'], null, $post['expiration_date'])['id'];
+
+    $imagePath = getImagePathFromPost($post_id)[0]['path'];
+
+    if($imagePath != null)
+        createImagePost($imagePath,$_SESSION['id'],$new_post_id);
+
+    $tags = getTagNamesFromPost($post_id);
+    foreach($tags as $newTag)
+        addTagToPost($new_post_id,$newTag['name']);
 }
 
 if (!isset($return_messages['errors']))

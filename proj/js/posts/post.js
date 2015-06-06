@@ -74,6 +74,7 @@ function repost(event) {
         type: "post",
         data: {"post_id":post_id},
         success: function (data) {
+            console.log(data);
         },
         error: function () {}
     });
