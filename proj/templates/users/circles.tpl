@@ -12,7 +12,10 @@
     <div style="inline-box-align">
         <div> <h1> Circles </h1> </div>
         <div class="clearfix">
-            <button type="button" class="btn btn-primary" id="btn-newCircle" data-toggle="collapse" data-target="#new_circle" aria-expanded="false" aria-controls="comments"><i class="fa  fa-circle-o "></i> Create Circle
+            <button type="button" class="btn btn-primary" id="btn-friendsList" data-toggle="collapse" data-target="#friendsList" aria-expanded="false" aria-controls="comments"><i class="fa fa-users"></i> Friends
+            </button>
+
+            <button type="button" class="btn btn-primary" id="btn-newCircle" data-toggle="collapse" data-target="#new_circle" aria-expanded="false" aria-controls="comments"><i class="fa fa-circle-o "></i> Create Circle
             </button>
         </div>
     </div>
@@ -109,4 +112,5 @@
     {/foreach}
 </div>
 
+{include file='users/circles_friends.tpl'}
 {include file='common/footer.tpl'}

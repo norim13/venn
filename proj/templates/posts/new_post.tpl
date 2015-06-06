@@ -1,5 +1,5 @@
 
-<form accept-charset="UTF-8" action="../../../../lbaw/actions/post/new_post.php" method="POST" enctype="multipart/form-data">
+<form accept-charset="UTF-8" action="../../actions/post/new_post.php" method="POST" enctype="multipart/form-data">
 
     <textarea id="new-post-textarea" maxlength="600" class="form-control counted" name="message" placeholder="Type in your post" rows="5" style="margin-bottom:10px;"></textarea>
 

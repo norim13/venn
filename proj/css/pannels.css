@@ -127,3 +127,11 @@
     -moz-hyphens: auto;
     hyphens: auto;
 }
+
+.modal-body .modal-votes p {
+    text-align: center;
+}
+
+.modal-body {
+    overflow: hidden;
+}

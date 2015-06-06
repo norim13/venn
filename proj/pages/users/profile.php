@@ -25,20 +25,24 @@ if($_SESSION['email']) {
             $smarty->assign('numberOfPosts',sizeof($posts));
             $smarty->assign('numberOfVotes',sizeof(getVotesFromUser($user['id'])));
             $smarty->assign('user_circles', getAllCirclesFromUser($_SESSION['id']));
+            $smarty->assign('profilePIC',getPathImageFromID($user['profilepic_id']));
             $smarty->display('../../templates/users/profile.tpl');
         } elseif (isFriend($_SESSION['id'], $hashId)) {
             $posts = getPostsFromUser($user['id']);
             $smarty->assign('numberOfPosts',sizeof($posts));
             $smarty->assign('numberOfVotes',sizeof(getVotesFromUser($user['id'])));
             $smarty->assign('user_posts', $posts);
+            $smarty->assign('profilePIC',getPathImageFromID($user['profilepic_id']));
             $smarty->display('../../templates/users/profile_friend_added.tpl');
         } else {
             $requestSent = hasFriendRequest($_SESSION['id'],$user['id']);
             $smarty->assign('requestSent', $requestSent);
+            $smarty->assign('profilePIC',getPathImageFromID($user['profilepic_id']));
             $smarty->display('../../templates/users/profile_friend.tpl');
         }
     } else {
         $user = getUserFromEmail($_SESSION['email']);
+        $smarty->assign('profilePIC',getPathImageFromID($user['profilepic_id']));
         $smarty->assign('numberOfFriends', sizeof(getAllFriendsOfUser($user['id'])));
         $smarty->assign('user', $user);
         $posts = getPostsFromUser($user['id']);

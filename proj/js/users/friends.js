@@ -1,7 +1,4 @@
 function showAllFriends(event) {
-
-    console.log("Entrou aqui");
-
     $.ajax({
         url: "../../actions/circles/get_friends.php",
         type: "post",
@@ -10,15 +7,23 @@ function showAllFriends(event) {
             var modal = $("#usersModal .modal-body");
             var base_url = response['base_url'];
 
-            var voteContent = "";
+            var userContent = "";
+
             response['friends'].forEach(function (entry) {
-                    voteContent += '<p><a href=' + base_url + 'pages/users/profile.php?user='
-                    + entry['hashid'] +
-                    ' style="text-decoration: none; color: inherit">'+ entry['name'] + '</a></p>';
+                    userContent +=
+                    '<div class="col-md-3 modal-friend">'+
+
+                    '<img alt="10x10" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people">'+
+
+                    '<p>' +
+                    '<a href=' + base_url + 'pages/users/profile.php?user=' + entry['hashid'] +
+                    ' style="text-decoration: none; color: inherit; align: center;">'+ entry['name'] + '</a>' +
+                    '</p>' +
+                    '</div>';
                 }
             );
 
-            modal.html(voteContent);
+            modal.html(userContent);
 
             $('#usersModal').modal({
                 show: 'false'
