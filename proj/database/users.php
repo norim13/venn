@@ -94,3 +94,11 @@ function getHashID($id) {
     $stmt->execute(array($id));
     return $stmt->fetch();
 }
+
+
+function searchUsers($string){
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM \"User\" WHERE name @@ plainto_tsquery(?)");
+    $stmt->execute(array($string));
+    return $stmt->fetchAll();
+}

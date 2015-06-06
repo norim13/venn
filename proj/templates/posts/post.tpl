@@ -6,7 +6,6 @@
             <h4>{$userFromID=getUserFromID($post.user_id)}
                 <a href="{$BASE_URL}pages/users/profile.php?user={$userFromID.hashid}" style="text-decoration: none; color: inherit"> {$userFromID.name} </a>
             </h4>
-
         </div>
 
         <div class="panel-body">
@@ -42,7 +41,7 @@
             </div>
 
             <!-- publication -->
-            <p>{$post.message}</p>
+            <div class="post-msg-div">{$post.message}</div>
             {$tags = getTagsFromPost($post.id)}
             {if $tags != NULL}
                 <p>
@@ -52,16 +51,13 @@
                 </p>
             {/if}
             {if $post.url}
-                <p><a href={$post.url}>{$post.url}</a></p>
+                <div class="post-url-div"><a href={$post.url}>{$post.url}</a></div>
             {/if}
 
             {$image=getImagePathFromPost($post.id)}
 
-                {if ($image[0].path != NULL)}
-
-            <img src="../../databaseImages/{$image[0].path}" alt="" class="img-responsive" style="border: 1px solid #fff;" />
-
-            {else}
+            {if ($image[0].path != NULL)}
+                <img src="../../databaseImages/{$image[0].path}" alt="" class="img-responsive" style="border: 1px solid #fff;" />
             {/if}
         </div>
 
@@ -83,11 +79,11 @@
                 {/if}
                 {if $post.user_id != $smarty.session.id}
                     <button class="btn btn-default btn-repost" id="btn-repost-{$post.id}"><i class="fa fa-retweet"></i> Repost</button>
+                    <a href="javascript:void" class="btn btn-default btn-flag-report" data-toggle="modal" id="btn-report-{$post.id}"> <i class="fa fa-flag"></i></a>
                 {/if}
                 {if $post.user_id == $smarty.session.id}
                     <button class="btn btn-default btn-delete" id="btn-delete-{$post.id}"><i class="fa fa-trash-o"></i> Delete</button>
                 {/if}
-                <a href="javascript:void" class="btn btn-default btn-flag-report" data-toggle="modal" id="btn-report-{$post.id}"> <i class="fa fa-flag"></i></a>
             </div>
 
             <!-- comment section-->

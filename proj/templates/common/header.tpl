@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,7 @@
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->    
+        <![endif]-->
 
     <!-- MetisMenu CSS -->
     <link href="../../assets/frameworks/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
@@ -51,4 +51,8 @@
 
 
     <link href="../../assets/frameworks/jasny-bootstrap/jasny-bootstrap.css" rel="stylesheet">
+
+
+    <link href="../../assets/frameworks/crop-image/css/cropper.min.css" rel="stylesheet">
+    <link href="../../assets/frameworks/crop-image/css/main.css" rel="stylesheet">
 

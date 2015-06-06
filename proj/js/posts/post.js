@@ -11,7 +11,7 @@ function vote(event) {
             var response = $.parseJSON(data);
             if(response.new_votecount < 0)
                 $("#td-votedifference-" + response.post_id).html("<i class=\"fa fa-minus-square-o\" style=\"color:rgb(176, 49, 33)\"></i>");
-            else $("#td-votedifference-" + response.post_id).text(response.new_votecount);
+            else $("#td-votedifference-" + response.post_id).html("<i class=\"fa\">"+response.new_votecount +"</i>");
 
             var colorG = "rgb(92,184,92)";
             var colorR = "rgb(176, 49, 33)";

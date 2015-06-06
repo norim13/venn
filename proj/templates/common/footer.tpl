@@ -3,7 +3,7 @@
 </footer>
 
 <!-- jQuery -->
-<script type="text/javascript" src="../../assets/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
 <!-- Bootstrap core JavaScript-->
 <script type="text/javascript" src="../../assets/frameworks/bootstrap/js/bootstrap.min.js"></script>
@@ -29,9 +29,15 @@
 <!-- drop down menus-->
 <script type="text/javascript" src="../../assets/frameworks/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
 
+<!-- crop image-->
+
+<!--<script src="../../assets/frameworks/crop-image/js/cropper.min.js"></script>
+<script src="../../assets/frameworks/crop-image/js/main.js"></script>
+<script src="../../assets/frameworks/crop-image/js/qunit.js"></script>
+
+
 <script type="text/javascript" src="../../assets/frameworks/jasny-bootstrap/jasny-bootstrap.js"></script>
-
-
+        -->
 
 <script>
     var base_url = "{$BASE_URL}";
@@ -49,8 +55,9 @@
     <script type="text/javascript" src="../../js/posts/votes.js"></script>
     <script type="text/javascript" src="../../js/posts/post.js"></script>
     <script type="text/javascript" src="../../js/posts/comments.js"></script>
-    <script type="text/javascript" src="../../js/users/circles.js"></script
-    <script type="text/javascript" src="../../js/posts/report.js"></script>>
+    <script type="text/javascript" src="../../js/users/circles.js"></script>
+    <script type="text/javascript" src="../../js/posts/report.js"></script>
+    <script type="text/javascript" src="../../js/users/profile.js"></script>
 {elseif strpos($current_page[1], 'users/tagview.php', 0)=== 0}
     <script type="text/javascript" src="../../js/posts/votes.js"></script>
     <script type="text/javascript" src="../../js/posts/post.js"></script>
@@ -60,6 +67,7 @@
 {elseif strpos($current_page[1], 'users/circles.php', 0)=== 0}
     <script type="text/javascript" src="../../js/posts/report.js"></script>
     <script type="text/javascript" src="../../js/users/circles.js"></script>
+    <script type="text/javascript" src="../../js/users/friends.js"></script>
 {/if}
 
 </body>

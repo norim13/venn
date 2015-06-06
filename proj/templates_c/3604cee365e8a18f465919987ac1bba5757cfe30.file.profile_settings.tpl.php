@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-04 00:49:04
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 16:36:09
          compiled from "../../templates/users/profile_settings.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9716760715557a529591747-82373811%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3604cee365e8a18f465919987ac1bba5757cfe30' => 
     array (
       0 => '../../templates/users/profile_settings.tpl',
-      1 => 1432726185,
+      1 => 1433598192,
       2 => 'file',
     ),
   ),
@@ -61,8 +61,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 </ul>
                 <ul class="list-group">
                     <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Shares</strong></span><input type="checkbox" value=""> Friends  <input type="checkbox" value=""> Public</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Upvotes</strong></span><input type="checkbox" value=""> Friends  <input type="checkbox" value=""> Public</li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Votes</strong></span><input type="checkbox" value=""> Friends  <input type="checkbox" value=""> Public</li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong class="">Posts</strong></span><input type="checkbox" value=""> Friends  <input type="checkbox" value=""> Public</li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong class="">Friends</strong></span><input type="checkbox" value=""> Friends  <input type="checkbox" value=""> Public</li>
                 </ul>

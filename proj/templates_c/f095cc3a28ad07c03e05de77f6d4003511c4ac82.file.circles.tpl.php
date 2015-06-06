@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-04 21:26:56
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 16:24:34
          compiled from "../../templates/users/circles.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18536193865549162558dcd8-43500815%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f095cc3a28ad07c03e05de77f6d4003511c4ac82' => 
     array (
       0 => '../../templates/users/circles.tpl',
-      1 => 1433445927,
+      1 => 1433446354,
       2 => 'file',
     ),
   ),
@@ -150,7 +150,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['friend_request']->key => $_smarty_tpl
 $_smarty_tpl->tpl_vars['friend_request']->_loop = true;
 ?>
         <?php $_smarty_tpl->tpl_vars['username'] = new Smarty_variable(getUserFromID($_smarty_tpl->tpl_vars['friend_request']->value['requestedBy_id']), null, 0);?>
-        <div class="panel panel-default target col-md-12 friendship-request-panel" id="friendship-request-panel-<?php echo $_smarty_tpl->tpl_vars['username']->value['id'];?>
+        <div class="panel panel-default target col-md-12 friendshiprequest--panel" id="friendship-request-panel-<?php echo $_smarty_tpl->tpl_vars['username']->value['id'];?>
 ">
             <div class="panel-body">
                 <div class="row">

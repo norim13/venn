@@ -15,7 +15,8 @@ $message = htmlspecialchars($_POST['message']);
 if(isset($_POST['url']) && $_POST['url'] != "") {
     $url = htmlspecialchars($_POST['url']);
     $needle = "http://";
-    if (strpos($url, $needle, 0) !== 0)
+    $needle1 = "https://";
+    if (strpos($url, $needle, 0) !== 0 && strpos($url, $needle1, 0) !== 0)
         $url = $needle . $url;
 }
 
@@ -40,21 +41,14 @@ $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
 
-    $check = getimagesize($_FILES["image"]["tmp_name"]);
-    if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        echo "File is not an image.";
-        $uploadOk = 0;
-    }
-
-
-
-
-
-
-
+$check = getimagesize($_FILES["image"]["tmp_name"]);
+if($check !== false) {
+    echo "File is an image - " . $check["mime"] . ".";
+    $uploadOk = 1;
+} else {
+    echo "File is not an image.";
+    $uploadOk = 0;
+}
 
 $new_post = createPost($user_id,$message,$url,$new_dateInit,$new_dateFinal);
 
@@ -63,7 +57,6 @@ if($tags!=null) {
         addTagToPost($new_post['id'], $tag);
     }
 }
-
 
 if (isset($_FILES['image']['name'])) {
 
