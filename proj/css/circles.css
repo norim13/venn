@@ -115,3 +115,15 @@
 .listrap li.active .listrap-toggle span {
     display: block;
 }
+
+.row-friends-model{
+    margin-top: 20px;
+}
+
+.modal-body .modal-friend p {
+    text-align: center;
+}
+
+.modal-body {
+    overflow: hidden;
+}
