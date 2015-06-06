@@ -206,7 +206,7 @@ $(document).ready(function () {
         var userSearch = $("#search-container #radio-people").is(':checked');
         if(stringForSearch.length > 0){
             if (userSearch)
-                location.replace("../../pages/posts/user_search.php?search="+stringForSearch);
+                location.replace("../../pages/users/user_search.php?search="+stringForSearch);
             else location.replace("../../pages/posts/post_search.php?search="+stringForSearch);
         }
     });
