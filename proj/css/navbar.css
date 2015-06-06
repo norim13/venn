@@ -4,6 +4,8 @@
 	width: 100%;
 	/*green*/
 	background-color: rgb(92,184,92);
+
+    //box-shadow: 0px 5px 5px #444444;
 }
 
 #navbar-toggle-icon-black{

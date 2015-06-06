@@ -55,7 +55,17 @@
     </div>
 
     <div id="search-field" class="search-field">
-        <input id="text-search" type="text" name="search">
-        <button id="search-btn" type="button" class="btn">Search</button>
+       <div id="search-container">
+           <div class="top-search">
+               <input id="text-search" type="text" name="search">
+           </div>
+           <div class="form-inline bottom-search">
+               <label for="radio-posts"> <input id="radio-posts" type="radio" name="search-scope" value="posts" checked="checked">Posts</label>
+               <label for="radio-people"><input id="radio-people" type="radio" name="search-scope" value="people">People</label>
+               <button id="search-btn" type="button" class="btn">Search</button>
+           </div>
+       </div>
+
+
     </div>
 </div>

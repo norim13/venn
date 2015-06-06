@@ -80,28 +80,46 @@ $(function() {
     })
 
 
-    $("#search-toggle").click(function(){
-    	
+    //hide serach when click outside of it.
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('#search-toggle').length && !$(event.target).closest('#search-field').length) {
+            //Hide the menus if visible
+            if (width < 768) {
+                if ($("#search-field").css('display') != 'none') {
+                    $("#search-field").slideUp(400);
+                }
+            } else {
+                if ($("#search-field").css('display') != 'none') {
+                    $("#search-field").hide('slide', {direction: 'left'}, 400);
+                }
+            }
+        }
+    });
 
-    	width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    	console.log(width);
+    $("#text-search").keyup(function(event){
+        if(event.keyCode == 13){
+            $("#search-btn").click();
+        }
+    });
+
+
+    $("#search-toggle").click(function(){
+        width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     	if (width < 768) {
     	   	if ($("#search-field").css('display') == 'none'){
-    	           console.log('devia mostrar');
-    	           $("#search-field").slideDown(400);
-    	       }
-		    else{
-			    $("#search-field").slideUp(400);
-		    }
+                $("#search-field").slideDown(400).after(function(){
+                    $("#text-search").trigger( "focus" );
+                });
+            }
+		    else  $("#search-field").slideUp(400);
     	   
     	} else {
-    		console.log("display: "+$("#search-field").css('display'));
-    		console.log("height: "+$("#search-field").css('height'));
-    		console.log("width: "+$("#search-field").css('width'));
 
 	    	if ($("#search-field").css('display') == 'none'){
-	            console.log('devia mostrar');
-	            $("#search-field").show('slide', {direction: 'left'}, 400);
+               // $("#text-search").trigger( "focus" );
+	            $("#search-field").show('slide', {direction: 'left'}, 400).after(function(){
+                    $("#text-search").trigger( "focus" );
+                });
 	        }
 	        else{
 	        	$("#search-field").hide('slide', {direction: 'left'}, 400);
@@ -185,10 +203,11 @@ $(document).ready(function () {
     $("button#search-btn").click(function(){
 
         var stringForSearch = $("#text-search").val();
-
-        console.log(stringForSearch);
+        var userSearch = $("#search-container #radio-people").is(':checked');
         if(stringForSearch.length > 0){
-            location.replace("../../pages/posts/post_search.php?search="+stringForSearch);
+            if (userSearch)
+                location.replace("../../pages/posts/user_search.php?search="+stringForSearch);
+            else location.replace("../../pages/posts/post_search.php?search="+stringForSearch);
         }
     });
 });

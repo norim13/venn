@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-04 05:05:55
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-04 21:26:56
          compiled from "../../templates/users/circles.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18536193865549162558dcd8-43500815%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f095cc3a28ad07c03e05de77f6d4003511c4ac82' => 
     array (
       0 => '../../templates/users/circles.tpl',
-      1 => 1433387151,
+      1 => 1433445927,
       2 => 'file',
     ),
   ),
@@ -141,7 +141,7 @@ $_smarty_tpl->tpl_vars['friend']->_loop = true;
     <?php } ?>
 
     <div>
-        <h1 class="">Friend Requests</h1>
+        <h1>Friend Requests</h1>
     </div>
 
     <?php  $_smarty_tpl->tpl_vars['friend_request'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['friend_request']->_loop = false;
@@ -150,7 +150,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['friend_request']->key => $_smarty_tpl
 $_smarty_tpl->tpl_vars['friend_request']->_loop = true;
 ?>
         <?php $_smarty_tpl->tpl_vars['username'] = new Smarty_variable(getUserFromID($_smarty_tpl->tpl_vars['friend_request']->value['requestedBy_id']), null, 0);?>
-        <div class="panel panel-default target col-md-12 circle-members" id="friend-members-<?php echo $_smarty_tpl->tpl_vars['username']->value['name'];?>
+        <div class="panel panel-default target col-md-12 friendship-request-panel" id="friendship-request-panel-<?php echo $_smarty_tpl->tpl_vars['username']->value['id'];?>
 ">
             <div class="panel-body">
                 <div class="row">
@@ -171,8 +171,6 @@ $_smarty_tpl->tpl_vars['friend_request']->_loop = true;
             </div>
         </div>
     <?php } ?>
-
-
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>

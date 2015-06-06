@@ -26,6 +26,12 @@
 <!-- drop down menus-->
 <script type="text/javascript" src="../../assets/frameworks/bootstrap/js/dropdowns-enhancement.js"></script>
 
+<!-- drop down menus-->
+<script type="text/javascript" src="../../assets/frameworks/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+<script type="text/javascript" src="../../assets/frameworks/jasny-bootstrap/jasny-bootstrap.js"></script>
+
+
 
 <script>
     var base_url = "{$BASE_URL}";
@@ -38,17 +44,21 @@
     <script type="text/javascript" src="../../js/posts/votes.js"></script>
     <script type="text/javascript" src="../../js/users/home.js"></script>
     <script type="text/javascript" src="../../js/users/circles.js"></script>
+    <script type="text/javascript" src="../../js/posts/report.js"></script>
 {elseif strpos($current_page[1], 'users/profile.php', 0)=== 0}
     <script type="text/javascript" src="../../js/posts/votes.js"></script>
     <script type="text/javascript" src="../../js/posts/post.js"></script>
     <script type="text/javascript" src="../../js/posts/comments.js"></script>
-    <script type="text/javascript" src="../../js/users/circles.js"></script>
+    <script type="text/javascript" src="../../js/users/circles.js"></script
+    <script type="text/javascript" src="../../js/posts/report.js"></script>>
 {elseif strpos($current_page[1], 'users/tagview.php', 0)=== 0}
     <script type="text/javascript" src="../../js/posts/votes.js"></script>
     <script type="text/javascript" src="../../js/posts/post.js"></script>
+    <script type="text/javascript" src="../../js/posts/report.js"></script>
     <script type="text/javascript" src="../../js/posts/comments.js"></script>
     <script type="text/javascript" src="../../js/users/circles.js"></script>
 {elseif strpos($current_page[1], 'users/circles.php', 0)=== 0}
+    <script type="text/javascript" src="../../js/posts/report.js"></script>
     <script type="text/javascript" src="../../js/users/circles.js"></script>
 {/if}
 

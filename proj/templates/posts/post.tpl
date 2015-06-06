@@ -87,7 +87,7 @@
                 {if $post.user_id == $smarty.session.id}
                     <button class="btn btn-default btn-delete" id="btn-delete-{$post.id}"><i class="fa fa-trash-o"></i> Delete</button>
                 {/if}
-                <a href="#report-modal" class="btn btn-default btn-flag-report" data-toggle="modal" id="btn-report-{$post.id}"> <i class="fa fa-flag"></i></a>
+                <a href="javascript:void" class="btn btn-default btn-flag-report" data-toggle="modal" id="btn-report-{$post.id}"> <i class="fa fa-flag"></i></a>
             </div>
 
             <!-- comment section-->

@@ -17,6 +17,7 @@
 	height: calc(100vh - 50px);	/* Standard */
 
 	/* background-color: red;*/
+    z-index
 }
 
 #sidebar *{
@@ -146,7 +147,20 @@
 	border-bottom-right-radius: 10px;
 }
 
-#search-field input{
+#search-container .bottom-search{
+    display: block;
+}
+#search-container .bottom-search label{
+    float: left;
+    padding: 4px 15px 0px;
+    color: #ffffff;
+}
+#search-container .bottom-search label input{
+    margin: 0 5px;
+}
+
+
+#text-search{
 	width: 90%;
 	margin: 10px 0px;
 }

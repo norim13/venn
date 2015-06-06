@@ -11,7 +11,7 @@
                     <div class="control-group">
                         <label class="control-label"> Tell us why you are reporting: </label>
                         <div class="question-text form-group-lg">
-                            <input type="text" class="form-control" size="100" placeholder="Write report message" required autocomplete="off">
+                            <input id="report-msg" type="text" class="form-control" size="100" placeholder="Write report message" required autocomplete="off">
                         </div>
                     </div>
                 </form>

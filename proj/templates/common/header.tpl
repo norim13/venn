@@ -49,3 +49,6 @@
 
     <link href="../../assets/frameworks/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
+
+    <link href="../../assets/frameworks/jasny-bootstrap/jasny-bootstrap.css" rel="stylesheet">
+

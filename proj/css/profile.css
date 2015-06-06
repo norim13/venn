@@ -1,3 +1,25 @@
 #myPostsh2 {
 	margin-top: 0px;
 }
+
+.datepickerdiv{
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+#profilePic    {  width:300px;
+    box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+    border-radius:5px;
+    overflow:hidden;}
+
+
+#overlay-profilePic   {  background:rgba(0,0,0,.75);
+    text-align:center;
+    padding:45px 0 66px 0;
+    opacity:0;
+    -webkit-transition: opacity .25s ease;
+    -moz-transition: opacity .25s ease;}
+
+#profilePic:hover #overlay-profilePic {
+    opacity:1;}

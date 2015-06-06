@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-16 22:07:25
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 03:51:00
          compiled from "../../templates/users/profile_friend_added.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1752829815557a0bfbae873-76587232%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b778d502844f2e706dccf2ece30fe88fe073e4d5' => 
     array (
       0 => '../../templates/users/profile_friend_added.tpl',
-      1 => 1431806813,
+      1 => 1433555401,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'user' => 0,
+    'numberOfVotes' => 0,
+    'numberOfPosts' => 0,
+    'numberOfFriends' => 0,
     'user_posts' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5557a0bfc9ddc0_24766471')) {function content_5557a0bfc9ddc0_24766471($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5557a0bfc9ddc0_24766471')) {function content_5557a0bfc9ddc0_24766471($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('title'=>$_smarty_tpl->tpl_vars['user']->value['name']), 0);?>
 
 
 <link href="../../css/profile.css" rel="stylesheet">
@@ -59,26 +62,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="row">
             <div class="col-sm-3">
                 <!--left col-->
-
                 <ul class="list-group">
                     <li class="list-group-item text-muted" contenteditable="false">Profile</li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span> 2.13.2014</li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last seen</strong></span> <i class="fa fa-eye-slash"></i></li>
-                    <li class="list-group-item text-right"><span class="pull-left"><a href=""><strong class="">Remove me from friends</strong></span> <i class="fa fa-trash-o"></i></a></li>
-
+                    <li class="list-group-item text-right"><span class="pull-left"><a href="" class="remove-friendship-btn" id="remove-friendship-btn-<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
+"><strong class="">Remove me from friends</strong></span> <i class="fa fa-trash-o"></i></a></li>
                 </ul>
                 <ul class="list-group">
                     <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Shares</strong></span> 125</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Upvotes</strong></span> 13</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Posts</strong></span> 37</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Friends</strong></span> <i class="fa fa-eye-slash"></i></li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Votes</strong></span> <?php echo $_smarty_tpl->tpl_vars['numberOfVotes']->value;?>
+</li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Posts</strong></span> <?php echo $_smarty_tpl->tpl_vars['numberOfPosts']->value;?>
+</li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Friends</strong></span> <?php echo $_smarty_tpl->tpl_vars['numberOfFriends']->value;?>
+</li>
                 </ul>
             </div>
 
             <div class="col-sm-9" contenteditable="false" style="">
                 <!--bio collum-->
-
                 <div class=" col-lg-12 clearfix">
                     <h2 id="myPostsh2">Posts</h2>
                     <?php  $_smarty_tpl->tpl_vars['post'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['post']->_loop = false;
@@ -92,6 +95,10 @@ $_smarty_tpl->tpl_vars['post']->_loop = true;
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<?php echo $_smarty_tpl->getSubTemplate ("posts/reportModal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
 <?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>

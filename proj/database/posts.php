@@ -28,7 +28,7 @@ function getPostFromID($post_id) {
     return $stmt->fetch();
 }
 
-function createPost($user_id,$message,$url,$date) {
+function createPost($user_id,$message,$url,$dateInit,$dateFinal) {
     global $conn;
     $stmt = $conn->prepare("INSERT INTO \"Post\" (user_id, message, url, post_date, start_date, expiration_date)
   VALUES (?,?,?,?,?,?) RETURNING id");
@@ -38,8 +38,8 @@ function createPost($user_id,$message,$url,$date) {
         $message,
         $url,
         date('Y-m-d H:i:s'),
-        date('Y-m-d H:i:s'),
-        $date));
+        $dateInit,
+        $dateFinal));
     return $stmt->fetch();
 }
 
@@ -175,7 +175,7 @@ function getVotesFromUser($userID) {
 
 function searchPosts($string){
     global $conn;
-    $stmt = $conn->prepare("SELECT * FROM \"Post\" WHERE message @@ to_tsquery(?)");
+    $stmt = $conn->prepare("SELECT * FROM \"Post\" WHERE message @@ plainto_tsquery(?)");
     $stmt->execute(array($string));
     return $stmt->fetchAll();
 }
@@ -210,3 +210,38 @@ function isVisibleTo($post_id,$post_owner,$user_id) {
     }
     return false;
 }
+
+
+
+function createImage($path,$owner_id) {
+    global $conn;
+    $stmt = $conn->prepare("INSERT INTO \"Image\" (path,owner_id)
+  VALUES (?,?) RETURNING id");
+
+    $stmt->execute(array(
+        $path,
+        $owner_id));
+    return $stmt->fetch();
+}
+
+function createImagePost($path,$owner_id,$post_id) {
+    $image=createImage($path,$owner_id);
+    global $conn;
+    $stmt = $conn->prepare("INSERT INTO \"ImagePost\" (image_id,post_id)
+  VALUES (?,?)");
+
+    $stmt->execute(array(
+        $image['id'],
+        $post_id));
+    return $stmt->fetch();
+}
+
+
+function getImagePathFromPost($post_id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT \"Image\".path FROM \"ImagePost\", \"Image\" WHERE \"ImagePost\".post_id=? AND
+                            \"ImagePost\".image_id=\"Image\".id" );
+    $stmt->execute(array($post_id));
+    return $stmt->fetchAll();
+}
+
