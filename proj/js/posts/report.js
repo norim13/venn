@@ -7,9 +7,7 @@ function report(event) {
         url: "../../actions/admin/report.php",
         type: "post",
         data: {"post_id":post_id, "msg":msg},
-        success: function (data) {
-            console.log(data);
-        },
+        success: function (data) {},
         error: function () {}
     });
 }
