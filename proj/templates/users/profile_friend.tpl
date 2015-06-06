@@ -53,5 +53,9 @@
                     <br/>
                     <h3>Send Friend request to see recent posts from {$user.name}</h3>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                {include file='common/footer.tpl'}
+{include file='common/footer.tpl'}

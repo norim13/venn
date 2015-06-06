@@ -1,4 +1,4 @@
-<div id="voteModal" class="modal fade" role="dialog">
+<div id="voteModal" class="modal fade" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">

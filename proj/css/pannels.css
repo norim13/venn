@@ -90,13 +90,13 @@
     padding-right:auto;
 }
 
-.btn-comments, .btn-delete, .btn-repost, .btn-report, .btn-edit-circle{
+.btn-comments, .btn-delete, .btn-repost, .btn-flag-report, .btn-edit-circle{
     float: right;
     background-color:transparent;
     border-color:transparent;
 }
 
-.btn-comments:focus, .btn-delete:focus, .btn-repost:focus, .btn-report:focus, .btn-edit-circle:focus{
+.btn-comments:focus, .btn-delete:focus, .btn-repost:focus, .btn-flag-report:focus, .btn-edit-circle:focus{
     outline: none;
 }
 

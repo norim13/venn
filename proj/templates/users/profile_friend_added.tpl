@@ -54,5 +54,9 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+{include file="posts/reportModal.tpl"}
 
 {include file='common/footer.tpl'}

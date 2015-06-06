@@ -84,8 +84,6 @@ $(".btn-repost").click(repost);
 function report(event) {
     var post_id = $(this).attr('id').split('-')[2];
 
-    console.log(post_id);
-
     var msg = "isto e um report!";
 
     $.ajax({
@@ -93,11 +91,16 @@ function report(event) {
         type: "post",
         data: {"post_id":post_id, "msg":msg},
         success: function (data) {
-            console.log(data);
-            var response = $.parseJSON(data);
         },
         error: function () {}
     });
 }
 
-$(".btn-report").click(report);
+//$(".btn-report").click(report);
+
+function changeReportModalID(event) {
+    var post_id = $(this).attr('id').split('-')[2];
+    $("#report-modal").attr('post-id',post_id);
+}
+
+$("btn-flag-report").click(changeReportModalID);

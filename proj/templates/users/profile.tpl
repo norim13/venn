@@ -20,7 +20,10 @@
 
             <div class="col-sm-2">
                 <!--profile pic-->
+                <div id="profilePic">
+                <div id="overlay">
                 <img title="profile image" class="img-circle img-responsive" src="http://www.rlsandbox.com/img/profile.jpg">
+                </div></div>
             </div>
         </div>
         <br>
@@ -63,6 +66,8 @@
         </div>
     </div>
 </div>
+
+{include file="posts/reportModal.tpl"}
 
 {include file="posts/voteModal.tpl"}
 

@@ -14,6 +14,8 @@
     {/if}
 </div>
 
+{include file="posts/reportModal.tpl"}
+
 {include file="posts/voteModal.tpl"}
 
 {include file="common/footer.tpl"}
