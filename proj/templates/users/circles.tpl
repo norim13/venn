@@ -112,5 +112,5 @@
     {/foreach}
 </div>
 
-{include file='users/circles_friends.tpl'}
+{include file='users/circles_friends_modal.tpl'}
 {include file='common/footer.tpl'}
