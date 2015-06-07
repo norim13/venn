@@ -7,7 +7,7 @@
 
 <!-- Bootstrap core JavaScript-->
 <script type="text/javascript" src="../../assets/frameworks/bootstrap/js/bootstrap.min.js"></script>
-1
+
 <!-- Metis Menu Plugin JavaScript -->
 <script type="text/javascript" src="../../assets/frameworks/metisMenu/dist/metisMenu.min.js"></script>
 
