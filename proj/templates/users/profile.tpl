@@ -6,31 +6,23 @@
 
 {include file='common/navbar.tpl'}
 
-<!-- based on http://www.bootply.com/AdHpVL3xRF-->
 <div id="page-wrapper">
-    <hr class="">
-    <!--header profile-->
-    <div class="container target">
-        <div class="row">
-            <div class="col-sm-10">
-                <h1 class="">{$user.name}</h1>
-                <button type="button" class="btn btn-primary" onclick="window.location.href='{$BASE_URL}pages/users/profile_settings.php'"><i class="fa fa-gear "></i> Settings</button>
-                <br>
-            </div>
-
-            <div class="col-sm-2">
-                <!--profile pic-->
-                <div id="profilePic">
-                <div id="overlay">
-                <img title="profile image" class="img-circle img-responsive" src="http://www.rlsandbox.com/img/profile.jpg">
-                </div></div>
-            </div>
-        </div>
-    </div>
-    <br>
+    <hr>
 
     <div class="row">
         <div class="col-sm-3">
+            <!-- Modal -->
+            <!--profile pic-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-transparent centered" style="marin-left:auto; margin-right:auto" data-toggle="modal" data-target="#myModal">
+                <div class="itemsContainer">
+                    <img class="centered-and-cropped profilePic " width="150" height="150" style="border-radius:50%" src="../../images/users/{$profilePIC.path}" alt="profilePic">
+                </div>
+            </button>
+
+            <h1 align="center">{$user.name}</h1>
+            <br>
+
             <!--left col-->
             <ul class="list-group">
                 <li class="list-group-item text-muted" contenteditable="false">Profile</li>
@@ -47,25 +39,25 @@
 
         <div class="col-sm-9" contenteditable="false" style="">
             <!--bio collum-->
-
             <div class=" col-lg-12 clearfix">
-                <h2 id="myPostsh2">My posts</h2>
-
                 <!--publication-->
-                <div class="panel panel-default   ">
-
+                <div class="panel panel-default">
                     <div class="panel-body"  >
                         {include file='posts/new_post.tpl'}
                     </div>
-
-                    {foreach $user_posts as $post}
-                        {include file="posts/post.tpl"}
-                    {/foreach}
                 </div>
+
+                <h2 id="myPostsh2">My posts</h2>
+
+                {foreach $user_posts as $post}
+                    {include file="posts/post.tpl"}
+                {/foreach}
             </div>
         </div>
     </div>
 </div>
+
+{include file='users/uploadProfilePicModal.tpl'}
 
 {include file="posts/reportModal.tpl"}
 

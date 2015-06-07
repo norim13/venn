@@ -42,4 +42,4 @@ if (isset($_FILES['image']['name'])) {
     }
 }
 
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+//header('Location: ' . $_SERVER['HTTP_REFERER']);
