@@ -25,3 +25,11 @@
 	color: white;
 }
 
+.accept_friend_request:hover {
+    color: #1ab11a;
+}
+
+.decline_friend_request:hover {
+    color: red;
+}
+

@@ -25,19 +25,23 @@
                     {foreach $friendRequests as $friendRequest}
                         <li>
                             <div>
-                                <strong>{$username = getUserFromID($friendRequest.requestedBy_id)}{$username.name}</strong>
-                            <span class="pull-right text-muted">
-                                <em>{$friendRequest.date}</em>
-                            </span>
+                                {$username = getUserFromID($friendRequest.requestedBy_id)}
+                                <strong class="pull-right text-muted" style="margin-right:10px "> <em>{$friendRequest.date}</em></strong>
+
+                                {$imagePath=getProfilePic($username.id)}
+                                <h4>
+                                    <a href="{$BASE_URL}pages/users/profile.php?user={$username.hashid}" style="text-decoration: none; color: inherit">
+                                        <img class="profilePic" width="40" height="40" style="border-radius:50%" src="../../images/users/{$imagePath}" alt="profilePic">
+                                        {$username.name}
+                                        </a>
+                                </h4>
                             </div>
+
                             <div>
-                            <span class="pull-left text-muted">
-                                <a href="" class="accept_friend_request" id="accept_friend_request-{$friendRequest.requestedBy_id}"> <span class="text-muted"> Accept </span></a>
-                            </span>
-                            <span class="pull-right text-muted">
-                                <a href="" class="decline_friend_request" id="decline_friend_request-{$friendRequest.requestedBy_id}"><span class="text-muted"> Decline </span></a>
-                            </span>
+                                <a href="" class="accept_friend_request" id="accept_friend_request-{$friendRequest.requestedBy_id}"> <span class="text-muted"> <i class="fa fa-check"></i> Accept </span></a>
+                                <a href="" class="decline_friend_request" id="decline_friend_request-{$friendRequest.requestedBy_id}"><span class="text-muted"> <i class="fa fa-times"></i> Decline </span></a>
                             </div>
+
                         </li>
                         <li class="divider"></li>
                     {/foreach}
