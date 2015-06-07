@@ -108,11 +108,14 @@ function updateProfilePic($userID,$imageID){
     global $conn;
     $stmt = $conn->prepare("UPDATE \"User\"
         SET profilepic_id=?
-        WHERE id=? RETURNING OLD.profilepic_id");
+        WHERE \"User\".id=? RETURNING (
+          SELECT \"User\".profilepic_id FROM \"User\" WHERE \"User\".id = ?
+        ) as profilepic");
 
-    $stmt->execute(array($imageID,$userID));
+    $stmt->execute(array($imageID,$userID, $userID));
+
+    return $stmt->fetch();
 }
-
 
 function getPathImageFromID($imageID){
     global $conn;
@@ -121,3 +124,24 @@ function getPathImageFromID($imageID){
     return $stmt->fetch();
 }
 
+function getProfilePicID($userID){
+    global $conn;
+    $stmt = $conn->prepare("SELECT profilepic_id FROM \"User\" WHERE id=?");
+    $stmt->execute(array($userID));
+    return $stmt->fetch();
+}
+
+function getProfilePic($userID){
+    $profilepic_id=getProfilePicID($userID)['profilepic_id'];
+    return getPathImageFromID($profilepic_id)['path'];
+}
+
+function deleteImage($imageID) {
+    global $conn;
+    $stmt = $conn->prepare("DELETE FROM \"Image\" WHERE id = ? RETURNING path");
+    $stmt->execute(array($imageID));
+
+    $oldPath = $stmt->fetch()['path'];
+
+    unlink('../../images/users/'.$oldPath);
+}

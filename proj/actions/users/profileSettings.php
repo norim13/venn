@@ -35,11 +35,9 @@ if (isset($_FILES['image']['name'])) {
 
     $oldImage = updateProfilePic($user_id,$image['id']);
 
-    print_r($oldImage);
-
-    if($oldImage['id'] != 1 && $oldImage['id'] != 2) {
-        //deleteImage();
+    if($oldImage['profilepic'] != 1 && $oldImage['profilepic'] != 2) {
+        deleteImage($oldImage['profilepic']);
     }
 }
 
-//header('Location: ' . $_SERVER['HTTP_REFERER']);
+header('Location: ' . $_SERVER['HTTP_REFERER']);
