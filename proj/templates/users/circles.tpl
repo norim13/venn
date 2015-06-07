@@ -69,9 +69,9 @@
                     {$friendsFromCircle=getFriendsFromCircle($circle.id,$userId) }
                     {foreach $friendsFromCircle as $friend}
                         {$imagePath=getPathImageFromID($friend.profilepic_id)}
-                        <div class="col-md-1 profile-thumbnail" style="float:left">
+                        <div class="col-md-2 profile-thumbnail" style="float:left">
                             <a href="{$BASE_URL}pages/users/profile.php?user={$friend.hashid}" style="text-decoration: none; color: inherit">
-                                <img class="profile-circles img-circle img-responsive" src="../../images/users/{$imagePath.path}" alt="profilePic">
+                                <img class="profile-circles img-circle img-responsive" width="80" height="80" src="../../images/users/{$imagePath.path}" alt="profilePic">
                                 <p><strong>{$friend.name}<strong></p>
                             </a>
                         </div>
@@ -85,17 +85,21 @@
         <h1>Friend Requests</h1>
     </div>
 
-    {foreach $user_friend_requests as $friend_request}
-        {$username = getUserFromID($friend_request.requestedBy_id)}
-        <div class="panel panel-default target col-md-12 friendship-request-panel" id="friendship-request-panel-{$username.id}">
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-1 profile-thumbnail">
+    <div class="panel panel-default target col-md-12">
+        <div class="panel-body">
+            <div class="row">
+                {foreach $user_friend_requests as $friend_request}
+                    {$username = getUserFromID($friend_request.requestedBy_id)}
+                    <div class="col-md-1 profile-thumbnail friendship-request-panel" width="inherit" id="friendship-request-panel-{$username.id}">
                         {$imagePath=getProfilePic($friend_request.requestedBy_id)}
-                        <a href="{$BASE_URL}pages/users/profile.php?user={$userFromID.hashid}" style="text-decoration: none; color: inherit">
-                            <img class="profilePic" width="40" height="40" style="border-radius:50%" src="../../images/users/{$imagePath}" alt="profilePic">
-                            {$userFromID.name}
+
+                        <a href="{$BASE_URL}pages/users/profile.php?user={$username.hashid}" style="text-decoration: none; color: inherit">
+                            <div>
+                                <img class="profilePic" width="80" height="80" style="border-radius:50%" src="../../images/users/{$imagePath}" alt="profilePic">
+                                <p>{$username.name}</p>
+                            </div>
                         </a>
+
                         <table cellpadding="0" cellspacing="0" style="width: 100%; text-align:center" class="col-md-2">
                             <tr>
                                 <td><a class="accept_friend_request" id="accept_friend_request-{$friend_request.requestedBy_id}"><i class="fa fa-check"></i></a></td>
@@ -103,10 +107,10 @@
                             </tr>
                         </table>
                     </div>
-                </div>
+                {/foreach}
             </div>
         </div>
-    {/foreach}
+    </div>
 </div>
 
 {include file='users/circles_friends_modal.tpl'}

@@ -10,30 +10,32 @@
     <!--header profile-->
     <div class="container target">
         <div class="row">
-            <div class="col-sm-10" style="margin-bottom:10px">
-                <h1 class="">{$user.name}</h1>
-                {if $requestSent}
-                    <button type="button" class="btn btn-success" id="new_friend_request-btn-{$user.id}">Friend Request Sent</button>
-                {else}
-                    <button type="button" class="btn btn-success new_friend_request-btn" id="new_friend_request-btn-{$user.id}">Friend Request</button>
-                {/if}
-                <button type="button" class="btn btn-info">Send me a message</button>
-                <br>
-            </div>
 
-            <div class="col-sm-2">
-                <!--profile pic-->
-                <img class="centered-and-cropped" width="150" height="150" style="border-radius:50%" src="../../images/users/{$profilePIC.path}" alt="profilePic">
-            </div>
-        </div>
-        <br>
-
-        <div class="row">
             <div class="col-sm-3">
+                <!-- Modal -->
+                <!--profile pic-->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-transparent centered" style="marin-left:auto; margin-right:auto" data-toggle="modal" data-target="#myModal">
+                    <div class="itemsContainer">
+                        <img class="centered-and-cropped profilePic " width="150" height="150" style="border-radius:50%" src="../../images/users/{$profilePIC.path}" alt="profilePic">
+                    </div>
+                </button>
+                <h1 align="center">{$user.name}</h1>
+
+                {if $requestSent}
+                    <button type="button" class="btn btn-success centered" id="new_friend_request-btn-{$user.id}">Friend Request Sent</button>
+                {else}
+                    <button type="button" class="btn btn-success new_friend_request-btn centered" id="new_friend_request-btn-{$user.id}">Friend Request</button>
+                {/if}
+                <br>
+
+
+
                 <!--left col-->
                 <ul class="list-group">
                     <li class="list-group-item text-muted" contenteditable="false">Profile</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span><i class="fa fa-eye-slash"></i></li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span> <i class="fa fa-eye-slash"></i></li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last seen</strong></span> <i class="fa fa-eye-slash"></i></li>
                 </ul>
                 <ul class="list-group">
                     <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
@@ -42,18 +44,14 @@
                     <li class="list-group-item text-right"><span class="pull-left"><strong class="">Friends</strong></span> <i class="fa fa-eye-slash"></i></li>
                 </ul>
             </div>
-
             <div class="col-sm-9" contenteditable="false" style="">
-                <!--bio collum-->
-
                 <div class=" col-lg-12 clearfix">
-                    <h2 id="myPostsh2">Posts</h2>
-                    <!--publication-->
-                    <br/>
-                    <h3>Send Friend request to see recent posts from {$user.name}</h3>
-                </div>
+                    <br><br>
+                    <h1>Send a Friend Request to {$user.name} to see new posts.</h1>
+                    </div>
             </div>
-        </div>
+        <br>
+
     </div>
 </div>
 

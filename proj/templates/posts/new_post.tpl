@@ -1,5 +1,5 @@
 
-<form accept-charset="UTF-8" action="../../actions/post/new_post.php" method="POST" enctype="multipart/form-data">
+<form id="new_post_form" accept-charset="UTF-8" method="POST" enctype="multipart/form-data">
 
     <textarea id="new-post-textarea" maxlength="600" class="form-control counted" name="message" placeholder="Type in your post" rows="5" style="margin-bottom:10px;"></textarea>
 
@@ -39,16 +39,16 @@
                 <ul class="dropdown-menu dropdown-menu-form">
                     {counter start=0 skip=1 print=false}
                     {$n = {counter}}
-                    <li><input id="ex3_{$n}" name="ex3" value="{$n}" type="checkbox"><label for="ex3_{$n}">Public</label></li>
+                    <li><input id="circle-{$circle.id}-{$n}" name="ex3" value="{$n}" type="checkbox"><label for="circle-{$circle.id}-{$n}">Public</label></li>
                     {foreach $user_circles as $circle}
                         {$n = {counter}}
-                        <li><input id="ex3_{$n}" name="ex3" value="{$n}" type="checkbox"><label for="ex3_{$n}">{$circle.name}</label></li>
+                        <li><input id="circle-{$circle.id}-{$n}" name="ex3" value="{$n}" type="checkbox"><label for="circle-{$circle.id}-{$n}">{$circle.name}</label></li>
                     {/foreach}
                 </ul>
             </div>
         </div>
 
-        <input type="submit" value="Post" class="pull-right btn btn-info" style="margin-left:10px">
+        <input type="submit" id="submitNewPost" value="Post" class="pull-right btn btn-info" style="margin-left:10px">
 
         <h6 class="pull-right" id="counter-remaining-chars">600 characters remaining   </h6>
 

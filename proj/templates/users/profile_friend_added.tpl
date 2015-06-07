@@ -10,25 +10,23 @@
 
     <hr class="">
     <!--header profile-->
-    <div class="container target">
-        <div class="row">
-            <div class="col-sm-10" style="margin-bottom:10px">
-                <h1 class="">{$user.name}</h1>
 
-                <button id="addToCircleButton" type="button" class="btn btn-success"><i class="fa fa-circle-o"></i> Add to a circle</button>
-                <button type="button" class="btn btn-info">Send me a message</button>
-                <br>
-            </div>
-
-            <div class="col-sm-2">
-                <!--profile pic-->
-                <img class="centered-and-cropped" width="150" height="150" style="border-radius:50%" src="../../images/users/{$profilePIC.path}" alt="profilePic">
-            </div>
-        </div>
-        <br>
 
         <div class="row">
             <div class="col-sm-3">
+
+                <button type="button" class="btn btn-transparent centered" style="marin-left:auto; margin-right:auto" data-toggle="modal" data-target="#myModal">
+                    <div class="itemsContainer">
+                        <img class="centered-and-cropped profilePic " width="150" height="150" style="border-radius:50%" src="../../images/users/{$profilePIC.path}" alt="profilePic">
+                    </div>
+                </button>
+
+                <h1 align="center">{$user.name}</h1>
+
+
+
+                <button id="addToCircleButton" type="button" class="btn btn-success centered"><i class="fa fa-circle-o"></i> Add to a circle</button>
+                <br>
                 <!--left col-->
                 <ul class="list-group">
                     <li class="list-group-item text-muted" contenteditable="false">Profile</li>
