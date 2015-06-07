@@ -106,25 +106,29 @@ function addFriendToCircle(event) {
         type: "post",
         success: function (data) {
 
-            console.log("SUCESSAO");
-
             var response = $.parseJSON(data);
             var modal = $("#circlesModal .modal-body");
             var base_url = response['base_url'];
 
-            var userContent = "";
+            var userContent = '<ul class="listrap">';
 
             response['circles'].forEach(function (entry) {
                     userContent +=
-                        '<div class="col-md-3 modal-friend">'+
-                        '<img alt="10x10" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people">'+
-
+                        '<div class="col-md-3 modal-circle" style="display:flex;justify-content:center;align-items:center;">'+
+                        '<li>' +
+                        '<div class="listrap-toggle">' +
+                        '<img alt="20x20" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people">'+
                         '<p>' +
                         entry['name'] +
                         '</p>' +
-                        '</div>';
+                        '</div>'+
+                        '</li>'+
+                       '</div>';
                 }
             );
+
+            userContent += '</ul>';
+
 
             modal.html(userContent);
 

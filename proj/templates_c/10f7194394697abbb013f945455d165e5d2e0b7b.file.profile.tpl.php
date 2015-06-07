@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 22:47:04
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 03:07:19
          compiled from "../../templates/users/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2145186425549488d326bc8-14187107%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10f7194394697abbb013f945455d165e5d2e0b7b' => 
     array (
       0 => '../../templates/users/profile.tpl',
-      1 => 1433623590,
+      1 => 1433639231,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'user' => 0,
     'profilePIC' => 0,
-    'BASE_URL' => 0,
     'numberOfVotes' => 0,
     'numberOfPosts' => 0,
     'numberOfFriends' => 0,
@@ -39,61 +38,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php echo $_smarty_tpl->getSubTemplate ('common/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
-<!-- based on http://www.bootply.com/AdHpVL3xRF-->
 <div id="page-wrapper">
-    <hr class="">
-    <!--header profile-->
-
+    <hr>
 
     <div class="row">
         <div class="col-sm-3">
-
-
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title" id="myModalLabel">Change profile pic</h4>
-                                </div>
-                                <div class="modal-body">
-
-                                    <form accept-charset="UTF-8" action="../../actions/users/profileSettings.php" method="POST" enctype="multipart/form-data">
-
-                                        <input type="submit" value="Change Pic" class="pull-right btn btn-info" style="margin-left:10px">
-                                        <div class=" fileinput fileinput-new" data-provides="fileinput" style="display: inline">
-                                            <span class="btn btn-default btn-file"><span class="fileinput-new"><i class="fa fa-picture-o"></i>  Upload Photo</span><span class="fileinput-exists">Change</span><input type="file" name="image"></span>
-                                            <span class="fileinput-filename"></span>
-                                            <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                        <!--profile pic-->
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-transparent centered" style="marin-left:auto; margin-right:auto" data-toggle="modal" data-target="#myModal">
-                            <div class="itemsContainer">
-                                profilePic: <?php echo $_smarty_tpl->tpl_vars['profilePIC']->value['path'];?>
-
-                                <img class="centered-and-cropped profilePic " width="150" height="150" style="border-radius:50%" src="../../databaseImages/<?php echo $_smarty_tpl->tpl_vars['profilePIC']->value['path'];?>
+            <!-- Modal -->
+            <!--profile pic-->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-transparent centered" style="marin-left:auto; margin-right:auto" data-toggle="modal" data-target="#myModal">
+                <div class="itemsContainer">
+                    <img class="centered-and-cropped profilePic " width="150" height="150" style="border-radius:50%" src="../../images/users/<?php echo $_smarty_tpl->tpl_vars['profilePIC']->value['path'];?>
 " alt="profilePic">
-                               <!-- <div class="play"><center><h3><i class="fa fa-cog"></i></h3></center></div>-->
-                            </div> </button>
+                </div>
+            </button>
 
-                        <h1 align="center"><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
+            <h1 align="center"><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
 </h1>
-                       <!-- <button type="button" class="btn btn-primary centered" onclick="window.location.href='<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-pages/users/profile_settings.php'"><i class="fa fa-gear "></i> Settings</button>
--->
-
             <br>
 
             <!--left col-->
@@ -117,14 +78,10 @@ pages/users/profile_settings.php'"><i class="fa fa-gear "></i> Settings</button>
 
         <div class="col-sm-9" contenteditable="false" style="">
             <!--bio collum-->
-
             <div class=" col-lg-12 clearfix">
-
                 <!--publication-->
-                <div class="panel panel-default   ">
-
+                <div class="panel panel-default">
                     <div class="panel-body"  >
-
                         <?php echo $_smarty_tpl->getSubTemplate ('posts/new_post.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
                     </div>
@@ -144,7 +101,9 @@ $_smarty_tpl->tpl_vars['post']->_loop = true;
         </div>
     </div>
 </div>
-</div>
+
+<?php echo $_smarty_tpl->getSubTemplate ('users/uploadProfilePicModal.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 <?php echo $_smarty_tpl->getSubTemplate ("posts/reportModal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 

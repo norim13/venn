@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 20:34:09
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 03:56:05
          compiled from "../../templates/users/profile_friend_added.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1752829815557a0bfbae873-76587232%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b778d502844f2e706dccf2ece30fe88fe073e4d5' => 
     array (
       0 => '../../templates/users/profile_friend_added.tpl',
-      1 => 1433615626,
+      1 => 1433642159,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'user' => 0,
+    'profilePIC' => 0,
     'numberOfVotes' => 0,
     'numberOfPosts' => 0,
     'numberOfFriends' => 0,
@@ -54,7 +55,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
             <div class="col-sm-2">
                 <!--profile pic-->
-                <img title="profile image" class="img-circle img-responsive" src="http://www.rlsandbox.com/img/profile.jpg">
+                <img class="centered-and-cropped" width="150" height="150" style="border-radius:50%" src="../../images/users/<?php echo $_smarty_tpl->tpl_vars['profilePIC']->value['path'];?>
+" alt="profilePic">
             </div>
         </div>
         <br>
