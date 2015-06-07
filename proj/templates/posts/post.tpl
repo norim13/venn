@@ -2,9 +2,12 @@
     <!--publication-->
     <div class="panel panel-default panel-feed" id="panel-feed-{$post.id}">
         <div class="panel-heading ">
-            <img alt="200x200" class="profile-circles img-circle img-responsive"  style="float:left"src="http://lorempixel.com/40/40/people/4">
+            {$imagePath=getProfilePic($post.user_id)}
             <h4>{$userFromID=getUserFromID($post.user_id)}
-                <a href="{$BASE_URL}pages/users/profile.php?user={$userFromID.hashid}" style="text-decoration: none; color: inherit"> {$userFromID.name} </a>
+                <a href="{$BASE_URL}pages/users/profile.php?user={$userFromID.hashid}" style="text-decoration: none; color: inherit">
+                    <img class="profilePic " width="40" height="40" style="border-radius:50%" src="../../images/users/{$imagePath}" alt="profilePic">
+                    {$userFromID.name}
+                </a>
             </h4>
         </div>
 
@@ -15,7 +18,7 @@
                     {$vote = getVote($smarty.session.id, $post.id)}
                     <tr>
                         <td><i id="upvote-{$post.id}" class="fa fa-sort-asc upvote-btn"
-                               style="{if $vote.positive == '1'} color:rgb(92,184,92) {/if}"}></i></td>
+                               style="{if $vote.positive == '1'} color:rgb(92,184,92); {/if}"}></i></td>
                     </tr>
                     <tr>
                         {if $post.user_id != $smarty.session.id}
@@ -25,7 +28,7 @@
                                 {/if}
                             </td>
                         {else}
-                            <td class="votedifference" id="td-votedifference-{$post.id}" style="cursor: pointer">
+                            <td class="votedifference" id="td-votedifference-{$post.id}">
                                 {if $post.votedifference < 0} <i class="fa fa-minus-square-o" style="color:rgb(176, 49, 33)"></i>
                                 {else} <i class="fa">{$post.votedifference}</i>
                                 {/if}
@@ -34,7 +37,7 @@
                     </tr>
                     <tr>
                         <td><i id="downvote-{$post.id}" class="fa fa-sort-desc downvote-btn"
-                               style="{if $vote.positive == '0'} color:rgb(176, 49, 33) {/if}"}></i>
+                               style="{if $vote.positive == '0'} color:rgb(176, 49, 33); {/if}"}></i>
                         </td>
                     </tr>
                 </table>

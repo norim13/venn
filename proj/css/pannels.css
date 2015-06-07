@@ -135,3 +135,7 @@
 .modal-body {
     overflow: hidden;
 }
+
+.upvote-btn, .downvote-btn, .votedifference {
+    cursor: pointer;
+}
