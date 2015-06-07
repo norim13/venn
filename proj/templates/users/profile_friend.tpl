@@ -23,7 +23,7 @@
 
             <div class="col-sm-2">
                 <!--profile pic-->
-                <img title="profile image" class="img-circle img-responsive" src="http://www.rlsandbox.com/img/profile.jpg">
+                <img class="centered-and-cropped" width="150" height="150" style="border-radius:50%" src="../../images/users/{$profilePIC.path}" alt="profilePic">
             </div>
         </div>
         <br>
