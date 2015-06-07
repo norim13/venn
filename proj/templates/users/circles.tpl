@@ -26,7 +26,6 @@
     <div class="panel panel-default target circle-group">
         <div class="panel-body">
             <div class="row">
-
                 {foreach $user_circles as $circle}
                     <div class="col-md-2">
                         <div class="thumbnail">
