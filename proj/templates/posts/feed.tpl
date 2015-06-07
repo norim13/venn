@@ -16,7 +16,7 @@
             <div class="dropdown" style="float:right">
                 <div class="btn-group">
                     <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle pull-right" data-placeholder="Visibility" >Circles <span class="caret"></span></button>
-                    <ul class="dropdown-menu dropdown-menu-form">
+                    <ul class="pull-right dropdown-menu dropdown-menu-form">
                         {counter start=0 skip=1 print=false}
                         {$n = {counter}}
                         <li><input id="ex3_{$n}" name="ex3" value="{$n}" type="checkbox"><label for="ex3_{$n}">Public</label></li>
