@@ -71,8 +71,10 @@
                     {foreach $friendsFromCircle as $friend}
                         {$imagePath=getPathImageFromID($friend.profilepic_id)}
                         <div class="col-md-1 profile-thumbnail" style="float:left">
-                            <img alt="200x200" class="profile-circles img-circle img-responsive" src="../../images/users/{$imagePath.path}">
-                            <p> {$friend.name} </p>
+                            <a href="{$BASE_URL}pages/users/profile.php?user={$friend.hashid}" style="text-decoration: none; color: inherit">
+                                <img class="profile-circles img-circle img-responsive" src="../../images/users/{$imagePath.path}" alt="profilePic">
+                                <p><strong>{$friend.name}<strong></p>
+                            </a>
                         </div>
                     {/foreach}
                 </div>
