@@ -233,7 +233,7 @@ function createImagePost($path,$owner_id,$post_id) {
     $image=createImage($path,$owner_id);
     global $conn;
     $stmt = $conn->prepare("INSERT INTO \"ImagePost\" (image_id,post_id)
-  VALUES (?,?)");
+                            VALUES (?,?)");
 
     $stmt->execute(array(
         $image['id'],
@@ -249,3 +249,11 @@ function getImagePathFromPost($post_id) {
     return $stmt->fetchAll();
 }
 
+function createPostVisibleTo($post_id, $circle_id) {
+    global $conn;
+    $stmt = $conn->prepare("INSERT INTO \"PostVisibleTo\" (post_id,circle_id)
+                            VALUES (?,?)");
+
+    $stmt->execute(array($post_id,$circle_id));
+    return $stmt->fetch();
+}

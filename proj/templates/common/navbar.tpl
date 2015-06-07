@@ -33,7 +33,7 @@
                                     <a href="{$BASE_URL}pages/users/profile.php?user={$username.hashid}" style="text-decoration: none; color: inherit">
                                         <img class="profilePic" width="40" height="40" style="border-radius:50%" src="../../images/users/{$imagePath}" alt="profilePic">
                                         {$username.name}
-                                        </a>
+                                    </a>
                                 </h4>
                             </div>
 

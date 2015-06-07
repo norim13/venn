@@ -62,7 +62,11 @@ function deletePost(event) {
 
 $(".btn-delete").click(deletePost);
 
-$('#example1').datepicker({
+$('#datePicker1').datepicker({
+    format: "dd/mm/yyyy"
+});
+
+$('#datePicker2').datepicker({
     format: "dd/mm/yyyy"
 });
 

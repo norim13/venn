@@ -1,4 +1,4 @@
-{if isVisibleTo($post.id,$post.user_id,$smarty.session.id)}
+{if $post.user_id == $smarty.session.id || isVisibleTo($post.id,$post.user_id,$smarty.session.id)}
     <!--publication-->
     <div class="panel panel-default panel-feed" id="panel-feed-{$post.id}">
         <div class="panel-heading">
