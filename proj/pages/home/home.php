@@ -46,6 +46,19 @@ if($_SESSION['email']) {
         foreach($uniqueC as $circleUser) {
             $circlePosts[] = getPostsFromUser($circleUser['id']);
         }
+
+        usort($circlePosts, function($a, $b) {
+            if($a['start_date'] != null)
+                $aValue = $a['start_date'];
+            else $aValue = $a['post_date'];
+
+            if($b['start_date'] != null)
+                $bValue = $a['start_date'];
+            else $bValue = $a['post_date'];
+
+            return $aValue - $bValue;
+        });
+
         $smarty->assign('circles_posts', $circlePosts);
     }
 
