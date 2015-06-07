@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 03:51:00
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 20:34:09
          compiled from "../../templates/users/profile_friend_added.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1752829815557a0bfbae873-76587232%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b778d502844f2e706dccf2ece30fe88fe073e4d5' => 
     array (
       0 => '../../templates/users/profile_friend_added.tpl',
-      1 => 1433555401,
+      1 => 1433615626,
       2 => 'file',
     ),
   ),
@@ -47,7 +47,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <h1 class=""><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
 </h1>
 
-                <button type="button" class="btn btn-success"><i class="fa fa-circle-o"></i> Add to a circle</button>
+                <button id="addToCircleButton" type="button" class="btn btn-success"><i class="fa fa-circle-o"></i> Add to a circle</button>
                 <button type="button" class="btn btn-info">Send me a message</button>
                 <br>
             </div>
@@ -99,6 +99,9 @@ $_smarty_tpl->tpl_vars['post']->_loop = true;
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ("posts/reportModal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+
+<?php echo $_smarty_tpl->getSubTemplate ("users/add_to_circles_modal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
 <?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>

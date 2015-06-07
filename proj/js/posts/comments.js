@@ -21,7 +21,7 @@ function comment(event) {
             var linkToProfile = '<a href=\"' + base_url + 'pages/users/profile.php?user=' + hashowner +
                 '\" style=\"text-decoration: none; color: inherit\">'+ msgowner +'</a>';
 
-            $('<div class="panel panel-default">' +
+            $('<div class="panel panel-default comment-panel">' +
             '<div class="panel-heading">' + newmsg + '</div>' +
             '<div class="panel-body">' + linkToProfile + ', on ' + date +
             '</div></div>').insertBefore(parentdiv);

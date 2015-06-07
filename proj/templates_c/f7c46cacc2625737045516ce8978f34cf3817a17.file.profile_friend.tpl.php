@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-05 01:26:53
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 20:05:14
          compiled from "../../templates/users/profile_friend.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1303653800554952f6a41013-64801979%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7c46cacc2625737045516ce8978f34cf3817a17' => 
     array (
       0 => '../../templates/users/profile_friend.tpl',
-      1 => 1433460377,
+      1 => 1433598192,
       2 => 'file',
     ),
   ),
@@ -69,7 +69,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 </ul>
                 <ul class="list-group">
                     <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Upvotes</strong></span> <i class="fa fa-eye-slash"></i></li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Votes</strong></span> <i class="fa fa-eye-slash"></i></li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong class="">Posts</strong></span> <i class="fa fa-eye-slash"></i></li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong class="">Friends</strong></span> <i class="fa fa-eye-slash"></i></li>
                 </ul>
@@ -85,7 +85,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <h3>Send Friend request to see recent posts from <?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
 </h3>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                <?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <?php }} ?>

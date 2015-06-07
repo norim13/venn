@@ -15,7 +15,7 @@
             <div class="col-sm-10" style="margin-bottom:10px">
                 <h1 class="">{$user.name}</h1>
 
-                <button type="button" class="btn btn-success"><i class="fa fa-circle-o"></i> Add to a circle</button>
+                <button id="addToCircleButton" type="button" class="btn btn-success"><i class="fa fa-circle-o"></i> Add to a circle</button>
                 <button type="button" class="btn btn-info">Send me a message</button>
                 <br>
             </div>
@@ -58,5 +58,7 @@
 </div>
 
 {include file="posts/reportModal.tpl"}
+
+{include file="users/add_to_circles_modal.tpl"}
 
 {include file='common/footer.tpl'}

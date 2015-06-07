@@ -57,7 +57,7 @@
             {$image=getImagePathFromPost($post.id)}
 
             {if ($image[0].path != NULL)}
-                <img src="../../databaseImages/{$image[0].path}" alt="" class="img-responsive" style="border: 1px solid #fff;" />
+                <img src="../../images/users/{$image[0].path}" alt="" class="img-responsive" style="border: 1px solid #fff;" />
             {/if}
         </div>
 

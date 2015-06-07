@@ -102,3 +102,22 @@ function searchUsers($string){
     $stmt->execute(array($string));
     return $stmt->fetchAll();
 }
+
+
+function updateProfilePic($userID,$imageID){
+    global $conn;
+    $stmt = $conn->prepare("UPDATE \"User\"
+        SET profilepic_id=?
+        WHERE id=? RETURNING OLD.profilepic_id");
+
+    $stmt->execute(array($imageID,$userID));
+}
+
+
+function getPathImageFromID($imageID){
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM \"Image\" WHERE id=?");
+    $stmt->execute(array($imageID));
+    return $stmt->fetch();
+}
+

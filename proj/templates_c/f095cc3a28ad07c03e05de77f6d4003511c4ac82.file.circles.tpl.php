@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 16:24:34
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 19:53:06
          compiled from "../../templates/users/circles.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18536193865549162558dcd8-43500815%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f095cc3a28ad07c03e05de77f6d4003511c4ac82' => 
     array (
       0 => '../../templates/users/circles.tpl',
-      1 => 1433446354,
+      1 => 1433612996,
       2 => 'file',
     ),
   ),
@@ -46,7 +46,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <div style="inline-box-align">
         <div> <h1> Circles </h1> </div>
         <div class="clearfix">
-            <button type="button" class="btn btn-primary" id="btn-newCircle" data-toggle="collapse" data-target="#new_circle" aria-expanded="false" aria-controls="comments"><i class="fa  fa-circle-o "></i> Create Circle
+            <button type="button" class="btn btn-primary" id="btn-friendsList" data-toggle="collapse" data-target="#friendsList" aria-expanded="false" aria-controls="comments"><i class="fa fa-users"></i> Friends
+            </button>
+
+            <button type="button" class="btn btn-primary" id="btn-newCircle" data-toggle="collapse" data-target="#new_circle" aria-expanded="false" aria-controls="comments"><i class="fa fa-circle-o "></i> Create Circle
             </button>
         </div>
     </div>
@@ -172,6 +175,8 @@ $_smarty_tpl->tpl_vars['friend_request']->_loop = true;
         </div>
     <?php } ?>
 </div>
+
+<?php echo $_smarty_tpl->getSubTemplate ('users/circles_friends_modal.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 

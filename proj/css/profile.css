@@ -8,19 +8,22 @@
 
 }
 
-#profilePic    {  width:300px;
+#profilePic {
+    width:300px;
     box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
     border-radius:5px;
-    overflow:hidden;}
-
-
-#profilePic  {
-   /* background: 50% 50% no-repeat; /* 50% 50% centers image in div */
-    width: 250px;
-    height: 250px;*/
+    overflow:hidden;
 }
 
-#overlay-profilePic   {  background:rgba(0,0,0,.75);
+
+#profilePic {
+    /* background: 50% 50% no-repeat; /* 50% 50% centers image in div */
+    width: 250px;
+    height: 250px;
+}
+
+#overlay-profilePic {
+    background:rgba(0,0,0,.75);
     text-align:center;
     padding:45px 0 66px 0;
     opacity:0;
@@ -28,17 +31,18 @@
     -moz-transition: opacity .25s ease;}
 
 #profilePic:hover #overlay-profilePic {
-    opacity:1;}
-
+    opacity:1;
+}
 
 .btn-transparent{
-    background-color: Transparent;
-    background-repeat:no-repeat;
+    background-color: transparent;
+    background-repeat: no-repeat;
     border: none;
     cursor:pointer;
     overflow: hidden;
     outline:none;
 }
+
 .btn-transparent:focus,.btn-transparent:active {
     outline: none !important;
     background-color: Transparent !important;
@@ -47,10 +51,28 @@
     box-shadow: none !important;
 }
 
-
 .profilePic:hover {
     background-color:#000000;
     opacity:0.2;
 }
 
 .centered-and-cropped { object-fit: cover }
+
+.itemsContainer {
+    position:relative
+}
+.itemsContainer:hover .play{display:block}
+.play{
+    position : absolute;
+    display:none;
+    top:30%;
+    margin:0 auto; left:0px;
+    right:0px;
+    z-index:100
+}
+
+.centered{
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
