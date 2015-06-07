@@ -38,17 +38,6 @@
                                         Show more
                                     </button>
                                 </h3>
-                                <button type="button" class="btn btn-edit-circle" data-toggle="collapse" data-target="#edit-menu-{$circle.id}" aria-expanded="false" ><i class="fa fa-gear"></i> Edit</button>
-                                <div id="edit-menu-{$circle.id}" class="caption collapse">
-                                    <form action="../../actions/circles/rename_circle.php" method="post">
-                                        <input type="text" class="form-control " name="circle_rename" placeholder="Enter new name">
-                                        <input type="hidden" name="circle_id" value="{$circle.id}" />
-                                        <button type="submit" class="btn btn-primary" style="float:right"> Rename </button>
-                                    </form>
-                                    <p>
-                                        <a href="../../actions/circles/delete_circle.php?circle_id={$circle.id}"><i class="fa fa-trash"></i></a> Delete this circle</td>
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -62,9 +51,20 @@
         <div class="panel panel-default target col-md-12 circle-members collapse" id="circle-members-{$circle.id}">
             <div class="panel-heading" contenteditable="false">
                 <h3> {$circle.name}
-                    <button type="button" class="btn " id="btn-comment" ><i class="fa fa-gear "></i> Edit</button>
+                    <button type="button" class="btn btn-edit-circle" data-toggle="collapse" data-target="#edit-menu-{$circle.id}" aria-expanded="false"><i class="fa fa-gear "></i> Edit</button>
                 </h3>
+                <div id="edit-menu-{$circle.id}" class="caption collapse">
+                    <form action="../../actions/circles/rename_circle.php" method="post">
+                        <input type="text" class="form-control " name="circle_rename" placeholder="Enter new name">
+                        <input type="hidden" name="circle_id" value="{$circle.id}" />
+                        <button type="submit" class="btn btn-primary" style="float:right"> Rename </button>
+                    </form>
+                    <p>
+                        <a href="../../actions/circles/delete_circle.php?circle_id={$circle.id}"><i class="fa fa-trash"></i></a> Delete this circle</td>
+                    </p>
+                </div>
             </div>
+
             <div class="panel-body">
                 <div class="row">
                     {$friendsFromCircle=getFriendsFromCircle($circle.id,$userId) }
