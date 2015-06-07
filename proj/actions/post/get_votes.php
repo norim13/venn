@@ -1,6 +1,7 @@
 <?php
 include_once('../../config/init.php');
 include_once('../../database/posts.php');
+include_once('../../database/users.php');
 
 $return_messages = array();
 
@@ -12,6 +13,11 @@ else{
 
     if(isMyPost($post_id,$_SESSION['id'])) {
         $votes = getVotesFromPostID($post_id);
+
+        foreach($votes as &$vote) {
+            $vote['imagePath'] = getProfilePic($vote['user_id']);
+        }
+
         $return_messages['votes'] = $votes;
         $return_messages['post_id'] = $post_id;
         $return_messages['can_view'] = 'true';

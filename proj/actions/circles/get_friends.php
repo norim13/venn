@@ -1,6 +1,7 @@
 <?php
 include_once('../../config/init.php');
 include_once('../../database/circles.php');
+include_once('../../database/users.php');
 
 $return_messages = array();
 
@@ -8,6 +9,10 @@ $return_messages = array();
 $user_id = $_SESSION['id'];
 
 $friends = getAllFriendsOfUser($user_id);
+
+foreach($friends as &$friend) {
+    $friend['imagePath'] = getPathImageFromID($friend['profilepic_id'])['path'];
+}
 
 $return_messages['friends'] = $friends;
 $return_messages['base_url'] = $BASE_URL;

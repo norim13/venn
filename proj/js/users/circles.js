@@ -97,15 +97,12 @@ function removeFriendship(event) {
 }
 
 $('.remove-friendship-btn').click(removeFriendship);
+
 function addFriendToCircle(event) {
-
-    console.log("Entrou aqui");
-
     $.ajax({
         url: "../../actions/circles/get_circles.php",
         type: "post",
         success: function (data) {
-
             var response = $.parseJSON(data);
             var modal = $("#circlesModal .modal-body");
             var base_url = response['base_url'];
@@ -117,7 +114,7 @@ function addFriendToCircle(event) {
                         '<div class="col-md-3 modal-circle" style="display:flex;justify-content:center;align-items:center;">'+
                         '<li>' +
                         '<div class="listrap-toggle">' +
-                        '<img alt="20x20" class="profile-circles img-circle img-responsive"  src="http://lorempixel.com/70/70/people">'+
+                        '<img alt="profilePic" width="80" height="80" class="profile-circles img-circle img-responsive"  src="../../images/users/' + entry['imagePath'] + '">'+
                         '<p>' +
                         entry['name'] +
                         '</p>' +
@@ -129,7 +126,6 @@ function addFriendToCircle(event) {
 
             userContent += '</ul>';
 
-
             modal.html(userContent);
 
             $('#circlesModal').modal({
@@ -140,6 +136,5 @@ function addFriendToCircle(event) {
         error: function () {}
     });
 }
-
 
 $("#addToCircleButton").click(addFriendToCircle);

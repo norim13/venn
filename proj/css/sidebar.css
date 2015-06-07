@@ -15,9 +15,6 @@
 	height: -webkit-calc(100vh - 50px); /* WebKit */
 	height: -o-calc(100vh - 50px); /* Opera */
 	height: calc(100vh - 50px);	/* Standard */
-
-	/* background-color: red;*/
-    z-index
 }
 
 #sidebar *{
@@ -25,7 +22,6 @@
 	padding: 0;
 	border: 0;
 }
-
 
 .sidebar-item {
 	display: table-row;
@@ -158,7 +154,6 @@
 #search-container .bottom-search label input{
     margin: 0 5px;
 }
-
 
 #text-search{
 	width: 90%;

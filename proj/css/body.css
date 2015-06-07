@@ -1,14 +1,8 @@
-#bodydashboard{
-	/*red*/
-	/* background-color: rgb(221,77,66); */
-
-	/*blue*/
-	margin-left: 120px;
-}
-
-
-#page-wrapper{
-	background-color: rgb(236,236,236);
+#page-wrapper {
 	margin-top: 50px;
+    background-color: rgb(236,236,236);
 }
 
+html {
+    background-color: rgb(236,236,236);
+}

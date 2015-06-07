@@ -7,7 +7,13 @@
         <div class="col-lg-6 clearfix">
             <h1>Search: {$search_string}</h1>
             {foreach $users as $user}
-                <p>{$user.name}</p>
+                <div class="col-md-6 profile-thumbnail">
+                    {$imagePath=getProfilePic($user.id)}
+                    <a href="{$BASE_URL}pages/users/profile.php?user={$user.hashid}" style="text-decoration: none; color: inherit">
+                        <img class="profilePic" width="80" height="80" style="border-radius:50%" src="../../images/users/{$imagePath}" alt="profilePic">
+                        <strong>{$user.name}<strong>
+                    </a>
+                </div>
             {/foreach}
         </div>
     {else}

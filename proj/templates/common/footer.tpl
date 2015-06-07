@@ -56,6 +56,13 @@
     <script type="text/javascript" src="../../js/users/home.js"></script>
     <script type="text/javascript" src="../../js/users/circles.js"></script>
     <script type="text/javascript" src="../../js/posts/report.js"></script>
+{elseif strpos($current_page[1], 'posts/post_search.php', 0)=== 0}
+    <script type="text/javascript" src="../../js/posts/post.js"></script>
+    <script type="text/javascript" src="../../js/posts/comments.js"></script>
+    <script type="text/javascript" src="../../js/posts/votes.js"></script>
+    <script type="text/javascript" src="../../js/users/home.js"></script>
+    <script type="text/javascript" src="../../js/users/circles.js"></script>
+    <script type="text/javascript" src="../../js/posts/report.js"></script>
 {elseif strpos($current_page[1], 'users/profile.php', 0)=== 0}
     <script type="text/javascript" src="../../js/posts/votes.js"></script>
     <script type="text/javascript" src="../../js/posts/post.js"></script>
