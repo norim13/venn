@@ -1,18 +1,30 @@
 function createNewCircle(event) {
     var id_array = [];
 
-    $("li.active").each( function( index, element ){
+    $(".select-friends-new-circle li.active").each( function( index, element ){
         id_array.push($( this ).attr("id").split('-')[1]);
     });
 
+    if(id_array.length == 0)
+        return;
+
     var name = $('#circle_name_content').val();
+
+    if(name == null || name == "")
+        return;
 
     $.ajax({
         url: '../../actions/circles/create_new_circle.php',
         type: 'post',
         data: {"friends":id_array,"circle_name":name},
         success: function(data){
-            $('#btn-newCircle').click();
+            //console.log(data);
+            var response = $.parseJSON(data);
+            if (response.success != null){
+                $('#btn-newCircle').click();
+            }
+            //else console.log(response.errors[0]);
+
         },
         error: function(){}
     });

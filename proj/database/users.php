@@ -63,6 +63,15 @@ function updateLogin($email) {
     $stmt->execute(array($email));
 }
 
+function updateUserName($userID,$newUserName) {
+    global $conn;
+    $stmt = $conn->prepare("UPDATE \"User\"
+        SET name=?
+        WHERE id=?");
+
+    $stmt->execute(array($newUserName,$userID));
+}
+
 function isFriend($myId, $hashId) {
     $otherUser=getUserFromHash($hashId)['id'];
     global $conn;
@@ -157,8 +166,23 @@ function setNewPassword($userId,$pw) {
     $stmt = $conn->prepare("UPDATE \"User\"
         SET password_hash=?
         WHERE \"User\".id=?");
-
     $stmt->execute(array(hash('sha256', $pw),$userId));
+}
+
+function removeTempCode($code) {
+    global $conn;
+    $stmt = $conn->prepare("DELETE FROM \"ResetPw\" WHERE tempcode = ?");
+    $stmt->execute(array($code));
+}
+
+function codeInReset($code) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT *
+      FROM \"ResetPw\"
+      WHERE tempcode = ?");
+    $stmt->execute(array($code));
+    return $stmt->fetch() == true;
 
 }
+
 

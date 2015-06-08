@@ -21,10 +21,15 @@ if($_SESSION['email']) {
         } elseif ($_SESSION['id'] == $user['id']) {
             include_once '../../database/circles.php';
             $posts = getPostsFromUser($user['id']);
-            foreach($posts as $post => $key) {
-                if($key['start_date'] > date("Y-m-d H:i:s") || $key['expiration_date'] < date("Y-m-d H:i:s")) {
-                    if($key['user_id'] != $_SESSION['id'])
-                        unset($posts[$post]);
+            foreach($posts as $post => &$key) {
+                if((isset($key['start_date']) && $key['start_date'] > date("Y-m-d H:i:s")) ||
+                    (isset($key['expiration_date']) && $key['expiration_date'] < date("Y-m-d H:i:s"))
+                    && $key['user_id'] != $_SESSION['id']) {
+                    unset($posts[$post]);
+                }
+                else if(isset($key['url'])) {
+                    if(yt($key['url']) != $key['url'])
+                        $key['urlyt'] = yt($key['url']);
                 }
             }
             $smarty->assign('user_posts', $posts);
@@ -37,10 +42,15 @@ if($_SESSION['email']) {
             $posts = getPostsFromUser($user['id']);
             $smarty->assign('numberOfPosts',sizeof($posts));
             $smarty->assign('numberOfVotes',sizeof(getVotesFromUser($user['id'])));
-            foreach($posts as $post => $key) {
-                if($key['start_date'] > date("Y-m-d H:i:s") || $key['expiration_date'] < date("Y-m-d H:i:s")) {
-                    if($key['user_id'] != $_SESSION['id'])
-                        unset($posts[$post]);
+            foreach($posts as $post => &$key) {
+                if((isset($key['start_date']) && $key['start_date'] > date("Y-m-d H:i:s")) ||
+                    (isset($key['expiration_date']) && $key['expiration_date'] < date("Y-m-d H:i:s"))
+                    && $key['user_id'] != $_SESSION['id']) {
+                    unset($posts[$post]);
+                }
+                else if(isset($key['url'])) {
+                    if(yt($key['url']) != $key['url'])
+                        $key['urlyt'] = yt($key['url']);
                 }
             }
             $smarty->assign('user_posts', $posts);
@@ -59,10 +69,15 @@ if($_SESSION['email']) {
         $smarty->assign('user', $user);
         $posts = getPostsFromUser($user['id']);
 
-        foreach($posts as $post => $key) {
-            if($key['start_date'] > date("Y-m-d H:i:s") || $key['expiration_date'] < date("Y-m-d H:i:s")) {
-                if($key['user_id'] != $_SESSION['id'])
-                    unset($posts[$post]);
+        foreach($posts as $post => &$key) {
+            if((isset($key['start_date']) && $key['start_date'] > date("Y-m-d H:i:s")) ||
+                (isset($key['expiration_date']) && $key['expiration_date'] < date("Y-m-d H:i:s"))
+                && $key['user_id'] != $_SESSION['id']) {
+                unset($posts[$post]);
+            }
+            else if(isset($key['url'])) {
+                if(yt($key['url']) != $key['url'])
+                    $key['urlyt'] = yt($key['url']);
             }
         }
 

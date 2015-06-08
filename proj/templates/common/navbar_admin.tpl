@@ -17,12 +17,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"> Venn admin panel </a>
+            <a class="navbar-brand" href="main_panel.php"> Venn admin panel </a>
         </div>
         <!-- /.navbar-header -->
 
         <div class="logoutButton">
-            <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+            <a href="../../actions/users/logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
         </div>
         <!-- /.navbar-top-links -->
 
@@ -62,21 +62,9 @@
                                 <a href="posts_db.php"> Posts </a>
                                 <!-- /.nav-third-level -->
                             </li>
-                            <li>
-                                <a href="reports_db.php"> Reports  </a>
-                                <!-- /.nav-third-level -->
-                            </li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
-
-
-                    <li>
-                        <a href="stats.php"><i class="fa fa-bar-chart-o fa-fw"></i> Statistics <span class="fa arrow"></span></a>
-
-                        <!-- /.nav-second-level -->
-                    </li>
-
 
                 </ul>
             </div>

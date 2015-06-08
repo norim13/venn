@@ -1,7 +1,20 @@
 <?php
 
 include_once '../../config/init.php';
+include_once '../../database/admin.php';
 
-$smarty->display('../../templates/admin/admin.tpl');
+if($_SESSION['email']) {
+    $reports=getAllReports();
+    $smarty->assign('reports', $reports);
+    $admin=getAdminFromEmail($_SESSION['email']);
+    $smarty->assign('admin', $admin['name']);
+
+
+    $smarty->display('../../templates/admin/admin.tpl');
+
+}
+else {
+    $smarty->display('../../templates/users/login_admin.tpl');
+}
 
 ?>

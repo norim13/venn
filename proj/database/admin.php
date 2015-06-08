@@ -51,35 +51,26 @@ function createReport($postID, $userID, $msg) {
     return $stmt->fetch();
 }
 
-function getReports(){
-    global $conn;
-    $stmt = $conn->prepare("SELECT \"User\".name as username, \"Post\".message as text , \"Post\".url,\"Post\".id as post_id, \"Report\".date, \"Report\".processed, \"Report\".message, \"Report\".id
-                            FROM \"User\", \"Post\",  \"Report\"
-                            WHERE
-                            \"Report\".user_id=\"User\".id AND
-                             \"Report\".post_id=\"Post\".id");
-    $stmt->execute();
-    return $stmt->fetchAll();
-}
-
-function getReportState($report_id)
-{
+function isLoginAdminCorrect($email, $password) {
     global $conn;
     $stmt = $conn->prepare("SELECT *
-                            FROM \"Report\"
-                            WHERE id=?");
-    $stmt->execute(array($report_id));
+      FROM \"Admin\"
+      WHERE email = ? AND password_hash = ?");
+    $stmt->execute(array($email, hash('sha256', $password)));
+    return $stmt->fetch() == true;
+}
+
+function getAdminFromEmail($email){
+    global $conn;
+    $stmt = $conn->prepare("SELECT * FROM \"Admin\" WHERE  email = ?");
+    $stmt->execute(array($email));
     return $stmt->fetch();
 }
 
-function changeReportState($report_id){
-    $state=getReportState($report_id)['processed'];
-    /*$new_state= !$state;*/
-    if($state)
-        $new_state=0;
-    else
-        $new_state=1;
+function getAllReports(){
     global $conn;
-    $stmt = $conn->prepare("UPDATE \"Report\" SET processed = ? WHERE id=?");
-    $stmt->execute(array($new_state,$report_id));
+    $stmt = $conn->prepare("SELECT *
+                            FROM \"Report\" ORDER BY date DESC");
+    $stmt->execute();
+    return $stmt->fetchAll();
 }

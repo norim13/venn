@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-md-12" style="float:left">
                     <h3>Members:</h3>
-                    <div class="">
+                    <div class="select-friends-new-circle">
                         <ul class="listrap">
                             {foreach $user_friends as $friend}
                                 <div class="col-md-2">

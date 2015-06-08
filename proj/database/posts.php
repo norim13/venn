@@ -263,14 +263,24 @@ function getPostsFromUsers($user_ids){
     global $conn;
     $query_string = "SELECT * FROM \"Post\" WHERE ";
 
-    $i=0;
-    while ($i < sizeof($user_ids)-1)
-        $query_string = $query_string."user_id = ? OR ";
-    
-    $query_string = $query_string."user_id = ?";
+    $query_string = "SELECT * FROM \"Post\" WHERE user_id = ANY(ARRAY[" . implode(",", $user_ids) . "]) ORDER BY post_date DESC";
+
+    //WHERE   some_id = ANY(?::INT[])
+    //You would need to pass a string representation of the array: {1,2}
 
     $stmt = $conn->prepare($query_string);
-    $stmt->execute($user_ids);
+    $stmt->execute();
     return $stmt->fetchAll();
+}
 
+function yt($url) {
+
+    if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $match)) {
+        $video_id = 'https://www.youtube.com/embed/'.$match[1];
+
+        return '<iframe width="420" height="315" src="'. $video_id.
+        '" frameborder="0" allowfullscreen></iframe>';
+    }
+
+    return $url;
 }

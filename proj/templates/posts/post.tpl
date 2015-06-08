@@ -53,7 +53,9 @@
                     {/foreach}
                 </p>
             {/if}
-            {if $post.url}
+            {if $post.urlyt}
+                <div class="post-url-div">{$post.urlyt}</div>
+            {elseif $post.url}
                 <div class="post-url-div"><a href={$post.url}>{$post.url}</a></div>
             {/if}
 
@@ -68,8 +70,11 @@
         <div class="panel-footer clearfix ">
             <!-- section with the time and comments button -->
             <div class="fill-flow">
-                <a href="{$BASE_URL}pages/posts/single_post.php?post_id={$post.id}" class="btn btn-default" id="clock-panel"><i class="fa fa-clock-o"></i>
-                    {if $post.start_date} {$post.start_date} {else} {$post.post_date} {/if} </a>
+                <a href="{$BASE_URL}pages/posts/single_post.php?post_id={$post.id}" data-toggle="tooltip" data-placement="bottom" title="Check this post"
+                   class="btn btn-default" id="clock-panel">
+                    <i class="fa fa-clock-o"></i>
+                    {if $post.start_date} {$post.start_date} {else} {$post.post_date} {/if}
+                </a>
 
                 {if $isRightFeed}
                     <button class="btn btn-default btn-comments rightFeed" id="btn-comments-{$post.id}" type="button" data-toggle="collapse" data-target="#comments-rightfeed-{$post.id}" aria-expanded="false" aria-controls="comments">
@@ -116,4 +121,3 @@
         </div>
     </div>
 {/if}
-

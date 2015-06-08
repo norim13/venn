@@ -41,6 +41,12 @@
     var base_url = "{$BASE_URL}";
 </script>
 
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
 {assign var=current_page value={$BASE_URL|cat:'pages/'}|explode:$smarty.server.REQUEST_URI}
 {if strpos($current_page[1], 'home/home.php', 0)=== 0}
     <script type="text/javascript" src="../../js/posts/post.js"></script>

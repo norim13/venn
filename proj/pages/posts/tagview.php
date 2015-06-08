@@ -10,10 +10,15 @@ if($_SESSION['email']) {
 
         $tagposts = getPostsWithTag($tagname);
 
-        foreach($tagposts as $post => $key) {
-            if($key['start_date'] > date("Y-m-d H:i:s") || $key['expiration_date'] < date("Y-m-d H:i:s")) {
-                if($key['user_id'] != $_SESSION['id'])
-                    unset($tagposts[$post]);
+        foreach($tagposts as $post => &$key) {
+            if((isset($key['start_date']) && $key['start_date'] > date("Y-m-d H:i:s")) ||
+                (isset($key['expiration_date']) && $key['expiration_date'] < date("Y-m-d H:i:s"))
+                && $key['user_id'] != $_SESSION['id']) {
+                unset($tagposts[$post]);
+            }
+            else if(isset($key['url'])) {
+                if(yt($key['url']) != $key['url'])
+                    $key['urlyt'] = yt($key['url']);
             }
         }
 
