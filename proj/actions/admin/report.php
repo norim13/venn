@@ -5,7 +5,9 @@ include_once('../../database/admin.php');
 
 $return_messages = array();
 
-if (!$_POST['msg'] || !$_POST['post_id']) {
+if(!$_POST['post_id'])
+    $return_messages['errors'][] = 'No post selected';
+else if (!$_POST['msg']) {
     $return_messages['errors'][] = 'Please, type comment';
 }
 else{

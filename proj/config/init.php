@@ -1,5 +1,5 @@
 <?php
-  session_set_cookie_params(3600, '/~***REMOVED***');
+  session_set_cookie_params(86400, '/~***REMOVED***'); //86400s = 24h
   session_start();
 
   error_reporting(E_ERROR | E_WARNING); // E_NOTICE by default
