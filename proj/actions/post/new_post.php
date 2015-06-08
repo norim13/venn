@@ -21,7 +21,7 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
         $url = $needle . $url;
 }
 
-if(isset($_POST['tags']) && $_POST['tags'] != "")
+if(isset($_POST['tags']) && preg_match('/\S/', $_POST['tags']))
     $tags = preg_split("/[\s,]+/",htmlspecialchars($_POST['tags']));
 
 if(isset($_POST['dateInit']) && $_POST['dateInit'] != "") {
