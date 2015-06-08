@@ -14,7 +14,23 @@ else{
 
         if(isMyPost($post_id,$_SESSION['id'])) {
             $post = getPostFromID($post_id);
+            $tags = getTagNamesFromPost($post_id);
+
+            if(isset($post['start_date']))  {
+                $dateInit = preg_split("/[\s\-]+/", $post['start_date']);
+                 $new_dateInit = $dateInit[2] . "/" . $dateInit[1] . "/" . $dateInit[0];
+                 $return_messages['startdate'] = $new_dateInit;
+           }
+
+            if(isset($post['expiration_date'])) {
+                $dateEnd = preg_split("/[\s\-]+/", $post['expiration_date']);
+                $new_dateEnd = $dateEnd[2] . "/" . $dateEnd[1] . "/" . $dateEnd[0];
+
+                $return_messages['enddate'] = $new_dateEnd;
+            }
+
             $return_messages['post'] = $post;
+            $return_messages['tags'] = $tags;
         }
         else {
             $return_messages['errors'][] = 'Not my post!';

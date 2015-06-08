@@ -132,4 +132,3 @@
     </div>
 {/if}
 
-{include file='posts/edit_post_modal.tpl'}

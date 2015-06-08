@@ -52,12 +52,32 @@
                 <h3> {$circle.name}
                     <button type="button" class="btn btn-edit-circle" data-toggle="collapse" data-target="#edit-menu-{$circle.id}" aria-expanded="false"><i class="fa fa-gear "></i> Edit</button>
                 </h3>
+
                 <div id="edit-menu-{$circle.id}" class="caption collapse">
-                    <form action="../../actions/circles/rename_circle.php" method="post">
-                        <input type="text" class="form-control " name="circle_rename" placeholder="Enter new name">
+                    <div>
+                    <form action="../../actions/circles/rename_circle.php" class="form-inline" method="post">
+
+                        <div class="form-group">
+                            <input class="form-control" id="appendedInputButton" type="text"  name="circle_rename" placeholder="Enter new name">
+                            <button class="btn btn-primary" type="submit">Rename</button>
+                        </div>
                         <input type="hidden" name="circle_id" value="{$circle.id}" />
-                        <button type="submit" class="btn btn-primary" style="float:right"> Rename </button>
                     </form>
+                </div>
+                    <div>
+                    <form accept-charset="UTF-8" action="../../actions/circles/new_circle_pic.php" method="POST" enctype="multipart/form-data">
+
+                        <input type="submit" value="Change Pic" class=" btn btn-info" style="margin-left:10px">
+                        <div class=" fileinput fileinput-new" data-provides="fileinput" style="display: inline">
+                            <span class="btn btn-default btn-file"><span class="fileinput-new"><i class="fa fa-picture-o"></i>  Upload Photo</span><span class="fileinput-exists">Change</span><input type="file" name="image"></span>
+                            <span class="fileinput-filename"></span>
+                            <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                        </div>
+                    </form>
+                </div>
+
+
+
                     <p>
                         <a href="../../actions/circles/delete_circle.php?circle_id={$circle.id}"><i class="fa fa-trash"></i></a> Delete this circle</td>
                     </p>
@@ -71,7 +91,6 @@
                         {$imagePath=getPathImageFromID($friend.profilepic_id)}
                         <div class="col-md-2 profile-thumbnail" style="display:flex;justify-content:center;align-items:center;">
                             <a href="{$BASE_URL}pages/users/profile.php?user={$friend.hashid}" style="text-decoration: none; color: inherit">
-                                <!--<img class="profile-circles img-circle img-responsive" width="80" height="80" src="../../images/users/{$imagePath.path}" alt="profilePic">-->
                                 <img class="profilePic" width="80" height="80" style="border-radius:50%" src="../../images/users/{$imagePath.path}" alt="profilePic">
                                 <p><strong>{$friend.name}<strong></p>
                             </a>

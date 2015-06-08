@@ -21,7 +21,7 @@ if(isset($_POST['url']) && $_POST['url'] != "") {
         $url = $needle . $url;
 }
 
-if(isset($_POST['tags']) && preg_match('/\S/', $_POST['tags']))
+if(isset($_POST['tags']))
     $tags = preg_split("/[\s,]+/",htmlspecialchars($_POST['tags']));
 
 if(isset($_POST['dateInit']) && $_POST['dateInit'] != "") {
@@ -38,7 +38,8 @@ $new_post = createPost($user_id,$message,$url,$new_dateInit,$new_dateFinal);
 
 if($tags!=null) {
     foreach ($tags as $tag) {
-        addTagToPost($new_post['id'], $tag);
+        if(preg_match('/\S/', $tag))
+            addTagToPost($new_post['id'], $tag);
     }
 }
 

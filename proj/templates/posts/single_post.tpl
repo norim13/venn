@@ -17,6 +17,8 @@
 
 {include file="posts/voteModal.tpl"}
 
+{include file='posts/edit_post_modal.tpl'}
+
 {include file="common/footer.tpl"}
 
 <script>

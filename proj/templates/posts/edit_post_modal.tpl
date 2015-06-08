@@ -16,13 +16,13 @@
             </div>
 
             <div class="form-group">
-                <input class="form-control" name="tags" placeholder="Write post tags here, separated by commas or space" style="margin-bottom:10px;">
+                <input id="edit-post-tags" class="form-control" name="tags" placeholder="Write post tags here, separated by commas or space" style="margin-bottom:10px;">
             </div>
 
             <div class="form-inline form-group">
-                <label class="datepickerdiv">   <i class="fa fa-calendar"></i> Start date:</label>
+                <label class="datepickerdiv datepicker">   <i class="fa fa-calendar"></i> Start date:</label>
                 <input class="form-control" type="text" name="dateInit" placeholder="Click to select "  id="datePickerEdit1">
-                <label class="datepickerdiv"><i class="fa fa-calendar"></i>  Expiration date:</label>
+                <label class="datepickerdiv datepicker"><i class="fa fa-calendar"></i>  Expiration date:</label>
                 <input class="form-control" type="text" name="dateFinal" placeholder="Click to select"  id="datePickerEdit2">
             </div>
 
@@ -46,11 +46,11 @@
                 <h6 class="pull-right" id="counter-remaining-chars">600 characters remaining </h6>
             </div>
             </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">
-                    Close</button>
-            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+                Close</button>
         </div>
     </div>
+</div>
 </div>

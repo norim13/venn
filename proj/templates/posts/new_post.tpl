@@ -13,9 +13,9 @@
 
     <div class="form-inline form-group">
         <label class="datepickerdiv">   <i class="fa fa-calendar"></i> Start date:</label>
-        <input class="form-control" type="text" name="dateInit" placeholder="Click to select "  id="datePicker1">
+        <input class="form-control datepicker" type="text" name="dateInit" placeholder="Click to select "  id="datePicker1">
         <label class="datepickerdiv"><i class="fa fa-calendar"></i>  Expiration date:</label>
-        <input class="form-control" type="text" name="dateFinal" placeholder="Click to select"  id="datePicker2">
+        <input class="form-control datepicker" type="text" name="dateFinal" placeholder="Click to select"  id="datePicker2">
 
         <div class="pull-right fileinput fileinput-new" data-provides="fileinput" style="display: inline">
             <span class="btn btn-default btn-file"><span class="fileinput-new"><i class="fa fa-picture-o"></i>  Upload Photo</span><span class="fileinput-exists">Change</span>

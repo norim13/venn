@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 19:45:15
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 21:11:44
          compiled from "../../templates/posts/single_post.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:662351503555c5b996e2597-94353754%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a250e12587dcbd576a8ef3fb75bd69f89e03d4e2' => 
     array (
       0 => '../../templates/posts/single_post.tpl',
-      1 => 1433611631,
+      1 => 1433790665,
       2 => 'file',
     ),
   ),
@@ -47,6 +47,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
 <?php echo $_smarty_tpl->getSubTemplate ("posts/voteModal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+
+<?php echo $_smarty_tpl->getSubTemplate ('posts/edit_post_modal.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
 <?php echo $_smarty_tpl->getSubTemplate ("common/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>

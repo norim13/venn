@@ -62,19 +62,7 @@ function deletePost(event) {
 
 $(".btn-delete").click(deletePost);
 
-$('#datePicker1').datepicker({
-    format: "dd/mm/yyyy"
-});
-
-$('#datePicker2').datepicker({
-    format: "dd/mm/yyyy"
-});
-
-$('#datePickerEdit1').datepicker({
-    format: "dd/mm/yyyy"
-});
-
-$('#datePickerEdit2').datepicker({
+$('.datepicker').datepicker({
     format: "dd/mm/yyyy"
 });
 
@@ -117,9 +105,24 @@ function fillModal(event) {
                 if (response.success != null){
                     $('#edit-post-textarea').val(response.post.message);
                     $('#edit-post-url').val(response.post.url);
-                    $('#datePickerEdit1').val(response.post.start_date);
-                    $('#datePickerEdit2').val("27/06/2015");
+                    $('#datePickerEdit1').val(response.startdate);
+                    $('#datePickerEdit2').val(response.enddate);
 
+                    $('#datePickerEdit1').val(response['startdate']);
+                    $('#datePickerEdit2').val(response['enddate']);
+
+                    var tags_text = "";
+
+                    response['tags'].forEach(function (entry) {
+                        tags_text += entry['name'] +  ',' ;
+
+                    });
+
+                    $('#edit-post-tags').val(tags_text);
+
+
+
+                    console.log(tags_text);
 
                 }else{
                     console.log(data);
