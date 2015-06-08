@@ -2,8 +2,6 @@
 
 {include file="common/navbar.tpl"}
 
-<link href="../../css/feed.css" rel="stylesheet">
-
 <div id="page-wrapper">
 
     <div class="">

@@ -150,3 +150,14 @@ function isInCircle($my_id, $user_id, $circle_id){
     }
     return false;
 }
+
+function updateCircleImage($circle_id,$image_id){
+    global $conn;
+    $stmt = $conn->prepare("UPDATE \"Circle\"
+        SET img_id=? WHERE
+        id=?");
+
+    $stmt->execute(array($image_id,$circle_id));
+
+    return $stmt->fetch();
+}

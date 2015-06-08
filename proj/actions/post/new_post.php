@@ -14,11 +14,13 @@ $user_id = getUserFromEmail($_SESSION['email'])['id'];
 $message = htmlspecialchars($_POST['message']);
 
 if(isset($_POST['url']) && $_POST['url'] != "") {
-    $url = htmlspecialchars($_POST['url']);
-    $needle = "http://";
-    $needle1 = "https://";
-    if (strpos($url, $needle, 0) !== 0 && strpos($url, $needle1, 0) !== 0)
-        $url = $needle . $url;
+    if(preg_match('/\S/', $_POST['url'])) {
+        $url = htmlspecialchars($_POST['url']);
+        $needle = "http://";
+        $needle1 = "https://";
+        if (strpos($url, $needle, 0) !== 0 && strpos($url, $needle1, 0) !== 0)
+            $url = $needle . $url;
+    }
 }
 
 if(isset($_POST['tags']))

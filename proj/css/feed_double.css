@@ -20,6 +20,17 @@
     to { -moz-transform: rotate(360deg);}
 }
 
+/*inidividual scroll in left and right pannels.
+    scroll bars are hidden in chrome, but not in firefox... */
 
+.left-panel, .right-panel{
+    overflow: auto;
+    height: calc(100vh - 50px);
+}
+
+.left-panel::-webkit-scrollbar,
+.right-panel::-webkit-scrollbar{
+    display: none;
+}
 
 

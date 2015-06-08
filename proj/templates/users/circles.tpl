@@ -27,10 +27,13 @@
         <div class="panel-body">
             <div class="row">
                 {foreach $user_circles as $circle}
-                    <div class="col-md-2">
-                        <div class="thumbnail">
+                    <div class="col-md-2 profile-thumbnail" style="display:flex;justify-content:center;align-items:center;">
+                        <div class="">
                             {$imagePath=getPathImageFromID($circle.img_id)}
-                            <a href=""><img alt="circleImage" class="img-circle img-responsive" src="../../images/users/{$imagePath.path}"></a>
+                            <a href="">
+                                <img class="centered-and-cropped profilePic " width="150" height="150" style="border-radius:50%" src="../../images/users/{$imagePath.path}" alt="profilePic">
+
+                            </a>
                             <div class="caption">
                                 <h3 class="fill-flow"> {$circle.name} <br/>
                                     <button class="btn" id="btn-transparent" type="button" data-toggle="collapse" data-target="#circle-members-{$circle.id}" aria-expanded="false" aria-controls="comments">
@@ -66,6 +69,7 @@
                 </div>
                     <div>
                     <form accept-charset="UTF-8" action="../../actions/circles/new_circle_pic.php" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="circle_id" value="{$circle.id}" />
 
                         <input type="submit" value="Change Pic" class=" btn btn-info" style="margin-left:10px">
                         <div class=" fileinput fileinput-new" data-provides="fileinput" style="display: inline">

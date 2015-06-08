@@ -60,6 +60,8 @@
                 </li>
                 <li><a href="{$BASE_URL}pages/users/profile_settings.php"><i class="fa fa-gear fa-fw"></i> Settings</a>
                 </li>
+                <li><a href="{$BASE_URL}actions/users/double_scroll_toggle.php"><i class="fa fa-caret-square-o-up"></i> Double-scroll</a>
+                </li>
                 <li class="divider"></li>
                 <li><a href="{$BASE_URL}actions/users/logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                 </li>

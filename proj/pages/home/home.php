@@ -85,6 +85,10 @@ if($_SESSION['email']) {
 
     $smarty->assign('friendRequests', getFriendRequestsOfUser($_SESSION['id']));
 
+    if(isset($_SESSION['double_scroll']) && $_SESSION['double_scroll'] == 'yes'){
+        echo '<link href="../../css/feed_double.css" rel="stylesheet">';
+    }
+    else '<link href="../../css/feed.css" rel="stylesheet">';
     $smarty->display('../../templates/posts/feed.tpl');
 }
 else

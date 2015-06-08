@@ -273,6 +273,20 @@ function getPostsFromUsers($user_ids){
     return $stmt->fetchAll();
 }
 
+
+function removeTagsFromPost($post_id) {
+    global $conn;
+    $stmt = $conn->prepare("DELETE FROM \"TagPost\" WHERE post_id=?");
+    $stmt->execute(array($post_id));
+}
+
+function editPost($post_id,$new_message,$new_url,$new_start_date,$new_exp_date) {
+    global $conn;
+    $stmt = $conn->prepare("UPDATE \"Post\" SET message = ?, url=?, start_date=?,expiration_date=?
+        WHERE id=?");
+    $stmt->execute(array($new_message, $new_url, $new_start_date,$new_exp_date,$post_id));
+}
+
 function yt($url) {
 
     if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $match)) {

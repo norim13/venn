@@ -91,17 +91,13 @@ $(".btn-repost").click(repost);
 function fillModal(event) {
     var post_id = $(this).attr('id').split('-')[2];
 
-    console.log("Entrou aqui");
-
     $.ajax({
         url: "../../actions/post/getPostData.php",
         type: "post",
         data: {"post_id":post_id},
         success: function (data) {
-
-           try {
+            try {
                 var response = $.parseJSON(data);
-
                 if (response.success != null){
                     $('#edit-post-textarea').val(response.post.message);
                     $('#edit-post-url').val(response.post.url);
@@ -119,24 +115,16 @@ function fillModal(event) {
                     });
 
                     $('#edit-post-tags').val(tags_text);
-
-
-
-                    console.log(tags_text);
-
+                    $('#editModal').attr("currentModalPostId",post_id);
+                    $('#hiddenPostId').val(post_id);
                 }else{
-                    console.log(data);
                 }
             }
             catch(err) {
-                console.log(data);
             }
-
-
         },
         error: function () {}
     });
 }
 
 $(".btn-edit").click(fillModal);
-

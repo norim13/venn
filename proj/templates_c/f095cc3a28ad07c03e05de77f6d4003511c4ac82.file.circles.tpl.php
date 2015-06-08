@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 21:31:56
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 23:17:52
          compiled from "../../templates/users/circles.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18536193865549162558dcd8-43500815%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f095cc3a28ad07c03e05de77f6d4003511c4ac82' => 
     array (
       0 => '../../templates/users/circles.tpl',
-      1 => 1433791885,
+      1 => 1433798270,
       2 => 'file',
     ),
   ),
@@ -68,11 +68,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 foreach ($_from as $_smarty_tpl->tpl_vars['circle']->key => $_smarty_tpl->tpl_vars['circle']->value) {
 $_smarty_tpl->tpl_vars['circle']->_loop = true;
 ?>
-                    <div class="col-md-2">
-                        <div class="thumbnail">
+                    <div class="col-md-2 profile-thumbnail" style="display:flex;justify-content:center;align-items:center;">
+                        <div class="">
                             <?php $_smarty_tpl->tpl_vars['imagePath'] = new Smarty_variable(getPathImageFromID($_smarty_tpl->tpl_vars['circle']->value['img_id']), null, 0);?>
-                            <a href=""><img alt="circleImage" class="img-circle img-responsive" src="../../images/users/<?php echo $_smarty_tpl->tpl_vars['imagePath']->value['path'];?>
-"></a>
+                            <a href="">
+                                <img class="centered-and-cropped profilePic " width="150" height="150" style="border-radius:50%" src="../../images/users/<?php echo $_smarty_tpl->tpl_vars['imagePath']->value['path'];?>
+" alt="profilePic">
+
+                            </a>
                             <div class="caption">
                                 <h3 class="fill-flow"> <?php echo $_smarty_tpl->tpl_vars['circle']->value['name'];?>
  <br/>
@@ -118,7 +121,9 @@ $_smarty_tpl->tpl_vars['circle']->_loop = true;
                     </form>
                 </div>
                     <div>
-                    <form accept-charset="UTF-8" action="../../actions/users/profileSettings.php" method="POST" enctype="multipart/form-data">
+                    <form accept-charset="UTF-8" action="../../actions/circles/new_circle_pic.php" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="circle_id" value="<?php echo $_smarty_tpl->tpl_vars['circle']->value['id'];?>
+" />
 
                         <input type="submit" value="Change Pic" class=" btn btn-info" style="margin-left:10px">
                         <div class=" fileinput fileinput-new" data-provides="fileinput" style="display: inline">

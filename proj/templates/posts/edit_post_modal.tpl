@@ -9,6 +9,7 @@
 
                 <form id="edit_post_form" action="../../actions/post/edit_post.php" accept-charset="UTF-8" method="POST" enctype="multipart/form-data">
 
+                    <input id='hiddenPostId' type="hidden" name="post_id" value=""/>
                     <textarea id="edit-post-textarea" maxlength="600" class="form-control counted" name="message" placeholder="Type in your post" rows="5" style="margin-bottom:10px;" required></textarea>
 
                     <div class="form-group"">
@@ -42,7 +43,7 @@
                     </div>
                 </div>
 
-                <input id="submitNewPost" type="submit" value="Edit post" class="pull-right btn btn-info" style="margin-left:10px">
+                <input id="submitEditedPost" type="submit" value="Edit post" class="pull-right btn btn-info" style="margin-left:10px">
                 <h6 class="pull-right" id="counter-remaining-chars">600 characters remaining </h6>
             </div>
             </form>
