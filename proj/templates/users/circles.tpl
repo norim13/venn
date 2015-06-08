@@ -69,9 +69,10 @@
                     {$friendsFromCircle=getFriendsFromCircle($circle.id,$userId) }
                     {foreach $friendsFromCircle as $friend}
                         {$imagePath=getPathImageFromID($friend.profilepic_id)}
-                        <div class="col-md-2 profile-thumbnail" style="float:left">
+                        <div class="col-md-2 profile-thumbnail" style="display:flex;justify-content:center;align-items:center;">
                             <a href="{$BASE_URL}pages/users/profile.php?user={$friend.hashid}" style="text-decoration: none; color: inherit">
-                                <img class="profile-circles img-circle img-responsive" width="80" height="80" src="../../images/users/{$imagePath.path}" alt="profilePic">
+                                <!--<img class="profile-circles img-circle img-responsive" width="80" height="80" src="../../images/users/{$imagePath.path}" alt="profilePic">-->
+                                <img class="profilePic" width="80" height="80" style="border-radius:50%" src="../../images/users/{$imagePath.path}" alt="profilePic">
                                 <p><strong>{$friend.name}<strong></p>
                             </a>
                         </div>
@@ -90,22 +91,23 @@
             <div class="row">
                 {foreach $user_friend_requests as $friend_request}
                     {$username = getUserFromID($friend_request.requestedBy_id)}
-                    <div class="col-md-1 profile-thumbnail friendship-request-panel" width="inherit" id="friendship-request-panel-{$username.id}">
+                    <div class="col-md-1 profile-thumbnail friendship-request-panel" width="inherit" id="friendship-request-panel-{$username.id}" style="display:flex;justify-content:center;align-items:center;">
                         {$imagePath=getProfilePic($friend_request.requestedBy_id)}
+                        <div>
+                            <a href="{$BASE_URL}pages/users/profile.php?user={$username.hashid}" style="text-decoration: none; color: inherit">
+                                <div>
+                                    <img class="profilePic" width="80" height="80" style="border-radius:50%" src="../../images/users/{$imagePath}" alt="profilePic">
+                                    <p>{$username.name}</p>
+                                </div>
+                            </a>
 
-                        <a href="{$BASE_URL}pages/users/profile.php?user={$username.hashid}" style="text-decoration: none; color: inherit">
-                            <div>
-                                <img class="profilePic" width="80" height="80" style="border-radius:50%" src="../../images/users/{$imagePath}" alt="profilePic">
-                                <p>{$username.name}</p>
-                            </div>
-                        </a>
-
-                        <table cellpadding="0" cellspacing="0" style="width: 100%; text-align:center" class="col-md-2">
-                            <tr>
-                                <td><a class="accept_friend_request" id="accept_friend_request-{$friend_request.requestedBy_id}"><i class="fa fa-check"></i></a></td>
-                                <td><a class="decline_friend_request" id="decline_friend_request-{$friend_request.requestedBy_id}"><i class="fa fa-times"></i></a></td>
-                            </tr>
-                        </table>
+                            <table cellpadding="0" cellspacing="0" style="width: 100%; text-align:center" class="col-md-2">
+                                <tr>
+                                    <td><a class="accept_friend_request" id="accept_friend_request-{$friend_request.requestedBy_id}"><i class="fa fa-check"></i></a></td>
+                                    <td><a class="decline_friend_request" id="decline_friend_request-{$friend_request.requestedBy_id}"><i class="fa fa-times"></i></a></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 {/foreach}
             </div>

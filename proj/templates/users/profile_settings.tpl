@@ -37,8 +37,8 @@
                 <label>Name:</label><input class="form-control" name="newName" placeholder="Change Name" style="margin-bottom:10px;">
 
 
-                    <label>New Password:</label><input class="form-control" name="pass1" placeholder="New Password" style="margin-bottom:10px;">
-                    <label>Repeat Password:</label><input class="form-control" name="pass2" placeholder="Rewrite New Password" style="margin-bottom:10px;">
+                    <label>New Password:</label><input type="password" class="form-control" name="pass1" placeholder="New Password" style="margin-bottom:10px;">
+                    <label>Repeat Password:</label><input type="password" class="form-control" name="pass2" placeholder="Rewrite New Password" style="margin-bottom:10px;">
 
                     <input type="submit" value="Change" class="pull-right btn btn-info" style="margin-left:10px">
 

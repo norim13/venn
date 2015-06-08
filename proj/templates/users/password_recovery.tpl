@@ -18,7 +18,7 @@
 
                                                 <div id="error_message"></div>
                                                 <div class="login_btns col-md-4">
-                                                    <input class="btn btn-lg btn-success" type="submit" value="Email me a new one">
+                                                    <input class="btn btn-lg btn-success" type="submit" value="Send">
                                                 </div>
                                             </fieldset>
                                         </form>

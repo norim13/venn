@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 19:40:53
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 20:38:22
          compiled from "../../templates/users/circles.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18536193865549162558dcd8-43500815%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f095cc3a28ad07c03e05de77f6d4003511c4ac82' => 
     array (
       0 => '../../templates/users/circles.tpl',
-      1 => 1433698807,
+      1 => 1433788699,
       2 => 'file',
     ),
   ),
@@ -127,11 +127,13 @@ foreach ($_from as $_smarty_tpl->tpl_vars['friend']->key => $_smarty_tpl->tpl_va
 $_smarty_tpl->tpl_vars['friend']->_loop = true;
 ?>
                         <?php $_smarty_tpl->tpl_vars['imagePath'] = new Smarty_variable(getPathImageFromID($_smarty_tpl->tpl_vars['friend']->value['profilepic_id']), null, 0);?>
-                        <div class="col-md-2 profile-thumbnail" style="float:left">
+                        <div class="col-md-2 profile-thumbnail" style="display:flex;justify-content:center;align-items:center;">
                             <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/users/profile.php?user=<?php echo $_smarty_tpl->tpl_vars['friend']->value['hashid'];?>
 " style="text-decoration: none; color: inherit">
-                                <img class="profile-circles img-circle img-responsive" width="80" height="80" src="../../images/users/<?php echo $_smarty_tpl->tpl_vars['imagePath']->value['path'];?>
+                                <!--<img class="profile-circles img-circle img-responsive" width="80" height="80" src="../../images/users/<?php echo $_smarty_tpl->tpl_vars['imagePath']->value['path'];?>
+" alt="profilePic">-->
+                                <img class="profilePic" width="80" height="80" style="border-radius:50%" src="../../images/users/<?php echo $_smarty_tpl->tpl_vars['imagePath']->value['path'];?>
 " alt="profilePic">
                                 <p><strong><?php echo $_smarty_tpl->tpl_vars['friend']->value['name'];?>
 <strong></p>
@@ -157,28 +159,29 @@ $_smarty_tpl->tpl_vars['friend_request']->_loop = true;
 ?>
                     <?php $_smarty_tpl->tpl_vars['username'] = new Smarty_variable(getUserFromID($_smarty_tpl->tpl_vars['friend_request']->value['requestedBy_id']), null, 0);?>
                     <div class="col-md-1 profile-thumbnail friendship-request-panel" width="inherit" id="friendship-request-panel-<?php echo $_smarty_tpl->tpl_vars['username']->value['id'];?>
-">
+" style="display:flex;justify-content:center;align-items:center;">
                         <?php $_smarty_tpl->tpl_vars['imagePath'] = new Smarty_variable(getProfilePic($_smarty_tpl->tpl_vars['friend_request']->value['requestedBy_id']), null, 0);?>
-
-                        <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+                        <div>
+                            <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/users/profile.php?user=<?php echo $_smarty_tpl->tpl_vars['username']->value['hashid'];?>
 " style="text-decoration: none; color: inherit">
-                            <div>
-                                <img class="profilePic" width="80" height="80" style="border-radius:50%" src="../../images/users/<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
+                                <div>
+                                    <img class="profilePic" width="80" height="80" style="border-radius:50%" src="../../images/users/<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
 " alt="profilePic">
-                                <p><?php echo $_smarty_tpl->tpl_vars['username']->value['name'];?>
+                                    <p><?php echo $_smarty_tpl->tpl_vars['username']->value['name'];?>
 </p>
-                            </div>
-                        </a>
+                                </div>
+                            </a>
 
-                        <table cellpadding="0" cellspacing="0" style="width: 100%; text-align:center" class="col-md-2">
-                            <tr>
-                                <td><a class="accept_friend_request" id="accept_friend_request-<?php echo $_smarty_tpl->tpl_vars['friend_request']->value['requestedBy_id'];?>
+                            <table cellpadding="0" cellspacing="0" style="width: 100%; text-align:center" class="col-md-2">
+                                <tr>
+                                    <td><a class="accept_friend_request" id="accept_friend_request-<?php echo $_smarty_tpl->tpl_vars['friend_request']->value['requestedBy_id'];?>
 "><i class="fa fa-check"></i></a></td>
-                                <td><a class="decline_friend_request" id="decline_friend_request-<?php echo $_smarty_tpl->tpl_vars['friend_request']->value['requestedBy_id'];?>
+                                    <td><a class="decline_friend_request" id="decline_friend_request-<?php echo $_smarty_tpl->tpl_vars['friend_request']->value['requestedBy_id'];?>
 "><i class="fa fa-times"></i></a></td>
-                            </tr>
-                        </table>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 <?php } ?>
             </div>

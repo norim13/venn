@@ -22,7 +22,7 @@
         <!-- /.navbar-header -->
 
         <div class="logoutButton">
-            <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+            <a href="../../actions/admin/logout_admin.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
         </div>
         <!-- /.navbar-top-links -->
 

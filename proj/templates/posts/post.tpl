@@ -1,5 +1,8 @@
 {if $post.user_id == $smarty.session.id || isVisibleTo($post.id,$post.user_id,$smarty.session.id)}
     <!--publication-->
+
+
+
     <div class="panel panel-default panel-feed" id="panel-feed-{$post.id}">
         <div class="panel-heading">
             {$imagePath=getProfilePic($post.user_id)}
@@ -97,6 +100,7 @@
                 {/if}
                 {if $post.user_id == $smarty.session.id}
                     <button class="btn btn-default btn-delete" id="btn-delete-{$post.id}"><i class="fa fa-trash-o"></i> Delete</button>
+                    <button class="btn btn-default btn-edit" data-toggle="modal" data-target="#editModal" id="btn-edit-{$post.id}"><i class="fa fa-pencil"></i> Edit</button>
                 {/if}
             </div>
 
@@ -127,3 +131,5 @@
         </div>
     </div>
 {/if}
+
+{include file='posts/edit_post_modal.tpl'}

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 04:18:41
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 18:45:11
          compiled from "../../templates/users/profile_settings.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9716760715557a529591747-82373811%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3604cee365e8a18f465919987ac1bba5757cfe30' => 
     array (
       0 => '../../templates/users/profile_settings.tpl',
-      1 => 1433729890,
+      1 => 1433781884,
       2 => 'file',
     ),
   ),
@@ -67,8 +67,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <label>Name:</label><input class="form-control" name="newName" placeholder="Change Name" style="margin-bottom:10px;">
 
 
-                    <label>New Password:</label><input class="form-control" name="pass1" placeholder="New Password" style="margin-bottom:10px;">
-                    <label>Repeat Password:</label><input class="form-control" name="pass2" placeholder="Rewrite New Password" style="margin-bottom:10px;">
+                    <label>New Password:</label><input type="password" class="form-control" name="pass1" placeholder="New Password" style="margin-bottom:10px;">
+                    <label>Repeat Password:</label><input type="password" class="form-control" name="pass2" placeholder="Rewrite New Password" style="margin-bottom:10px;">
 
                     <input type="submit" value="Change" class="pull-right btn btn-info" style="margin-left:10px">
 

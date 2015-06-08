@@ -138,3 +138,15 @@ function addFriendToCircle($circle_id,$myId,$friend) {
 
     }
 }
+
+function isInCircle($my_id, $user_id, $circle_id){
+    $friendship = getFriendship($my_id,$user_id);
+    if($friendship != null) {
+        global $conn;
+        $stmt = $conn->prepare("SELECT * FROM \"CircleFriendship\" WHERE circle_id = ? AND
+                    friendship_user1_id = ? AND friendship_user2_id = ?");
+        $stmt->execute(array($circle_id, $friendship['user1_id'], $friendship['user2_id']));
+        return $stmt->fetch() == true;
+    }
+    return false;
+}

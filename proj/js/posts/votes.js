@@ -18,18 +18,19 @@ function showWhoVoted(event) {
                 response['votes'].forEach(function (entry) {
                         voteContent +=
 
-                            '<div class="col-md-3 modal-friend" style="display:flex;justify-content:center;align-items:center;">'+
-                            '<div>'+
-                            '<a href=' + base_url + 'pages/users/profile.php?user=' + entry['hashid'] +
-                            ' style="text-decoration: none; color: inherit; align: center;">'+
-                            '<img alt="profilePic" width="50" height="80" class="profile-circles img-circle img-responsive" src="../../images/users/' + entry['imagePath'] + '">'+
-                            '</a>' +
-                            '<p>' +
-                            '<a href=' + base_url + 'pages/users/profile.php?user=' + entry['hashid'] +
-                            ' style="text-decoration: none; color: inherit; align: center;">'+ entry['name'] + '</a>' +
-                            '</p>' +
-                            '</div>' +
+                            '<div class="col-md-3" style="display:flex;justify-content:center;align-items:center;">'+
+                                '<div>'+
+                                    '<a href=' + base_url + 'pages/users/profile.php?user=' + entry['hashid'] +
+                                    ' style="text-decoration: none; color: inherit; align: center;">'+
+                                        '<img alt="profilePic" width="60" height="60" style="border-radius:50%" class="profilePic" src="../../images/users/' + entry['imagePath'] + '">'+
+                                    '</a>' +
+                                    '<p style="text-align: center;">' +
+                                        '<a href=' + base_url + 'pages/users/profile.php?user=' + entry['hashid'] +
+                                        ' style="text-decoration: none; color: inherit; align: center;">'+ entry['name'] + '</a>' +
+                                    '</p>' +
+                                '</div>'+
                             '</div>';
+
                     }
                 );
 

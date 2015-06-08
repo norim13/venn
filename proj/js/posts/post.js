@@ -70,6 +70,14 @@ $('#datePicker2').datepicker({
     format: "dd/mm/yyyy"
 });
 
+$('#datePickerEdit1').datepicker({
+    format: "dd/mm/yyyy"
+});
+
+$('#datePickerEdit2').datepicker({
+    format: "dd/mm/yyyy"
+});
+
 function repost(event) {
     var post_id = $(this).attr('id').split('-')[2];
 
@@ -89,3 +97,43 @@ function repost(event) {
 }
 
 $(".btn-repost").click(repost);
+
+
+
+function fillModal(event) {
+    var post_id = $(this).attr('id').split('-')[2];
+
+    console.log("Entrou aqui");
+
+    $.ajax({
+        url: "../../actions/post/getPostData.php",
+        type: "post",
+        data: {"post_id":post_id},
+        success: function (data) {
+
+           try {
+                var response = $.parseJSON(data);
+
+                if (response.success != null){
+                    $('#edit-post-textarea').val(response.post.message);
+                    $('#edit-post-url').val(response.post.url);
+                    $('#datePickerEdit1').val(response.post.start_date);
+                    $('#datePickerEdit2').val("27/06/2015");
+
+
+                }else{
+                    console.log(data);
+                }
+            }
+            catch(err) {
+                console.log(data);
+            }
+
+
+        },
+        error: function () {}
+    });
+}
+
+$(".btn-edit").click(fillModal);
+

@@ -108,43 +108,112 @@ function removeFriendship(event) {
 
 $('.remove-friendship-btn').click(removeFriendship);
 
-function addFriendToCircle(event) {
+function addFriendToCircleShowModal(event) {
+
     $.ajax({
         url: "../../actions/circles/get_circles.php",
         type: "post",
         success: function (data) {
-            var response = $.parseJSON(data);
-            var modal = $("#circlesModal .modal-body");
-            var base_url = response['base_url'];
+            try {
+                var response = $.parseJSON(data);
+                var modal = $("#circlesModal .modal-body");
 
-            var userContent = '<ul class="listrap">';
+                if (response.success != null){
+                    var base_url = response['base_url'];
 
-            response['circles'].forEach(function (entry) {
-                    userContent +=
-                        '<div class="col-md-3 modal-circle" style="display:flex;justify-content:center;align-items:center;">'+
-                        '<li>' +
-                        '<div class="listrap-toggle">' +
-                        '<img alt="profilePic" width="80" height="80" class="profile-circles img-circle img-responsive"  src="../../images/users/' + entry['imagePath'] + '">'+
-                        '<p>' +
-                        entry['name'] +
-                        '</p>' +
-                        '</div>'+
-                        '</li>'+
-                       '</div>';
+                    var userContent = '<ul class="listrap">';
+
+                    response['circles'].forEach(function (entry) {
+                            userContent +=
+                                '<div class="col-md-3 modal-circle" id="circle-'+entry['id']+'" style="display:flex;justify-content:center;align-items:center;">'+
+                                '<li>' +
+                                '<div class="listrap-toggle">' +
+                                '<img class="profilePic" width="40" height="40" style="border-radius:50%" src="../../images/users/' + entry['imagePath'] + '" alt="profilePic">'+
+                                //'<img alt="profilePic" width="80" height="80" class="profile-circles img-circle img-responsive"  src="../../images/users/' + entry['imagePath'] + '">'+
+                                '<p>' +
+                                entry['name'] +
+                                '</p>' +
+                                '</div>'+
+                                '</li>'+
+                                '</div>';
+                        }
+                    );
+
+                    userContent += '</ul>';
+
+
+                     $('#circlesModal').modal({
+                     show: 'false'
+                     });
+
+                    modal.html(userContent);
+                    $(".modal-circle").click(addFriendToCircle);
+
+                }else{
+                    modal.html("Problem fetching circles...!");
                 }
-            );
 
-            userContent += '</ul>';
 
-            modal.html(userContent);
-
-            $('#circlesModal').modal({
-                show: 'false'
-            });
+            }
+            catch(err) {
+                modal.html("Problem fetching circles...!");
+            }
 
         },
         error: function () {}
     });
 }
 
-$("#addToCircleButton").click(addFriendToCircle);
+$("#addToCircleButton").click(addFriendToCircleShowModal);
+
+
+
+function addFriendToCircle(event){
+    var circle_id = $(this).attr('id').split('-')[1];
+
+    var friend_hash_id = getQueryVariable('user');
+
+    if(circle_id != null && friend_hash_id != 'false'){
+
+        $.ajax({
+            url: "../../actions/circles/add_friend_to_circle.php",
+            type: "post",
+            data: {"friend_hash":friend_hash_id, "circle_id":circle_id},
+            success: function (data) {
+                var modal = $("#circlesModal .modal-body");
+
+                try {
+                    var response = $.parseJSON(data);
+
+                    if (response.success != null){
+                        modal.html(response.success);
+                    }else{
+                        modal.html("Problem adding to circle...!");
+                    }
+                }
+                catch(err) {
+                    modal.html("Problem adding to circle...!");
+                }
+
+            },
+            error: function () {}
+        });
+
+
+    }
+
+
+}
+
+
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    return 'false';
+}
