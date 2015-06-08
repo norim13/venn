@@ -29,7 +29,7 @@
                                                     <label class="radio-inline"><input type="radio" name="gender" value="O"> Other </label>
                                                 </div>
                                                 <div id="error_message"></div>
-                                                <div id="login_btns">
+                                                <div class="login_btns">
                                                     <input class="btn btn-lg btn-success" type="submit" value="Sign Up">
                                                 </div>
                                             </fieldset>

@@ -18,11 +18,11 @@ body {
 	border-radius: 0px;
 }
 
-div#login_btns {
+div.login_btns {
 	float: right;
 }
 
-#login_btns input, #login_btns a {
+.login_btns input, .login_btns a {
 	border-radius: 0px;
 	padding: 5px 10px;
 }

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 01:36:11
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 15:11:20
          compiled from "../../templates/admin/database_posts.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:59463060055521b2fe34425-55036001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5ee12f082935eefb09cdc976d9c2e6b1592fb3d4' => 
     array (
       0 => '../../templates/admin/database_posts.tpl',
-      1 => 1433720145,
+      1 => 1433769050,
       2 => 'file',
     ),
   ),
@@ -75,8 +75,8 @@ $_smarty_tpl->tpl_vars['post']->_loop = true;
                                                 <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/posts/single_post.php?post_id=<?php echo $_smarty_tpl->tpl_vars['post']->value['id'];?>
 ">
-                                                    View</a> <?php echo $_smarty_tpl->tpl_vars['post']->value['id'];?>
-
+                                                    <?php echo $_smarty_tpl->tpl_vars['post']->value['id'];?>
+</a>
                                             </td>
                                             <td><?php echo $_smarty_tpl->tpl_vars['post']->value['name'];?>
 </td>

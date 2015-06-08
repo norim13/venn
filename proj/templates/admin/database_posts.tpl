@@ -41,7 +41,7 @@
                                         <tr>
                                             <td>
                                                 <a href="{$BASE_URL}pages/posts/single_post.php?post_id={$post.id}">
-                                                    View</a> {$post.id}
+                                                    {$post.id}</a>
                                             </td>
                                             <td>{$post.name}</td>
                                             <td>{$post.post_date}</td>

@@ -59,7 +59,7 @@
                     {$yturl = yt($post.url)}
                 {/if}
                 {if $yturl}
-                    <div class="post-url-div">{$yturl}</div>
+                    <div class="video-container post-url-div">{$yturl}</div>
                 {else}
                     <div class="post-url-div"><a href={$post.url}>{$post.url}</a></div>
                 {/if}

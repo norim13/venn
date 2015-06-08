@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 05:14:17
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 15:12:26
          compiled from "../../templates/admin/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1470588233554a147ac31004-62371265%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2663ed643eb0036c54b4880c88aec87588f96609' => 
     array (
       0 => '../../templates/admin/admin.tpl',
-      1 => 1433733230,
+      1 => 1433769118,
       2 => 'file',
     ),
   ),
@@ -19,8 +19,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_554a147accb6a7_55272415',
   'variables' => 
   array (
-    'admin' => 0,
     'reports' => 0,
+    'BASE_URL' => 0,
     'report' => 0,
   ),
   'has_nocache_code' => false,
@@ -30,72 +30,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <!-- Custom CSS -->
 <link href="../../assets/frameworks/sb-admin.css" rel="stylesheet">
 <link href="../../css/admin.css" rel="stylesheet">
+
 </head>
 <body>
 
 <div id="wrapper">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="main_panel.php"> Venn admin panel - <?php echo $_smarty_tpl->tpl_vars['admin']->value;?>
- </a>
-        </div>
-        <!-- /.navbar-header -->
-
-        <div class="logoutButton">
-            <a href="../../actions/users/logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-        </div>
-        <!-- /.navbar-top-links -->
-
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="side-menu">
-                    <li class="sidebar-search">
-                        <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="main_panel.php"><i class="fa fa-cogs fa-fw"></i> Main panel</a>
-                    </li>
-
-                    <li>
-                        <a href="database.php"><i class="fa fa-database fa-fw"></i> Databases<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-
-                            <li>
-                                <a href="users_db.php"> Posts  </a>
-                            </li>
-                            <li>
-                                <a href="posts_db.php"> Users <span class="fa arrow"></span></a>
-                                <!-- /.nav-third-level -->
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-
-
-
-                </ul>
-            </div>
-            <!-- /.sidebar-collapse -->
-        </div>
-        <!-- /.navbar-static-side -->
-    </nav>
+    <?php echo $_smarty_tpl->getSubTemplate ("common/navbar_admin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
     <div id="page-wrapper">
         <br>
@@ -124,6 +65,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </a> -->
                 </div>
             </div>
+            <!--
             <div class="col-lg-6 col-md-6">
                 <div class="panel panel-red">
                     <div class="panel-heading">
@@ -143,10 +85,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
-                    </a> -->
+                    </a>
+                    <!--
                 </div>
             </div>
-
+-->
 
         </div>
         <!-- /.row -->
@@ -184,41 +127,80 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>UserID</th>
-                                            <th>PostID</th>
-                                            <th>Message</th>
-                                            <th>Date</th>
-                                            <th>Status</th>
+                                            <th>Post</th>
 
+                                            <th>Post's User</th>
+                                            <th>Text</th>
+                                            <th>URL</th>
+                                            <th>Report's Date</th>
+                                            <th>Report's Message</th>
+                                            <th>Processed</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
 
+                                        <tbody>
                                         <?php  $_smarty_tpl->tpl_vars['report'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['report']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['reports']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['report']->key => $_smarty_tpl->tpl_vars['report']->value) {
 $_smarty_tpl->tpl_vars['report']->_loop = true;
 ?>
-
                                             <tr>
-                                                <td> <?php echo $_smarty_tpl->tpl_vars['report']->value['id'];?>
- </td>
-                                                <td> <?php echo $_smarty_tpl->tpl_vars['report']->value['user_id'];?>
- </td>
-                                                <td> <?php echo $_smarty_tpl->tpl_vars['report']->value['post_id'];?>
- </td>
-                                                <td> <?php echo $_smarty_tpl->tpl_vars['report']->value['message'];?>
- </td>
-                                                <td> <?php echo $_smarty_tpl->tpl_vars['report']->value['date'];?>
- </td>
-                                                <td> <?php echo $_smarty_tpl->tpl_vars['report']->value['processed'];?>
- </td>
+                                            <td>
+                                                <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/posts/single_post.php?post_id=<?php echo $_smarty_tpl->tpl_vars['report']->value['post_id'];?>
+">
+                                                    View Post</a>
+                                            </td>
+                                            <td>
+                                                <?php echo $_smarty_tpl->tpl_vars['report']->value['username'];?>
 
-                                            </tr>
+                                            </td>
+                                            <td>
+                                                <?php echo $_smarty_tpl->tpl_vars['report']->value['text'];?>
 
-                                        <?php } ?>
+                                            </td>
+                                            <td>
+                                                <a href=<?php echo $_smarty_tpl->tpl_vars['report']->value['url'];?>
+><?php echo $_smarty_tpl->tpl_vars['report']->value['url'];?>
+</a>
+                                            </td>
+                                            <td>
+                                                <?php echo $_smarty_tpl->tpl_vars['report']->value['date'];?>
 
+                                            </td>
+                                            <td>
+                                                <?php echo $_smarty_tpl->tpl_vars['report']->value['message'];?>
+
+                                            </td>
+                                            <?php if ($_smarty_tpl->tpl_vars['report']->value['processed']) {?>
+                                                <td>
+                                                    Yes
+                                                </td>
+                                            <?php }?>
+                                            <?php if (!$_smarty_tpl->tpl_vars['report']->value['processed']) {?>
+                                                <td>
+                                                    No
+                                                </td>
+                                            <?php }?>
+
+
+                                            <td>
+                                                <form id="form" action="../../actions/admin/process_report.php" method="post">
+                                                    <input type="hidden" name="report_id" value="<?php echo $_smarty_tpl->tpl_vars['report']->value['id'];?>
+">
+                                                    <input type="submit" value="Ignore Post" class="btn">
+                                                </form>
+
+                                            </td>
+                                            <td>
+                                                <form id="form" action="../../actions/admin/delete_post.php" method="post">
+                                                    <input type="hidden" name="post_id" value=<?php echo $_smarty_tpl->tpl_vars['report']->value['post_id'];?>
+>
+                                                    <input type="submit" value="Delete Post" class="btn btn-danger">
+                                                </form>
+
+                                            </td>
+                                            </tr><?php } ?>
                                         </tbody>
                                     </table>
                                 </div>

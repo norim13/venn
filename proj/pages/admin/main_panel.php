@@ -4,7 +4,7 @@ include_once '../../config/init.php';
 include_once '../../database/admin.php';
 
 if($_SESSION['email']) {
-    $reports=getAllReports();
+    $reports=getReports();
     $smarty->assign('reports', $reports);
     $admin=getAdminFromEmail($_SESSION['email']);
     $smarty->assign('admin', $admin['name']);

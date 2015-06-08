@@ -2,72 +2,13 @@
 <!-- Custom CSS -->
 <link href="../../assets/frameworks/sb-admin.css" rel="stylesheet">
 <link href="../../css/admin.css" rel="stylesheet">
+
 </head>
 <body>
 
 <div id="wrapper">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="main_panel.php"> Venn admin panel - {$admin} </a>
-        </div>
-        <!-- /.navbar-header -->
-
-        <div class="logoutButton">
-            <a href="../../actions/users/logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-        </div>
-        <!-- /.navbar-top-links -->
-
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="side-menu">
-                    <li class="sidebar-search">
-                        <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="main_panel.php"><i class="fa fa-cogs fa-fw"></i> Main panel</a>
-                    </li>
-
-                    <li>
-                        <a href="database.php"><i class="fa fa-database fa-fw"></i> Databases<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-
-                            <li>
-                                <a href="users_db.php"> Posts  </a>
-                            </li>
-                            <li>
-                                <a href="posts_db.php"> Users <span class="fa arrow"></span></a>
-                                <!-- /.nav-third-level -->
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-
-
-
-                </ul>
-            </div>
-            <!-- /.sidebar-collapse -->
-        </div>
-        <!-- /.navbar-static-side -->
-    </nav>
-
+    {include file="common/navbar_admin.tpl"}
     <div id="page-wrapper">
         <br>
         <!-- /.row -->
@@ -94,6 +35,7 @@
                     </a> -->
                 </div>
             </div>
+            <!--
             <div class="col-lg-6 col-md-6">
                 <div class="panel panel-red">
                     <div class="panel-heading">
@@ -113,10 +55,11 @@
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
-                    </a> -->
+                    </a>
+                    <!--
                 </div>
             </div>
-
+-->
 
         </div>
         <!-- /.row -->
@@ -154,31 +97,66 @@
                                     <table class="table table-bordered table-hover table-striped">
                                         <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>UserID</th>
-                                            <th>PostID</th>
-                                            <th>Message</th>
-                                            <th>Date</th>
-                                            <th>Status</th>
+                                            <th>Post</th>
 
+                                            <th>Post's User</th>
+                                            <th>Text</th>
+                                            <th>URL</th>
+                                            <th>Report's Date</th>
+                                            <th>Report's Message</th>
+                                            <th>Processed</th>
                                         </tr>
                                         </thead>
+
                                         <tbody>
-
                                         {foreach $reports as $report}
-
                                             <tr>
-                                                <td> {$report.id} </td>
-                                                <td> {$report.user_id} </td>
-                                                <td> {$report.post_id} </td>
-                                                <td> {$report.message} </td>
-                                                <td> {$report.date} </td>
-                                                <td> {$report.processed} </td>
+                                            <td>
+                                                <a href="{$BASE_URL}pages/posts/single_post.php?post_id={$report.post_id}">
+                                                    View Post</a>
+                                            </td>
+                                            <td>
+                                                {$report.username}
+                                            </td>
+                                            <td>
+                                                {$report.text}
+                                            </td>
+                                            <td>
+                                                <a href={$report.url}>{$report.url}</a>
+                                            </td>
+                                            <td>
+                                                {$report.date}
+                                            </td>
+                                            <td>
+                                                {$report.message}
+                                            </td>
+                                            {if $report.processed}
+                                                <td>
+                                                    Yes
+                                                </td>
+                                            {/if}
+                                            {if !$report.processed}
+                                                <td>
+                                                    No
+                                                </td>
+                                            {/if}
 
-                                            </tr>
 
-                                        {/foreach}
+                                            <td>
+                                                <form id="form" action="../../actions/admin/process_report.php" method="post">
+                                                    <input type="hidden" name="report_id" value="{$report.id}">
+                                                    <input type="submit" value="Ignore Post" class="btn">
+                                                </form>
 
+                                            </td>
+                                            <td>
+                                                <form id="form" action="../../actions/admin/delete_post.php" method="post">
+                                                    <input type="hidden" name="post_id" value={$report.post_id}>
+                                                    <input type="submit" value="Delete Post" class="btn btn-danger">
+                                                </form>
+
+                                            </td>
+                                            </tr>{/foreach}
                                         </tbody>
                                     </table>
                                 </div>
