@@ -1,14 +1,13 @@
 {if $post.user_id == $smarty.session.id || isVisibleTo($post.id,$post.user_id,$smarty.session.id)}
     <!--publication-->
-
-
-
     <div class="panel panel-default panel-feed" id="panel-feed-{$post.id}">
         <div class="panel-heading">
             {$imagePath=getProfilePic($post.user_id)}
             <h4>{$userFromID=getUserFromID($post.user_id)}
                 <a href="{$BASE_URL}pages/users/profile.php?user={$userFromID.hashid}" style="text-decoration: none; color: inherit">
-                    <img class="profilePic" width="40" height="40" style="border-radius:50%" src="../../images/users/{$imagePath}" alt="profilePic">
+
+
+                    <img class="profilePic" width="40" height="40" style="border-radius:50%" style="border-radius:50%" src="../../images/users/{$imagePath}" alt="profilePic">
                     {$userFromID.name}
                 </a>
             </h4>
@@ -131,4 +130,3 @@
         </div>
     </div>
 {/if}
-

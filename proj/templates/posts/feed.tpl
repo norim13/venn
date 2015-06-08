@@ -2,6 +2,9 @@
 
 {include file="common/navbar.tpl"}
 
+<link href="../../css/feed.css" rel="stylesheet">
+<link href="../../css/body.css" rel="stylesheet">
+
 <div id="page-wrapper">
 
     <div class="">
@@ -23,7 +26,7 @@
                         <ul class="dropdown-menu dropdown-menu-form pull-right">
                             {counter start=0 skip=1 print=false}
                             {$n = {counter}}
-                            <li><input id="circle-0-{$n}" class="right-circle-checkbox" name="visibility[]" value="0" type="checkbox"><label for="circle-public-{$n}">All</label></li>
+                            <li><input id="circle-public-{$n}" class="" name="visibility[]" value="0" type="checkbox"><label for="circle-public-{$n}">All</label></li>
                             {foreach $user_circles as $circle}
                                 {$n = {counter}}
                                 <li><input id="circle-{$circle.id}-{$n}" class="right-circle-checkbox" name="visibility[]" value="{$circle.id}" type="checkbox"><label for="circle-{$circle.id}-{$n}">{$circle.name}</label></li>

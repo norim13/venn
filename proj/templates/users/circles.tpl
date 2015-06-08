@@ -57,34 +57,40 @@
                 </h3>
 
                 <div id="edit-menu-{$circle.id}" class="caption collapse">
-                    <div>
-                    <form action="../../actions/circles/rename_circle.php" class="form-inline" method="post">
 
-                        <div class="form-group">
-                            <input class="form-control" id="appendedInputButton" type="text"  name="circle_rename" placeholder="Enter new name">
+                        <form style="display: inline-block;" action="../../actions/circles/rename_circle.php" class="form-inline" method="post">
+
+                            <div class="form-group">
+                                <input class="form-control" id="appendedInputButton" type="text"  name="circle_rename" placeholder="Enter new name">
+                            </div>
+                            <div class="form-group">
                             <button class="btn btn-primary" type="submit">Rename</button>
-                        </div>
-                        <input type="hidden" name="circle_id" value="{$circle.id}" />
-                    </form>
-                </div>
-                    <div>
-                    <form accept-charset="UTF-8" action="../../actions/circles/new_circle_pic.php" method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="circle_id" value="{$circle.id}" />
-
-                        <input type="submit" value="Change Pic" class=" btn btn-info" style="margin-left:10px">
-                        <div class=" fileinput fileinput-new" data-provides="fileinput" style="display: inline">
-                            <span class="btn btn-default btn-file"><span class="fileinput-new"><i class="fa fa-picture-o"></i>  Upload Photo</span><span class="fileinput-exists">Change</span><input type="file" name="image"></span>
-                            <span class="fileinput-filename"></span>
-                            <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
-                        </div>
-                    </form>
-                </div>
+                            </div>
+                            <input type="hidden" name="circle_id" value="{$circle.id}" />
+                        </form>
 
 
 
-                    <p>
-                        <a href="../../actions/circles/delete_circle.php?circle_id={$circle.id}"><i class="fa fa-trash"></i></a> Delete this circle</td>
+                        <form style="display: inline-block; float: right;" accept-charset="UTF-8" class="form-inline" action="../../actions/circles/new_circle_pic.php" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="circle_id" value="{$circle.id}" />
+
+                            <div class=" fileinput fileinput-new form-group" data-provides="fileinput" style="display: inline">
+                                <span class="btn btn-default btn-file"><span class="fileinput-new"><i class="fa fa-picture-o"></i>  Upload Photo</span><span class="fileinput-exists">Change</span><input type="file" name="image"></span>
+                                <span class="fileinput-filename"></span>
+                                <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Change Pic" class=" btn btn-info">
+                            </div>
+                        </form>
+                    <p >
+                        <a href="../../actions/circles/delete_circle.php?circle_id={$circle.id}"><i class="fa fa-trash"></i> Delete this circle</a>
                     </p>
+
+
+
+
+
                 </div>
             </div>
 

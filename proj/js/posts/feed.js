@@ -28,15 +28,22 @@ $( document ).ready(function() {
                             $(".right-panel-posts").html(response.html);
                         }
                     }catch(exp){
-                        $(".right-panel-posts").html("Error fetching data... please try again");
+                        $(".right-panel-posts").html("error fetching data... please try again");
                     }
                 },
                 error: function(){
                     console.log("error ajax");
-                    $(".right-panel-posts").html("Error fetching data... please try again");
+                    $(".right-panel-posts").html("error fetching data... please try again");
                 }
             });
         }
+        else {
+            $(".right-panel-posts").html('No circles selected...');
+        }
 
+    });
+
+    $("#circle-public-1").click(function(){
+        $('.right-circle-checkbox').not(this).prop('checked', this.checked);
     });
 });

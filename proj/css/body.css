@@ -6,3 +6,5 @@
 html {
     background-color: rgb(236,236,236);
 }
+
+.centered-and-cropped { object-fit: cover }
