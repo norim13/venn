@@ -49,6 +49,7 @@
 
 {assign var=current_page value={$BASE_URL|cat:'pages/'}|explode:$smarty.server.REQUEST_URI}
 {if strpos($current_page[1], 'home/home.php', 0)=== 0}
+    <script type="text/javascript" src="../../js/register/checkPasswordStrength.js"></script>
     <script type="text/javascript" src="../../js/posts/post.js"></script>
     <script type="text/javascript" src="../../js/posts/comments.js"></script>
     <script type="text/javascript" src="../../js/posts/votes.js"></script>

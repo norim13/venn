@@ -183,7 +183,7 @@ function getVotesFromUser($userID) {
 function searchPosts($string){
     global $conn;
     $stmt = $conn->prepare("SELECT * FROM \"Post\" WHERE message @@ plainto_tsquery(?)");
-    $stmt->execute(array($string));
+    $stmt->execute(array($string.':*'));
     return $stmt->fetchAll();
 }
 
