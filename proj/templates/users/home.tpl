@@ -52,5 +52,7 @@
 
 {include file='users/register.tpl'}
 
+{include file='users/password_recovery.tpl'}
+
 {include file='common/footer.tpl'}
 

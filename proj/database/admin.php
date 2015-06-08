@@ -50,3 +50,36 @@ function createReport($postID, $userID, $msg) {
     $stmt->execute(array($userID,$postID,$msg,date('Y-m-d H:i:s'),0));
     return $stmt->fetch();
 }
+
+function getReports(){
+    global $conn;
+    $stmt = $conn->prepare("SELECT \"User\".name as username, \"Post\".message as text , \"Post\".url,\"Post\".id as post_id, \"Report\".date, \"Report\".processed, \"Report\".message, \"Report\".id
+                            FROM \"User\", \"Post\",  \"Report\"
+                            WHERE
+                            \"Report\".user_id=\"User\".id AND
+                             \"Report\".post_id=\"Post\".id");
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
+
+function getReportState($report_id)
+{
+    global $conn;
+    $stmt = $conn->prepare("SELECT *
+                            FROM \"Report\"
+                            WHERE id=?");
+    $stmt->execute(array($report_id));
+    return $stmt->fetch();
+}
+
+function changeReportState($report_id){
+    $state=getReportState($report_id)['processed'];
+    /*$new_state= !$state;*/
+    if($state)
+        $new_state=0;
+    else
+        $new_state=1;
+    global $conn;
+    $stmt = $conn->prepare("UPDATE \"Report\" SET processed = ? WHERE id=?");
+    $stmt->execute(array($new_state,$report_id));
+}

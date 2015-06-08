@@ -62,7 +62,16 @@ if($_SESSION['email']) {
         $smarty->assign('circles_posts', $circlePosts);
     }
 
-    $smarty->assign('recent_posts', getRecentPosts());
+    $recent_posts = getRecentPosts();
+
+    foreach($recent_posts as $post => $key) {
+        if($key['start_date'] > date("Y-m-d H:i:s") || $key['expiration_date'] < date("Y-m-d H:i:s")) {
+            if($key['user_id'] != $_SESSION['id'])
+                unset($recent_posts[$post]);
+        }
+    }
+
+    $smarty->assign('recent_posts', $recent_posts);
     $smarty->assign('user_circles', $circles);
 
     $smarty->assign('friendRequests', getFriendRequestsOfUser($_SESSION['id']));

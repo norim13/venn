@@ -5,8 +5,6 @@ function createNewCircle(event) {
         id_array.push($( this ).attr("id").split('-')[1]);
     });
 
-    console.log(id_array);
-
     var name = $('#circle_name_content').val();
 
     $.ajax({

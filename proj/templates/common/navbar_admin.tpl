@@ -62,6 +62,10 @@
                                 <a href="posts_db.php"> Posts </a>
                                 <!-- /.nav-third-level -->
                             </li>
+                            <li>
+                                <a href="reports_db.php"> Reports  </a>
+                                <!-- /.nav-third-level -->
+                            </li>
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>

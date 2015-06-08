@@ -1,7 +1,7 @@
 
 <form id="new_post_form" action="../../actions/post/new_post.php" accept-charset="UTF-8" method="POST" enctype="multipart/form-data">
 
-    <textarea id="new-post-textarea" maxlength="600" class="form-control counted" name="message" placeholder="Type in your post" rows="5" style="margin-bottom:10px;"></textarea>
+    <textarea id="new-post-textarea" maxlength="600" class="form-control counted" name="message" placeholder="Type in your post" rows="5" style="margin-bottom:10px;" required></textarea>
 
     <div class="form-group"">
     <input class="form-control" name="url" placeholder="Share a website" style="margin-bottom:10px;">

@@ -22,12 +22,17 @@
 
             <h1 align="center">{$user.name}</h1>
             <br>
-
             <!--left col-->
             <ul class="list-group">
                 <li class="list-group-item text-muted" contenteditable="false">Profile</li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span> {$user.signup_date}</li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last seen</strong></span> {$user.last_login}</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Gender</strong></span> {if {$user.gender}=="M"} Male <i class="fa fa-mars"></i>{/if}
+                    {if {$user.gender}=="F"} Female <i class="fa fa-venus"></i>
+                    {/if}
+                    {if {$user.gender}=="O"} Other <i class="fa fa-transgender-alt"></i>
+                    {/if}</li>
+
             </ul>
             <ul class="list-group">
                 <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>

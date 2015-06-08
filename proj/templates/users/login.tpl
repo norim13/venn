@@ -19,9 +19,11 @@
                                         </div>
                                         <div id="error_message"></div>
                                         <div id="login_btns">
+                                            <a id="recover_back" href="#sec5"> Forgot password? </a>
                                             <a id="signup_back" href="#sec4"> Create an account </a>
                                             <input class="btn btn-lg btn-success" type="submit" value="Login">
                                         </div>
+
                                     </fieldset>
                                 </form>
                             </div>

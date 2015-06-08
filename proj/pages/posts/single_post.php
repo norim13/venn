@@ -7,8 +7,13 @@ if($_SESSION['email']) {
     include_once '../../database/circles.php';
 
     if(isset($_GET['post_id'])) {
-        $post_id = $_GET['post_id'];
-        $smarty->assign('post', getPostFromID($post_id));
+        $post_id = htmlspecialchars($_GET['post_id']);
+        $post = getPostFromID($post_id);
+
+        if($post['start_date'] > date("Y-m-d H:i:s") || $post['expiration_date'] < date("Y-m-d H:i:s")) {
+            if ($post['user_id'] != $_SESSION['id'])
+                $smarty->assign('post', $post);
+        }
     }
 
     $smarty->assign('friendRequests', getFriendRequestsOfUser($_SESSION['id']));

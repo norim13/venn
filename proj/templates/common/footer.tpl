@@ -49,6 +49,7 @@
     <script type="text/javascript" src="../../js/users/home.js"></script>
     <script type="text/javascript" src="../../js/users/circles.js"></script>
     <script type="text/javascript" src="../../js/posts/report.js"></script>
+    <script type="text/javascript" src="../../js/posts/feed.js"></script>
 {elseif strpos($current_page[1], 'posts/single_post.php', 0)=== 0}
     <script type="text/javascript" src="../../js/posts/post.js"></script>
     <script type="text/javascript" src="../../js/posts/comments.js"></script>

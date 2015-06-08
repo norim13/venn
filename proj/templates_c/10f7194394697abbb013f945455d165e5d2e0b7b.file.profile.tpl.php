@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 03:07:19
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 00:46:54
          compiled from "../../templates/users/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2145186425549488d326bc8-14187107%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10f7194394697abbb013f945455d165e5d2e0b7b' => 
     array (
       0 => '../../templates/users/profile.tpl',
-      1 => 1433639231,
+      1 => 1433717175,
       2 => 'file',
     ),
   ),
@@ -56,7 +56,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <h1 align="center"><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
 </h1>
             <br>
-
             <!--left col-->
             <ul class="list-group">
                 <li class="list-group-item text-muted" contenteditable="false">Profile</li>
@@ -64,6 +63,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last seen</strong></span> <?php echo $_smarty_tpl->tpl_vars['user']->value['last_login'];?>
 </li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Gender</strong></span> <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['user']->value['gender'];?>
+<?php $_tmp1=ob_get_clean();?><?php if ($_tmp1=="M") {?> Male <i class="fa fa-mars"></i><?php }?>
+                    <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['user']->value['gender'];?>
+<?php $_tmp2=ob_get_clean();?><?php if ($_tmp2=="F") {?> Female <i class="fa fa-venus"></i>
+                    <?php }?>
+                    <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['user']->value['gender'];?>
+<?php $_tmp3=ob_get_clean();?><?php if ($_tmp3=="O") {?> Other <i class="fa fa-transgender-alt"></i>
+                    <?php }?></li>
+
             </ul>
             <ul class="list-group">
                 <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>

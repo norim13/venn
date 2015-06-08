@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 15:54:24
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 20:42:21
          compiled from "../../templates/users/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2069286647554902c42894e2-96786545%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '885314c4399c3caad3ef452817c0f201016ed1c9' => 
     array (
       0 => '../../templates/users/home.tpl',
-      1 => 1433598192,
+      1 => 1433702460,
       2 => 'file',
     ),
   ),
@@ -74,6 +74,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
 <?php echo $_smarty_tpl->getSubTemplate ('users/register.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+
+<?php echo $_smarty_tpl->getSubTemplate ('users/password_recovery.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
 <?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>

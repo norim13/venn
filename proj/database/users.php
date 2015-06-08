@@ -145,3 +145,20 @@ function deleteImage($imageID) {
 
     unlink('../../images/users/'.$oldPath);
 }
+
+function storeTempCode($userId,$code) {
+    global $conn;
+    $stmt = $conn->prepare("INSERT INTO \"ResetPw\" (id, tempcode) VALUES (?,?)");
+    $stmt->execute(array($userId,$code));
+}
+
+function setNewPassword($userId,$pw) {
+    global $conn;
+    $stmt = $conn->prepare("UPDATE \"User\"
+        SET password_hash=?
+        WHERE \"User\".id=?");
+
+    $stmt->execute(array(hash('sha256', $pw),$userId));
+
+}
+

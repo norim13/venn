@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-06 16:36:09
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 23:29:48
          compiled from "../../templates/users/profile_settings.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9716760715557a529591747-82373811%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3604cee365e8a18f465919987ac1bba5757cfe30' => 
     array (
       0 => '../../templates/users/profile_settings.tpl',
-      1 => 1433598192,
+      1 => 1433642144,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.15',
   'unifunc' => 'content_5557a529632776_00518519',
+  'variables' => 
+  array (
+    'profilePIC' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5557a529632776_00518519')) {function content_5557a529632776_00518519($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('title'=>"Venn - Settings"), 0);?>
@@ -45,7 +49,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
             <div class="col-sm-2">
                 <!--profile pic-->
-                <img title="profile image" class="img-circle img-responsive" src="http://www.rlsandbox.com/img/profile.jpg">
+                <img class="centered-and-cropped" width="150" height="150" style="border-radius:50%" src="../../images/users/<?php echo $_smarty_tpl->tpl_vars['profilePIC']->value['path'];?>
+" alt="profilePic">
             </div>
         </div>
         <br>

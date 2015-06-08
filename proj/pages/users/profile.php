@@ -21,6 +21,12 @@ if($_SESSION['email']) {
         } elseif ($_SESSION['id'] == $user['id']) {
             include_once '../../database/circles.php';
             $posts = getPostsFromUser($user['id']);
+            foreach($posts as $post => $key) {
+                if($key['start_date'] > date("Y-m-d H:i:s") || $key['expiration_date'] < date("Y-m-d H:i:s")) {
+                    if($key['user_id'] != $_SESSION['id'])
+                        unset($posts[$post]);
+                }
+            }
             $smarty->assign('user_posts', $posts);
             $smarty->assign('numberOfPosts',sizeof($posts));
             $smarty->assign('numberOfVotes',sizeof(getVotesFromUser($user['id'])));
@@ -31,6 +37,12 @@ if($_SESSION['email']) {
             $posts = getPostsFromUser($user['id']);
             $smarty->assign('numberOfPosts',sizeof($posts));
             $smarty->assign('numberOfVotes',sizeof(getVotesFromUser($user['id'])));
+            foreach($posts as $post => $key) {
+                if($key['start_date'] > date("Y-m-d H:i:s") || $key['expiration_date'] < date("Y-m-d H:i:s")) {
+                    if($key['user_id'] != $_SESSION['id'])
+                        unset($posts[$post]);
+                }
+            }
             $smarty->assign('user_posts', $posts);
             $smarty->assign('profilePIC',getPathImageFromID($user['profilepic_id']));
             $smarty->display('../../templates/users/profile_friend_added.tpl');
@@ -46,6 +58,14 @@ if($_SESSION['email']) {
         $smarty->assign('numberOfFriends', sizeof(getAllFriendsOfUser($user['id'])));
         $smarty->assign('user', $user);
         $posts = getPostsFromUser($user['id']);
+
+        foreach($posts as $post => $key) {
+            if($key['start_date'] > date("Y-m-d H:i:s") || $key['expiration_date'] < date("Y-m-d H:i:s")) {
+                if($key['user_id'] != $_SESSION['id'])
+                    unset($posts[$post]);
+            }
+        }
+
         $smarty->assign('numberOfVotes',sizeof(getVotesFromUser($user['id'])));
         $smarty->assign('numberOfPosts',sizeof($posts));
         $smarty->assign('user_posts', $posts);

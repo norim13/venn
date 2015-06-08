@@ -10,6 +10,13 @@ if($_SESSION['email']) {
 
         $posts = searchPosts($search_string);
 
+        foreach($posts as $post => $key) {
+            if($key['start_date'] > date("Y-m-d H:i:s") || $key['expiration_date'] < date("Y-m-d H:i:s")) {
+                if($key['user_id'] != $_SESSION['id'])
+                    unset($posts[$post]);
+            }
+        }
+
         $smarty->assign('posts', $posts);
         $smarty->assign('search_string', $search_string);
 

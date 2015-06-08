@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 04:15:37
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 20:39:20
          compiled from "../../templates/admin/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1470588233554a147ac31004-62371265%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2663ed643eb0036c54b4880c88aec87588f96609' => 
     array (
       0 => '../../templates/admin/admin.tpl',
-      1 => 1433598192,
+      1 => 1433702331,
       2 => 'file',
     ),
   ),
@@ -29,71 +29,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <div id="wrapper">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"> Venn admin panel </a>
-        </div>
-        <!-- /.navbar-header -->
+    <?php echo $_smarty_tpl->getSubTemplate ("common/navbar_admin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-        <div class="logoutButton">
-            <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-        </div>
-        <!-- /.navbar-top-links -->
-
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="side-menu">
-                <li class="sidebar-search">
-                    <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                </li>
-                 
-                    <li>
-                        <a href="index.html"><i class="fa fa-cogs fa-fw"></i> Main panel</a>
-                    </li>
-                    
-                    <li>
-                        <a href="database.php"><i class="fa fa-database fa-fw"></i> Databases<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            
-                            <li>
-                                <a href="#"> Posts  </a>
-                            </li>
-                            <li>
-                                <a href="#"> Users <span class="fa arrow"></span></a>
-                                <!-- /.nav-third-level -->
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-
-                    <li>
-                        <a href="stats.php"><i class="fa fa-bar-chart-o fa-fw"></i> Statistics <span class="fa arrow"></span></a>
-                        
-                        <!-- /.nav-second-level -->
-                    </li>
-                    
-                    
-                </ul>
-            </div>
-            <!-- /.sidebar-collapse -->
-        </div>
-        <!-- /.navbar-static-side -->
-    </nav>
 
     <div id="page-wrapper">
         <br>

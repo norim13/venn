@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-05 14:00:43
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 01:36:11
          compiled from "../../templates/admin/database_posts.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:59463060055521b2fe34425-55036001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5ee12f082935eefb09cdc976d9c2e6b1592fb3d4' => 
     array (
       0 => '../../templates/admin/database_posts.tpl',
-      1 => 1432122410,
+      1 => 1433720145,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'posts' => 0,
+    'BASE_URL' => 0,
     'post' => 0,
   ),
   'has_nocache_code' => false,
@@ -70,8 +71,13 @@ foreach ($_from as $_smarty_tpl->tpl_vars['post']->key => $_smarty_tpl->tpl_vars
 $_smarty_tpl->tpl_vars['post']->_loop = true;
 ?>
                                         <tr>
-                                            <td><?php echo $_smarty_tpl->tpl_vars['post']->value['id'];?>
-</td>
+                                            <td>
+                                                <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/posts/single_post.php?post_id=<?php echo $_smarty_tpl->tpl_vars['post']->value['id'];?>
+">
+                                                    View</a> <?php echo $_smarty_tpl->tpl_vars['post']->value['id'];?>
+
+                                            </td>
                                             <td><?php echo $_smarty_tpl->tpl_vars['post']->value['name'];?>
 </td>
                                             <td><?php echo $_smarty_tpl->tpl_vars['post']->value['post_date'];?>

@@ -154,3 +154,8 @@
     overflow: hidden;
 }
 
+.centered{
+    marin-left:auto;
+    margin-right:auto;
+}
+

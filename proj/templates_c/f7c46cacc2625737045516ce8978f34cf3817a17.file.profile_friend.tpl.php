@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 01:22:58
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 19:06:23
          compiled from "../../templates/users/profile_friend.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1303653800554952f6a41013-64801979%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7c46cacc2625737045516ce8978f34cf3817a17' => 
     array (
       0 => '../../templates/users/profile_friend.tpl',
-      1 => 1433614473,
+      1 => 1433696759,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'user' => 0,
+    'profilePIC' => 0,
     'requestSent' => 0,
   ),
   'has_nocache_code' => false,
@@ -38,33 +39,36 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <!--header profile-->
     <div class="container target">
         <div class="row">
-            <div class="col-sm-10" style="margin-bottom:10px">
-                <h1 class=""><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
+
+            <div class="col-sm-3">
+                <!-- Modal -->
+                <!--profile pic-->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-transparent centered" style="marin-left:auto; margin-right:auto" data-toggle="modal" data-target="#myModal">
+                    <div class="itemsContainer">
+                        <img class="centered-and-cropped profilePic " width="150" height="150" style="border-radius:50%" src="../../images/users/<?php echo $_smarty_tpl->tpl_vars['profilePIC']->value['path'];?>
+" alt="profilePic">
+                    </div>
+                </button>
+                <h1 align="center"><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
 </h1>
+
                 <?php if ($_smarty_tpl->tpl_vars['requestSent']->value) {?>
-                    <button type="button" class="btn btn-success" id="new_friend_request-btn-<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
+                    <button type="button" class="btn btn-success centered" id="new_friend_request-btn-<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
 ">Friend Request Sent</button>
                 <?php } else { ?>
-                    <button type="button" class="btn btn-success new_friend_request-btn" id="new_friend_request-btn-<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
+                    <button type="button" class="btn btn-success new_friend_request-btn centered" id="new_friend_request-btn-<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
 ">Friend Request</button>
                 <?php }?>
-                <button type="button" class="btn btn-info">Send me a message</button>
                 <br>
-            </div>
 
-            <div class="col-sm-2">
-                <!--profile pic-->
-                <img title="profile image" class="img-circle img-responsive" src="http://www.rlsandbox.com/img/profile.jpg">
-            </div>
-        </div>
-        <br>
 
-        <div class="row">
-            <div class="col-sm-3">
+
                 <!--left col-->
                 <ul class="list-group">
                     <li class="list-group-item text-muted" contenteditable="false">Profile</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span><i class="fa fa-eye-slash"></i></li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span> <i class="fa fa-eye-slash"></i></li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last seen</strong></span> <i class="fa fa-eye-slash"></i></li>
                 </ul>
                 <ul class="list-group">
                     <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
@@ -73,19 +77,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <li class="list-group-item text-right"><span class="pull-left"><strong class="">Friends</strong></span> <i class="fa fa-eye-slash"></i></li>
                 </ul>
             </div>
-
             <div class="col-sm-9" contenteditable="false" style="">
-                <!--bio collum-->
-
                 <div class=" col-lg-12 clearfix">
-                    <h2 id="myPostsh2">Posts</h2>
-                    <!--publication-->
-                    <br/>
-                    <h3>Send Friend request to see recent posts from <?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
-</h3>
-                </div>
+                    <br><br>
+                    <h1>Send a Friend Request to <?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
+ to see new posts.</h1>
+                    </div>
             </div>
-        </div>
+        <br>
+
     </div>
 </div>
 

@@ -2,6 +2,7 @@
 
 include_once '../../config/init.php';
 include_once '../../database/admin.php';
+include_once '../../database/users.php';
 
 $users=getAllUsers();
 $posts=getAllPosts();

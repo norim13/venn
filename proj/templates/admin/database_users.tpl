@@ -29,7 +29,8 @@
                                     <tbody>
                                     {foreach $users as $user}
                                         <tr>
-                                            <td>{$user.id}</td>
+                                            {$userHash=getHashID($user.id)}
+                                            <td> <a href="{$BASE_URL}pages/users/profile.php?user={$userHash.hashid}">{$user.id}</a></td>
                                             <td>{$user.name}</td>
                                             <td>{$user.email}</td>
                                             <td>{$user.gender}</td>

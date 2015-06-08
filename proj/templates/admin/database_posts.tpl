@@ -39,7 +39,10 @@
                                     <tbody>
                                     {foreach $posts as $post}
                                         <tr>
-                                            <td>{$post.id}</td>
+                                            <td>
+                                                <a href="{$BASE_URL}pages/posts/single_post.php?post_id={$post.id}">
+                                                    View</a> {$post.id}
+                                            </td>
                                             <td>{$post.name}</td>
                                             <td>{$post.post_date}</td>
                                             <td>{$post.start_date}</td>

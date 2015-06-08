@@ -257,3 +257,20 @@ function createPostVisibleTo($post_id, $circle_id) {
     $stmt->execute(array($post_id,$circle_id));
     return $stmt->fetch();
 }
+
+
+function getPostsFromUsers($user_ids){
+    global $conn;
+    $query_string = "SELECT * FROM \"Post\" WHERE ";
+
+    $i=0;
+    while ($i < sizeof($user_ids)-1)
+        $query_string = $query_string."user_id = ? OR ";
+    
+    $query_string = $query_string."user_id = ?";
+
+    $stmt = $conn->prepare($query_string);
+    $stmt->execute($user_ids);
+    return $stmt->fetchAll();
+
+}

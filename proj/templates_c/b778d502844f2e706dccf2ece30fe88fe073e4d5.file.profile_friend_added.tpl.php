@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 03:56:05
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 01:10:08
          compiled from "../../templates/users/profile_friend_added.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1752829815557a0bfbae873-76587232%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b778d502844f2e706dccf2ece30fe88fe073e4d5' => 
     array (
       0 => '../../templates/users/profile_friend_added.tpl',
-      1 => 1433642159,
+      1 => 1433717237,
       2 => 'file',
     ),
   ),
@@ -42,34 +42,41 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <hr class="">
     <!--header profile-->
-    <div class="container target">
-        <div class="row">
-            <div class="col-sm-10" style="margin-bottom:10px">
-                <h1 class=""><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
-</h1>
 
-                <button id="addToCircleButton" type="button" class="btn btn-success"><i class="fa fa-circle-o"></i> Add to a circle</button>
-                <button type="button" class="btn btn-info">Send me a message</button>
-                <br>
-            </div>
-
-            <div class="col-sm-2">
-                <!--profile pic-->
-                <img class="centered-and-cropped" width="150" height="150" style="border-radius:50%" src="../../images/users/<?php echo $_smarty_tpl->tpl_vars['profilePIC']->value['path'];?>
-" alt="profilePic">
-            </div>
-        </div>
-        <br>
 
         <div class="row">
             <div class="col-sm-3">
+
+                <button type="button" class="btn btn-transparent centered" style="marin-left:auto; margin-right:auto" data-toggle="modal" data-target="#myModal">
+                    <div class="itemsContainer">
+                        <img class="centered-and-cropped profilePic " width="150" height="150" style="border-radius:50%" src="../../images/users/<?php echo $_smarty_tpl->tpl_vars['profilePIC']->value['path'];?>
+" alt="profilePic">
+                    </div>
+                </button>
+
+                <h1 align="center"><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
+</h1>
+
+
+
+                <button id="addToCircleButton" type="button" class="btn btn-success centered"><i class="fa fa-circle-o"></i> Add to a circle</button>
+                <br>
                 <!--left col-->
                 <ul class="list-group">
                     <li class="list-group-item text-muted" contenteditable="false">Profile</li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span> 2.13.2014</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last seen</strong></span> <i class="fa fa-eye-slash"></i></li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last seen</strong></span>  <?php echo $_smarty_tpl->tpl_vars['user']->value['last_login'];?>
+</li>
                     <li class="list-group-item text-right"><span class="pull-left"><a href="" class="remove-friendship-btn" id="remove-friendship-btn-<?php echo $_smarty_tpl->tpl_vars['user']->value['id'];?>
 "><strong class="">Remove me from friends</strong></span> <i class="fa fa-trash-o"></i></a></li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Gender</strong></span> <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['user']->value['gender'];?>
+<?php $_tmp1=ob_get_clean();?><?php if ($_tmp1=="M") {?> Male <i class="fa fa-mars"></i><?php }?>
+                        <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['user']->value['gender'];?>
+<?php $_tmp2=ob_get_clean();?><?php if ($_tmp2=="F") {?> Female <i class="fa fa-venus"></i>
+                        <?php }?>
+                        <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['user']->value['gender'];?>
+<?php $_tmp3=ob_get_clean();?><?php if ($_tmp3=="O") {?> Other <i class="fa fa-transgender-alt"></i>
+                        <?php }?></li>
                 </ul>
                 <ul class="list-group">
                     <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
