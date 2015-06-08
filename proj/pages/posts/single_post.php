@@ -10,11 +10,6 @@ if($_SESSION['email']) {
         $post_id = htmlspecialchars($_GET['post_id']);
         $post = getPostFromID($post_id);
 
-        if(isset($post['url'])) {
-            if(yt($post['url']) != $post['url'])
-                $post['urlyt']= yt($post['url']);
-        }
-
         if($post['start_date'] < date("Y-m-d H:i:s") || $post['expiration_date'] > date("Y-m-d H:i:s")) {
             $smarty->assign('post', $post);
         }

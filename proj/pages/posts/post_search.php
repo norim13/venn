@@ -10,15 +10,11 @@ if($_SESSION['email']) {
 
         $posts = searchPosts($search_string);
 
-        foreach($posts as $post => &$key) {
+        foreach($posts as $post => $key) {
             if((isset($key['start_date']) && $key['start_date'] > date("Y-m-d H:i:s")) ||
                 (isset($key['expiration_date']) && $key['expiration_date'] < date("Y-m-d H:i:s"))
                 && $key['user_id'] != $_SESSION['id']) {
                 unset($posts[$post]);
-            }
-            else if(isset($key['url'])) {
-                if(yt($key['url']) != $key['url'])
-                    $key['urlyt'] = yt($key['url']);
             }
         }
 

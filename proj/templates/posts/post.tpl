@@ -53,10 +53,16 @@
                     {/foreach}
                 </p>
             {/if}
-            {if $post.urlyt}
-                <div class="post-url-div">{$post.urlyt}</div>
-            {elseif $post.url}
-                <div class="post-url-div"><a href={$post.url}>{$post.url}</a></div>
+
+            {if $post.url}
+                {if (yt($post.url) != $post.url)}
+                    {$yturl = yt($post.url)}
+                {/if}
+                {if $yturl}
+                    <div class="post-url-div">{$yturl}</div>
+                {else}
+                    <div class="post-url-div"><a href={$post.url}>{$post.url}</a></div>
+                {/if}
             {/if}
 
             {$image=getImagePathFromPost($post.id)}

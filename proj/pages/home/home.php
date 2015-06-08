@@ -59,15 +59,11 @@ if($_SESSION['email']) {
             return $aValue - $bValue;
         });
 
-        foreach($circlePosts as $post => &$key) {
+        foreach($circlePosts as $post => $key) {
             if((isset($key['start_date']) && $key['start_date'] > date("Y-m-d H:i:s")) ||
                 (isset($key['expiration_date']) && $key['expiration_date'] < date("Y-m-d H:i:s"))
                 && $key['user_id'] != $_SESSION['id']) {
                 unset($circlePosts[$post]);
-            }
-            else if(isset($key['url'])) {
-                if(yt($key['url']) != $key['url'])
-                    $key['urlyt'] = yt($key['url']);
             }
         }
 
@@ -76,15 +72,11 @@ if($_SESSION['email']) {
 
     $recent_posts = getRecentPosts();
 
-    foreach($recent_posts as $post => &$key) {
+    foreach($recent_posts as $post => $key) {
         if((isset($key['start_date']) && $key['start_date'] > date("Y-m-d H:i:s")) ||
             (isset($key['expiration_date']) && $key['expiration_date'] < date("Y-m-d H:i:s"))
             && $key['user_id'] != $_SESSION['id']) {
             unset($recent_posts[$post]);
-        }
-        else if(isset($key['url'])) {
-            if(yt($key['url']) != $key['url'])
-                $key['urlyt'] = yt($key['url']);
         }
     }
 

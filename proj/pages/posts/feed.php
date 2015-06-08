@@ -7,15 +7,11 @@ if($_SESSION['email']) {
     include_once '../../database/users.php';
     include_once '../../database/circles.php';
 
-    foreach($recent_posts as $post => &$key) {
+    foreach($recent_posts as $post => $key) {
         if((isset($key['start_date']) && $key['start_date'] > date("Y-m-d H:i:s")) ||
             (isset($key['expiration_date']) && $key['expiration_date'] < date("Y-m-d H:i:s"))
             && $key['user_id'] != $_SESSION['id']) {
             unset($recent_posts[$post]);
-        }
-        else if(isset($key['url'])) {
-            if(yt($key['url']) != $key['url'])
-                $key['urlyt'] = yt($key['url']);
         }
     }
 
