@@ -39,8 +39,12 @@ else{
     $html_response_msg = "";
 
     foreach($posts as $post){
-        $smarty->assign('post', $post);
-        $html_response_msg = $html_response_msg . $smarty->fetch('../../templates/posts/post.tpl');
+        if(((!isset($post['start_date']) || $post['start_date'] < date("Y-m-d H:i:s")) &&
+                (!isset($post['expiration_date']) || $post['expiration_date'] > date("Y-m-d H:i:s")))
+            || $post['user_id'] == $_SESSION['id']) {
+            $smarty->assign('post', $post);
+            $html_response_msg = $html_response_msg . $smarty->fetch('../../templates/posts/post.tpl');
+        }
     }
 
     $return_messages['html'] = $html_response_msg;

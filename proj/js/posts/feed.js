@@ -5,6 +5,9 @@
 $( document ).ready(function() {
     $("#select-circles-feed .right-circle-checkbox").click(function(){
 
+        //$('#circle-public-1').prop('checked', false); //uncheck "All" button
+
+
         var selected_circle_ids  = [];
 
         $('#select-circles-feed .right-circle-checkbox:checked').each(function () {
@@ -43,7 +46,12 @@ $( document ).ready(function() {
 
     });
 
+    /**
+     * listener for "All" button. Select all circles.
+     */
     $("#circle-public-1").click(function(){
-        $('.right-circle-checkbox').not(this).prop('checked', this.checked);
+        $('.right-circle-checkbox').not(this).prop('checked', false);
+        if ($(this).prop('checked'))
+            $('.right-circle-checkbox').click();
     });
 });

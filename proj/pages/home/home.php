@@ -43,27 +43,30 @@ if($_SESSION['email']) {
 
     if($c) {
         $uniqueC = arrayUnique($c);
-        foreach($uniqueC as $circleUser) {
+        foreach ($uniqueC as $circleUser) {
             $circlePosts[] = getPostsFromUser($circleUser['id']);
         }
 
-        usort($circlePosts, function($a, $b) {
-            if($a['start_date'] != null)
+        usort($circlePosts, function ($a, $b) {
+            if ($a['start_date'] != null)
                 $aValue = $a['start_date'];
             else $aValue = $a['post_date'];
 
-            if($b['start_date'] != null)
+            if ($b['start_date'] != null)
                 $bValue = $a['start_date'];
             else $bValue = $a['post_date'];
 
             return $aValue - $bValue;
         });
 
-        foreach($circlePosts as $post => $key) {
-            if((isset($key['start_date']) && $key['start_date'] > date("Y-m-d H:i:s")) ||
-                (isset($key['expiration_date']) && $key['expiration_date'] < date("Y-m-d H:i:s"))
-                && $key['user_id'] != $_SESSION['id']) {
-                unset($circlePosts[$post]);
+        foreach ($circlePosts as &$posts){
+            foreach ($posts as $post => $key) {
+                if (((isset($key['start_date']) && $key['start_date'] > date("Y-m-d H:i:s")) ||
+                        (isset($key['expiration_date']) && $key['expiration_date'] < date("Y-m-d H:i:s")))
+                    && $key['user_id'] != $_SESSION['id']
+                ) {
+                    unset($posts[$post]);
+                }
             }
         }
 

@@ -2,9 +2,6 @@
 
 {include file="common/navbar.tpl"}
 
-<link href="../../css/feed.css" rel="stylesheet">
-<link href="../../css/body.css" rel="stylesheet">
-
 <div id="page-wrapper">
 
     <div class="">
@@ -22,7 +19,7 @@
             <h1>Circles
                 <div class="dropdown pull-right" id="select-circles-feed">
                     <div class="btn-group">
-                        <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle pull-right" data-placeholder="Visibility" >Visibility <span class="caret"></span></button>
+                        <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle pull-right" data-placeholder="Select Circles" >Visibility <span class="caret"></span></button>
                         <ul class="dropdown-menu dropdown-menu-form pull-right">
                             {counter start=0 skip=1 print=false}
                             {$n = {counter}}

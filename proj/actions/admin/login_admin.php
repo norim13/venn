@@ -13,6 +13,7 @@ else{
 
     if (isLoginAdminCorrect($email, $password)) {
         $_SESSION['email'] = $email;
+        $_SESSION['admin'] = "true";
         $_SESSION['id']=getAdminFromEmail($email)['id'];
         header('Location: ' . '../../pages/admin/main_panel.php');
     } else {
