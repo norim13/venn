@@ -9,23 +9,27 @@ if (!$_POST['post_id']) {
     $return_messages['errors'][] = 'No post id!';
 }
 else{
-    $post_id = htmlspecialchars($_POST['post_id']);
+    try {
+        $post_id = htmlspecialchars($_POST['post_id']);
 
-    if(isMyPost($post_id,$_SESSION['id'])) {
-        $votes = getVotesFromPostID($post_id);
+        if(isMyPost($post_id,$_SESSION['id'])) {
+            $votes = getVotesFromPostID($post_id);
 
-        foreach($votes as &$vote) {
-            $vote['imagePath'] = getProfilePic($vote['user_id']);
+            foreach($votes as &$vote) {
+                $vote['imagePath'] = getProfilePic($vote['user_id']);
+            }
+
+            $return_messages['votes'] = $votes;
+            $return_messages['post_id'] = $post_id;
+            $return_messages['can_view'] = 'true';
+            $return_messages['base_url'] = $BASE_URL;
         }
-
-        $return_messages['votes'] = $votes;
-        $return_messages['post_id'] = $post_id;
-        $return_messages['can_view'] = 'true';
-        $return_messages['base_url'] = $BASE_URL;
-    }
-    else {
-        $return_messages['errors']['not_owner'] = 'Not my post!';
-        $return_messages['can_view'] = 'false';
+        else {
+            $return_messages['errors'][] = 'Not my post!';
+            $return_messages['can_view'] = 'false';
+        }
+    } catch (PDOException $e) {
+        $return_messages['errors'][] = 'Database error!';
     }
 }
 

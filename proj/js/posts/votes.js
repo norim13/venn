@@ -8,6 +8,7 @@ function showWhoVoted(event) {
         success: function (data) {
             var response = $.parseJSON(data);
 
+            if(response['success']!= null)
             if(response['can_view'] == 'true') {
                 var modal = $("#voteModal .modal-body");
 
@@ -38,6 +39,7 @@ function showWhoVoted(event) {
                     show: 'false'
                 });
             }
+            else window.alert(response['errors']);
         },
         error: function () {}
     });

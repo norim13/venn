@@ -78,7 +78,11 @@ function repost(event) {
         type: "post",
         data: {"post_id":post_id},
         success: function (data) {
-            console.log(data);
+            $('#btn-repost-'+post_id).attr('data-toggle','tooltip');
+            $('#btn-repost-'+post_id).attr('data-placement','bottom');
+            $('#btn-repost-'+post_id).attr('title','Repost successful');
+
+            $('[data-toggle="tooltip"]').tooltip();
         },
         error: function () {}
     });

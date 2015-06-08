@@ -11,20 +11,23 @@ function comment(event) {
             parentdiv.children()[0].value = '';
 
             var response = $.parseJSON(data);
-            var newmsg = response['comment']['msg'];
-            var msgowner = response['comment']['user'];
-            var hashowner = response['comment']['user_hashid'];
-            var date = response['comment']['date'];
 
-            var base_url = response['base_url'];
+            if(response['success'] != null) {
+                var newmsg = response['comment']['msg'];
+                var msgowner = response['comment']['user'];
+                var hashowner = response['comment']['user_hashid'];
+                var date = response['comment']['date'];
 
-            var linkToProfile = '<a href=\"' + base_url + 'pages/users/profile.php?user=' + hashowner +
-                '\" style=\"text-decoration: none; color: inherit\">'+ msgowner +'</a>';
+                var base_url = response['base_url'];
 
-            $('<div class="panel panel-default comment-panel">' +
-            '<div class="panel-heading">' + newmsg + '</div>' +
-            '<div class="panel-body">' + linkToProfile + ', on ' + date +
-            '</div></div>').insertBefore(parentdiv);
+                var linkToProfile = '<a href=\"' + base_url + 'pages/users/profile.php?user=' + hashowner +
+                    '\" style=\"text-decoration: none; color: inherit\">'+ msgowner +'</a>';
+
+                $('<div class="panel panel-default comment-panel">' +
+                '<div class="panel-heading">' + newmsg + '</div>' +
+                '<div class="panel-body">' + linkToProfile + ', on ' + date +
+                '</div></div>').insertBefore(parentdiv);
+            } else window.alert(response['errors']);
         },
         error: function(){}
     });
@@ -52,29 +55,31 @@ function togglecomments(event) {
 
                 var response = $.parseJSON(data);
 
-                if(button.hasClass('rightFeed'))
-                    parentdiv = $('#commentform-rightfeed-' + post_id);
-                else
-                    parentdiv = $('#commentform-' + post_id);
+                if(response['success'] != null) {
+                    if (button.hasClass('rightFeed'))
+                        parentdiv = $('#commentform-rightfeed-' + post_id);
+                    else
+                        parentdiv = $('#commentform-' + post_id);
 
-                var base_url = response['base_url'];
-                var comments = response['comments'];
+                    var base_url = response['base_url'];
+                    var comments = response['comments'];
 
-                comments.forEach(function(entry) {
-                    var newmsg = entry['message'];
-                    var date = entry['date'];
+                    comments.forEach(function (entry) {
+                        var newmsg = entry['message'];
+                        var date = entry['date'];
 
-                    var msgowner = entry['name'];
-                    var hashowner = entry['hashid'];
+                        var msgowner = entry['name'];
+                        var hashowner = entry['hashid'];
 
-                    var linkToProfile = '<a href=' + base_url + 'pages/users/profile.php?user=' + hashowner +
-                        ' style="text-decoration: none; color: inherit">'+ msgowner +'</a>';
+                        var linkToProfile = '<a href=' + base_url + 'pages/users/profile.php?user=' + hashowner +
+                            ' style="text-decoration: none; color: inherit">' + msgowner + '</a>';
 
-                    $('<div class="panel panel-default comment-panel">' +
-                    '<div class="panel-heading">' + newmsg + '</div>' +
-                    '<div class="panel-body">' + linkToProfile + ', on ' + date +
-                    '</div></div>').insertBefore(parentdiv);
-                });
+                        $('<div class="panel panel-default comment-panel">' +
+                        '<div class="panel-heading">' + newmsg + '</div>' +
+                        '<div class="panel-body">' + linkToProfile + ', on ' + date +
+                        '</div></div>').insertBefore(parentdiv);
+                    });
+                } else window.alert(response['errors']);
             },
             error: function(){}
         });

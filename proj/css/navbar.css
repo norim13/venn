@@ -25,6 +25,11 @@
 	color: white;
 }
 
+.navbar-top-links .dropdown-user {
+    right: 0;
+    left: auto;
+}
+
 .accept_friend_request:hover {
     color: #1ab11a;
 }

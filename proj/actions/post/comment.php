@@ -11,12 +11,19 @@ if (!$_POST['msg'] || !$_POST['post_id']) {
 else{
     $comment = htmlspecialchars($_POST['msg']);
     $post_id = htmlspecialchars($_POST['post_id']);
-    createComment($_SESSION['id'], $post_id, $comment);
-    $return_messages['comment']['msg'] = $comment;
-    $return_messages['comment']['user'] = getNameFromID($_SESSION['id'])['name'];
-    $return_messages['comment']['user_hashid'] = getHashID($_SESSION['id'])['hashid'];
-    $return_messages['comment']['date'] = date('Y-m-d');
-    $return_messages['base_url'] = $BASE_URL;
+
+    try {
+        createComment($_SESSION['id'], $post_id, $comment);
+
+        $return_messages['comment']['msg'] = $comment;
+        $return_messages['comment']['user'] = getNameFromID($_SESSION['id'])['name'];
+        $return_messages['comment']['user_hashid'] = getHashID($_SESSION['id'])['hashid'];
+        $return_messages['comment']['date'] = date('Y-m-d');
+        $return_messages['base_url'] = $BASE_URL;
+
+    } catch (PDOException $e) {
+        $return_messages['errors'][] = "Database exception!";
+    }
 }
 
 if (!isset($return_messages['errors']))

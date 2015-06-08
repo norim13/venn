@@ -28,7 +28,7 @@
                                 {/if}
                             </td>
                         {else}
-                            <td class="votedifference" id="td-votedifference-{$post.id}">
+                            <td class="votedifference" id="td-votedifference-{$post.id}"  data-toggle="tooltip" data-placement="bottom" title="Check who voted">
                                 {if $post.votedifference < 0} <i class="fa fa-minus-square-o" style="color:rgb(176, 49, 33)"></i>
                                 {else} <i class="fa">{$post.votedifference}</i>
                                 {/if}
@@ -93,7 +93,7 @@
                 {/if}
                 {if $post.user_id != $smarty.session.id}
                     <button class="btn btn-default btn-repost" id="btn-repost-{$post.id}"><i class="fa fa-retweet"></i> Repost</button>
-                    <a href="javascript:void" class="btn btn-default btn-flag-report" data-toggle="modal" id="btn-report-{$post.id}"> <i class="fa fa-flag"></i></a>
+                    <a href="javascript:void" class="btn btn-default btn-flag-report" data-toggle="tooltip" data-placement="bottom" title="Report this post" data-toggle="modal" id="btn-report-{$post.id}"> <i class="fa fa-flag"></i></a>
                 {/if}
                 {if $post.user_id == $smarty.session.id}
                     <button class="btn btn-default btn-delete" id="btn-delete-{$post.id}"><i class="fa fa-trash-o"></i> Delete</button>

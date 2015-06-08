@@ -12,8 +12,6 @@ else{
     $myId = $_SESSION['id'];
     $friends = $_POST['friends'];
 
-
-
     try {
         global $conn;
         $conn->beginTransaction();
