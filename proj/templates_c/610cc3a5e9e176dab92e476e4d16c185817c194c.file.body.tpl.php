@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.15, created on 2015-05-08 20:34:20
-         compiled from "/opt/lbaw/***REMOVED***/public_html/proto/templates/users/feed.tpl" */ ?>
+         compiled from "/opt/lbaw/lbaw1446/public_html/proto/templates/users/feed.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18386296245548fca4d764f0-84960214%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '610cc3a5e9e176dab92e476e4d16c185817c194c' => 
     array (
-      0 => '/opt/lbaw/***REMOVED***/public_html/proto/templates/users/feed.tpl',
+      0 => '/opt/lbaw/lbaw1446/public_html/proto/templates/users/feed.tpl',
       1 => 1431109817,
       2 => 'file',
     ),

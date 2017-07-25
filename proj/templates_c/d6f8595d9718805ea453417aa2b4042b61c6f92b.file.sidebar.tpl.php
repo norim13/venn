@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.15, created on 2015-05-09 21:13:38
-         compiled from "/opt/lbaw/***REMOVED***/public_html/proto/templates/common/sidebar.tpl" */ ?>
+         compiled from "/opt/lbaw/lbaw1446/public_html/proto/templates/common/sidebar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:23817936855493182b5e8f3-42080271%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd6f8595d9718805ea453417aa2b4042b61c6f92b' => 
     array (
-      0 => '/opt/lbaw/***REMOVED***/public_html/proto/templates/common/sidebar.tpl',
+      0 => '/opt/lbaw/lbaw1446/public_html/proto/templates/common/sidebar.tpl',
       1 => 1431198813,
       2 => 'file',
     ),

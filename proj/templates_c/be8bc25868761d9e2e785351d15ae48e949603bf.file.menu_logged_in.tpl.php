@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.15, created on 2015-04-22 13:53:04
-         compiled from "/opt/lbaw/***REMOVED***/public_html/frmk/templates/common/menu_logged_in.tpl" */ ?>
+         compiled from "/opt/lbaw/lbaw1446/public_html/frmk/templates/common/menu_logged_in.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:80040360155378ba0a61a74-40018577%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'be8bc25868761d9e2e785351d15ae48e949603bf' => 
     array (
-      0 => '/opt/lbaw/***REMOVED***/public_html/frmk/templates/common/menu_logged_in.tpl',
+      0 => '/opt/lbaw/lbaw1446/public_html/frmk/templates/common/menu_logged_in.tpl',
       1 => 1386927924,
       2 => 'file',
     ),

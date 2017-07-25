@@ -1,1 +1,1 @@
-# lbaw_project
+# Venn - Social Network

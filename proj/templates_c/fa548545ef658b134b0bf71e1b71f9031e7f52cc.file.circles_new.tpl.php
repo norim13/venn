@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.15, created on 2015-05-13 12:16:09
-         compiled from "/opt/lbaw/***REMOVED***/public_html/proto/templates/users/circles_new.tpl" */ ?>
+         compiled from "/opt/lbaw/lbaw1446/public_html/proto/templates/users/circles_new.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:892190662554eb94869cb49-95286336%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fa548545ef658b134b0bf71e1b71f9031e7f52cc' => 
     array (
-      0 => '/opt/lbaw/***REMOVED***/public_html/proto/templates/users/circles_new.tpl',
+      0 => '/opt/lbaw/lbaw1446/public_html/proto/templates/users/circles_new.tpl',
       1 => 1431512165,
       2 => 'file',
     ),

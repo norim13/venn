@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.15, created on 2015-05-22 13:33:27
-         compiled from "/opt/lbaw/***REMOVED***/public_html/proto/templates/common/footer.tpl" */ ?>
+         compiled from "/opt/lbaw/lbaw1446/public_html/proto/templates/common/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:295879914553fd88c028684-39336425%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '50a2cee64c06846d7bb86289744fac57b6babd73' => 
     array (
-      0 => '/opt/lbaw/***REMOVED***/public_html/proto/templates/common/footer.tpl',
+      0 => '/opt/lbaw/lbaw1446/public_html/proto/templates/common/footer.tpl',
       1 => 1432294401,
       2 => 'file',
     ),
@@ -52,7 +52,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <script type="text/javascript" src="../../assets/frameworks/bootstrap/js/dropdowns-enhancement.js"></script>
 
 
-    <?php $_smarty_tpl->tpl_vars['current_page'] = new Smarty_variable(explode("/~***REMOVED***/proto/pages/",$_SERVER['REQUEST_URI']), null, 0);?>
+    <?php $_smarty_tpl->tpl_vars['current_page'] = new Smarty_variable(explode("/~lbaw1446/proto/pages/",$_SERVER['REQUEST_URI']), null, 0);?>
     <?php if ($_smarty_tpl->tpl_vars['current_page']->value[1]=='home/home.php') {?>
         <script type="text/javascript" src="../../js/posts/post.js"></script>
         <script type="text/javascript" src="../../js/posts/comments.js"></script>

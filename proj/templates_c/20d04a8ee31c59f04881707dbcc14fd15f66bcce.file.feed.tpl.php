@@ -28,7 +28,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5548fadd55e876_03005966')) {function content_5548fadd55e876_03005966($_smarty_tpl) {?><?php if (!is_callable('smarty_function_counter')) include '/opt/lbaw/***REMOVED***/public_html/final/lib/smarty/plugins/function.counter.php';
+<?php if ($_valid && !is_callable('content_5548fadd55e876_03005966')) {function content_5548fadd55e876_03005966($_smarty_tpl) {?><?php if (!is_callable('smarty_function_counter')) include '/opt/lbaw/lbaw1446/public_html/final/lib/smarty/plugins/function.counter.php';
 ?><?php echo $_smarty_tpl->getSubTemplate ("common/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('title'=>"Venn - Feed"), 0);?>
 
 

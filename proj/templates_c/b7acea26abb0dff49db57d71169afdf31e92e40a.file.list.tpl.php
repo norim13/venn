@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.15, created on 2015-04-22 13:52:41
-         compiled from "/opt/lbaw/***REMOVED***/public_html/frmk/templates/tweets/list.tpl" */ ?>
+         compiled from "/opt/lbaw/lbaw1446/public_html/frmk/templates/tweets/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:96948528655378b89cb65f5-35717895%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b7acea26abb0dff49db57d71169afdf31e92e40a' => 
     array (
-      0 => '/opt/lbaw/***REMOVED***/public_html/frmk/templates/tweets/list.tpl',
+      0 => '/opt/lbaw/lbaw1446/public_html/frmk/templates/tweets/list.tpl',
       1 => 1386932606,
       2 => 'file',
     ),

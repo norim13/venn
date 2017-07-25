@@ -1,12 +1,12 @@
 <?php /* Smarty version Smarty-3.1.15, created on 2015-05-16 22:25:24
-         compiled from "/opt/lbaw/***REMOVED***/public_html/proto/templates/common/header.tpl" */ ?>
+         compiled from "/opt/lbaw/lbaw1446/public_html/proto/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:756898544553fd88bed9fa4-22254726%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bf7f406a194a4bec52490dee5aef9bfb5b0f335d' => 
     array (
-      0 => '/opt/lbaw/***REMOVED***/public_html/proto/templates/common/header.tpl',
+      0 => '/opt/lbaw/lbaw1446/public_html/proto/templates/common/header.tpl',
       1 => 1431807917,
       2 => 'file',
     ),
