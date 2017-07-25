@@ -4,7 +4,7 @@
 
   error_reporting(E_ERROR | E_WARNING); // E_NOTICE by default
 
-  $BASE_DIR = '/opt/lbaw/***REMOVED***/public_html/final/';
+  $BASE_DIR = '***REMOVED***';
   $BASE_URL = '/~***REMOVED***/final/';
 
   $conn = new PDO('pgsql:host=vdbm;dbname=***REMOVED***', '***REMOVED***', '***REMOVED***');
